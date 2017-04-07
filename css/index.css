@@ -11,7 +11,7 @@ body{
     background-size: cover;
 	overflow:hidden;
 
-	font-size: 14px;
+	font-size: 16px;
 	font-family: "Arial";
 
 	display: -webkit-box;
@@ -28,7 +28,23 @@ body{
 	-moz-align-items: center;
 	-ms-align-items: center;
 }
-h1{
+
+.container{
 	color: #FFF;
+	text-align: center;
+}
+
+.container h1{
 	text-shadow: 1px 3px 0 #4c4c4c;
+}
+.container .contacme{
+	color: #FFF;
+}
+.contacme span{
+	font-weight: bold;
+	text-shadow: 1px 1px 0px black;
+}
+.contacme a{
+	color: #faff37;
+	font-style: italic;
 }
