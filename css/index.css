@@ -1,0 +1,34 @@
+body,html{
+	height: 100%;
+}
+
+body{
+	background-color: transparent;
+	background-image:url('../img/laptop_code.jpg');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+	overflow:hidden;
+
+	font-size: 14px;
+	font-family: "Arial";
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+}
+h1{
+	color: #FFF;
+	text-shadow: 1px 3px 0 #4c4c4c;
+}
