@@ -1,10 +1,12 @@
 body,html{
 	height: 100%;
 }
-
+html{
+	display: none;
+}
 body{
 	background-color: transparent;
-	background-image:url('../img/laptop_code.jpg');
+	/*background-image:url(../img/laptop_code@2x.jpg);*/
 	background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -23,10 +25,12 @@ body{
 	-webkit-justify-content: center;
 	-moz-justify-content: center;
 	-ms-justify-content: center;
+	justify-content: center;
 
 	-webkit-align-items: center;
 	-moz-align-items: center;
 	-ms-align-items: center;
+	align-items: center;
 }
 
 .container{
