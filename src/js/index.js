@@ -1,4 +1,4 @@
-var bgImage = "../img/laptop_code.e90b87c5.min.jpg";
+var bgImage = "dist/img/laptop_code.e90b87c5.min.jpg";
 
 $(window).load(function(){
 	
