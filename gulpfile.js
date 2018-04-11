@@ -1,30 +1,38 @@
 var gulp = require("gulp"),
-    concat = require("gulp-concat"),
+    hash = require('gulp-hash-filename');
     uglify = require("gulp-uglify"),
     minify = require("gulp-minify-css"),
     autoprefixer = require("gulp-autoprefixer");
+    imagemin = require('gulp-imagemin');
 
 //## Configuración de tareas ###
 
-// Javascript concat and minify
-gulp.task("js", function () {
-    gulp.src("js/src/*.js")
-    .pipe(concat("script.min.js"))
+// Javascript rename, hash and minify
+gulp.task("js", function() {
+  return gulp.src("src/js/*.js")
+    .pipe(hash({ "format": "{name}.{hash:8}.min{ext}" }))
     .pipe(uglify())
-    .pipe(gulp.dest("js/build/"))
+    .pipe(gulp.dest("./dist/js"))
 });
 
-// CSS concat, autoprefixer and minify
-gulp.task("css", function(){
-    gulp.src("css/src/*.css")
+// CSS rename, autoprefixer and minify
+gulp.task("css", function() {
+  return gulp.src("src/css/*.css")
+    .pipe(hash({ "format": "{name}.{hash:8}.min{ext}" }))
     .pipe(autoprefixer())
-    .pipe(concat("styles.min.css"))
     .pipe(minify())
-    .pipe(gulp.dest("css/build/"))
+    .pipe(gulp.dest("./dist/css"))
+});
+
+gulp.task('img', function () {
+  gulp.src('src/assets/img/*')
+    .pipe(hash({ "format": "{name}.{hash:8}.min{ext}" }))
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/img'));
 });
 
 //## Procedimiento Manual:  Tarea que ejecuta todas las tareas ###
-gulp.task("default", ["js", "css"], function(){
+gulp.task("default", ["js", "css", "img"], function(){
 });
 
 //## Procedimiento Automatico: Ejecutar tareas ###
