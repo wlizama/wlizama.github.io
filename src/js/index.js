@@ -1,4 +1,4 @@
-var bgImage = "./img/laptop_code.jpg";
+var bgImage = "../img/laptop_code.e90b87c5.min.jpg";
 
 $(window).load(function(){
 	
@@ -6,6 +6,6 @@ $(window).load(function(){
 	$("<img/>").attr("src", bgImage).load(function() {
 	   $(this).remove();
 	   $("body").css("background-image", "url(" + bgImage + ")");
-	   $("html").fadeIn(500);
+	   $("html").fadeIn(800);
 	});
 });
