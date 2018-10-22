@@ -1,6 +1,6 @@
 <template>
     <section class="main-section">
-        Hello <b>Vue</b>
+        Hello <b>Vue</b> <font-awesome-icon icon="coffee" />
     </section>
 </template>
 
