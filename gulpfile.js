@@ -37,11 +37,11 @@ gulp.task("default", ["js", "css", "img"], function(){
 
 //## Procedimiento Automatico: Ejecutar tareas ###
 gulp.task("autogen", function(){
-    gulp.watch('css/src/*.css', function() {
+    gulp.watch('src/css/*.css', function() {
         gulp.run('css');
     });
 
-    gulp.watch('js/src/*.js', function() {
+    gulp.watch('src/js/*.js', function() {
         gulp.run('js');
     });
 });
