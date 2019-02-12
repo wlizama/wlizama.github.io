@@ -1,41 +1,25 @@
 {
   "name": "wlizama.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build:dev": "webpack-dev-server --config ./webpack.dev.config.js --info=false --progress --hot",
-    "build:prod": "webpack --progress --hide-modules"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wlizama/wlizama.github.io.git"
-  },
-  "author": "Wilder",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wlizama/wlizama.github.io/issues"
-  },
-  "homepage": "https://github.com/wlizama/wlizama.github.io#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.6",
-    "@fortawesome/free-solid-svg-icons": "^5.4.1",
-    "@fortawesome/vue-fontawesome": "^0.1.1",
-    "vue": "^2.5.17"
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.5"
   },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^1.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^2.0.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
