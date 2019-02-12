@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            emojiSpin: "🚧",
+            msg: "PÁGINA EN CONSTRUCCIÓN"
+        }
+    }
+
+    render() {
+        return (
+            <section className="Main-App">
+                <span className="Emoji">{this.state.emojiSpin}</span>
+                <span>{this.state.msg}</span>
+                <span className="Emoji">{this.state.emojiSpin}</span>
+            </section>
+        );
+    }
 }
 
 export default App;
