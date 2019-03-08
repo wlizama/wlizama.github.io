@@ -1,3 +1,3 @@
-# wlizama.githu.io
+# wlizama.github.io
 
 Mi sitio web personal
