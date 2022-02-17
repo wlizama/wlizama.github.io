@@ -1,25 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import Router from 'routes'
 
-class App extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            emojiSpin: "🚧",
-            msg: "PÁGINA EN CONSTRUCCIÓN"
-        }
-    }
-
-    render() {
-        return (
-            <section className="Main-App">
-                <span className="Emoji">{this.state.emojiSpin}</span>
-                <span>{this.state.msg}</span>
-                <span className="Emoji">{this.state.emojiSpin}</span>
-            </section>
-        );
-    }
+const App = () => {
+    return <Router />
 }
 
 export default App;
