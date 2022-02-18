@@ -1,14 +1,15 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import Navigation from './Navigation'
+import Container from './Container'
+import './layout.scss'
+
 
 const Layout = () => {
 	return (
-		<div>
-			<nav>Aside nav</nav>
-			<main>
-				<Outlet/>
-			</main>
-		</div>
+		<>
+			<Navigation />
+			<Container />
+		</>
 	)
 }
 
