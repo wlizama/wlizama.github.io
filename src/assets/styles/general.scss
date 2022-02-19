@@ -1,0 +1,20 @@
+@import url($font-url);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+body {
+    font-family: $body-font;
+    font-size: 1rem;
+    background-color: $background;
+    color: $text;
+}
+
+a {
+    color: $links-color;
+    text-decoration: none;
+}
