@@ -1,11 +1,38 @@
 @import 'assets/styles/variables.scss';
 
+$user-color: $keywords-color;
+$role-color: $strings-color;
+$navigation-width: 13rem;
+
+.main-container.mobile {
+
+    .navigation {
+        transform: translateX(-$navigation-width);
+    }
+    .container {
+        opacity: 1;
+    }
+    
+    &.menu-open {
+        .navigation {
+            transform: translateX(0);
+        }
+        .container {
+            opacity: 40%;
+        }
+    }
+}
+
 .navigation {
     position: absolute;
+    height: 100vh;
     bottom: 0;
     top: 0;
-    width: 13em;
+    width: $navigation-width;
     background-color: $contrast;
+    border-right: 1px solid $border;
+    z-index: 2;
+    transition: $main-transition;
 
     .avatar {
         text-align: center;
@@ -18,6 +45,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            border: 1px solid $border;
         }
 
         .avatar--texts {
@@ -26,11 +54,11 @@
             .avatar--texts-user {
                 font-size: 1.5rem;
                 font-weight: bold;
-                color: $keywords-color;
+                color: $user-color;
             }
             .avatar--texts-role {
                 font-size: 1rem;
-                color: $strings-color;
+                color: $role-color;
             }
         }
     }
@@ -39,14 +67,20 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        
+        li {
+            a {
+                display: inline-block;
+                padding: 1.5em 1em;
+                width: 100%;
+                transition: all ease 1s;
+                &:hover {
+                    background-color: $background;
+                }
+            }
 
-        li > a {
-            display: inline-block;
-            padding: 1.5em 1em;
-            width: 100%;
-            transition: all ease 1s;
-            &:hover {
-                background-color: $background;
+            &:not(:last-child) {
+                border-bottom: 1px solid $border;
             }
         }
     }
@@ -56,4 +90,63 @@
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    transition: $main-transition;
+
+    .container--header {
+        background-color: $contrast;
+        border-bottom: 1px solid $border;
+        
+        button.container--header-mbutton {
+            font-size: 1.6em;
+            margin: .5em;
+            padding: .5em;
+            border-radius: .2em;
+            position: absolute;
+        }
+
+        h1 {
+            text-align: center;
+            padding: .5em 0;
+            width: 100%;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+
+            .container--header-user {
+                color: $user-color;
+            }
+            .container--header-role {
+                color: $role-color;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .container--body {
+        padding: 2em;
+        text-align: center;
+    }
+}
+
+@media (min-width: $media-min-width) {
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        
+        .navigation {
+            display: inline-block;
+            position: relative;
+            width: calc($navigation-width + 5em);
+        }
+    
+        .container {
+            display: inline-block;
+            flex: 1;
+            .container--header {
+                display: none;
+            }
+        }
+    }
 }

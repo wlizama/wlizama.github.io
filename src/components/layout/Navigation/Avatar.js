@@ -1,5 +1,5 @@
 import React from 'react'
-import C from '../../../constants'
+import { TEXTS } from 'utils/constants'
 
 const Avatar = () => {
     return (
@@ -10,8 +10,8 @@ const Avatar = () => {
                 className='avatar--image' 
             />
             <div className='avatar--texts'>
-                <div className='avatar--texts-user'>{C.USER}</div>
-                <div className='avatar--texts-role'>{C.OCUPATION}</div>
+                <div className='avatar--texts-user'>{TEXTS.USER}</div>
+                <div className='avatar--texts-role'>{TEXTS.OCUPATION}</div>
             </div>
         </div>
     )

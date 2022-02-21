@@ -12,9 +12,17 @@ body {
     font-size: 1rem;
     background-color: $background;
     color: $text;
+    height: 100vh;
 }
 
 a {
     color: $links-color;
     text-decoration: none;
+}
+
+button {
+    background-color: $buttons;
+    border: none;
+    color: $text;
+    border-radius: 0;
 }

@@ -1,6 +1,5 @@
-$font-url: 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap';
-$body-font: 'Ubuntu', sans-serif;
 
+//# Colors ####################################################################
 // Monokai pro
 $background: #2d2a2e;
 $second-background: #403e41;
@@ -14,7 +13,6 @@ $contrast: #221f22;
 $active: #4a474b;
 $border: #2d2a2e;
 $accent-color: #ffd866;
-$excluded-files-color: #3a3a3c;
 $green-color: #a9dc76;
 $yellow-color: #ffd866;
 $blue-color: #78dce8;
@@ -36,3 +34,10 @@ $operators-color: #ff6188;
 $attributes-color: #78dce8;
 $numbers-color: #ab9df2;
 $parameters-color: #f59762;
+
+
+//# Values ####################################################################
+$font-url: 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap';
+$body-font: 'Ubuntu', sans-serif;
+$media-min-width: 720px;
+$main-transition: all .3s ease-in-out;

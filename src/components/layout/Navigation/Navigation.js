@@ -1,23 +1,33 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Avatar from './Avatar'
+import { useOnClickOutside } from 'utils/helpers'
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+    const ref = useRef()
+    const { setIsOpenMenu } = props
+
+    useOnClickOutside(ref, () => { setIsOpenMenu(false) })
+
     return (
-        <nav className='navigation'>
+        <nav 
+            className='navigation'
+            ref={ref}
+        >
             <Avatar />
             <ul className='navigation--list'>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" onClick={() => { setIsOpenMenu(false) }}>About</Link>
                 </li>
                 <li>
-                    <Link to="/education">Education</Link>
+                    <Link to="/education" onClick={() => { setIsOpenMenu(false) }}>Education</Link>
                 </li>
                 <li>
-                    <Link to="/experiencie">Experiencie</Link>
+                    <Link to="/experiencie" onClick={() => { setIsOpenMenu(false) }}>Experiencie</Link>
                 </li>
                 <li>
-                    <Link to="/tech-stack">Tech Stack</Link>
+                    <Link to="/tech-stack" onClick={() => { setIsOpenMenu(false) }}>Tech Stack</Link>
                 </li>
             </ul>
         </nav>
