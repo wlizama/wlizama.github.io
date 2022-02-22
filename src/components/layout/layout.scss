@@ -77,6 +77,10 @@ $navigation-width: 13rem;
                 &:hover {
                     background-color: $background;
                 }
+
+                i {
+                    margin-right: .5em;
+                }
             }
 
             &:not(:last-child) {
@@ -105,11 +109,10 @@ $navigation-width: 13rem;
             position: absolute;
         }
 
-        h1 {
+        h2 {
             text-align: center;
             padding: .5em 0;
             width: 100%;
-            font-size: 1.5em;
             display: flex;
             flex-direction: column;
 
@@ -124,8 +127,22 @@ $navigation-width: 13rem;
     }
 
     .container--body {
-        padding: 2em;
+        padding: 4em 2em;
         text-align: center;
+
+        .container--body-wrapper {
+            h1 {
+                color: $purple-color
+            }
+            .container--body-wrapper-content {
+                padding-top: 1em;
+                text-align: justify;
+
+                & p:not(:last-child) {
+                    margin-bottom: 1em;
+                }
+            }
+        }
     }
 }
 
@@ -146,6 +163,11 @@ $navigation-width: 13rem;
             flex: 1;
             .container--header {
                 display: none;
+            }
+
+            .container--body {
+                max-width: 60em;
+                margin: 0 auto;
             }
         }
     }

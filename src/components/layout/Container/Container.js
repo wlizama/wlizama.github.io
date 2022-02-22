@@ -18,10 +18,10 @@ const Container = (props) => {
                 >
                     <i className='fa-solid fa-bars'></i>
                 </button>
-                <h1>
+                <h2>
                     <span className='container--header-user'>{TEXTS.USER}</span>
                     <span className='container--header-role'>{TEXTS.OCUPATION}</span>
-                </h1>
+                </h2>
             </header>
             <section className='container--body'>
                 <Outlet />

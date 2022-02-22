@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation/Navigation'
-import Container from './Container'
+import Container from './Container/Container'
 import { useMedia } from 'utils/helpers'
 import { VALS } from 'utils/constants'
 import './layout.scss'
