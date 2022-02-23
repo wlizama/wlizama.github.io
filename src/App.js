@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from 'components/layout'
 import About from 'components/pages/about'
 import Education from 'components/pages/education'
+import Experience from 'components/pages/experience'
+
 import NotFound from 'components/errors/not-found'
 import {
     BrowserRouter,
@@ -17,6 +19,7 @@ const App = () => {
                     <Route index element={<About />} />
                     <Route path='about' element={<About />} />
                     <Route path='education' element={<Education />} />
+                    <Route path='experience' element={<Experience />} />
                     <Route path='*' element={<NotFound />} />
                 </Route>
             </Routes>

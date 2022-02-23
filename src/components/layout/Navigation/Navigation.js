@@ -30,7 +30,7 @@ const Navigation = (props) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/experiencie" onClick={() => { setIsOpenMenu(false) }}>
+                    <Link to="/experience" onClick={() => { setIsOpenMenu(false) }}>
                         <i className='fa-solid fa-briefcase icon-color-1'></i>
                         Experiencie
                     </Link>
