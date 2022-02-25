@@ -1,0 +1,185 @@
+@import 'assets/styles/variables.scss';
+
+$user-color: $keywords-color;
+$role-color: $strings-color;
+$navigation-width: 13rem;
+
+.main-container {
+
+    &.mobile {
+        .navigation {
+            transform: translateX(-$navigation-width);
+        }
+        .container {
+            opacity: 1;
+        }
+
+        &.menu-open {
+            .navigation {
+                transform: translateX(0);
+            }
+            .container {
+                opacity: 40%;
+            }
+        }
+    }
+
+    .navigation {
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        width: $navigation-width;
+        background-color: $contrast;
+        border-right: 1px solid $border;
+        z-index: 2;
+        transition: $main-transition;
+        height: auto;
+        background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+        // background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+        // background-image: url("https://www.transparenttextures.com/patterns/triangles.png");
+
+        .avatar {
+            text-align: center;
+            padding: 2em 0;
+
+            .avatar--image {
+                width: 60%;
+                height: 60%;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: 1px solid $border;
+            }
+
+            .avatar--texts {
+                padding: .5em 0;
+                
+                .avatar--texts-user {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: $user-color;
+                }
+                .avatar--texts-role {
+                    font-size: 1rem;
+                    color: $role-color;
+                }
+            }
+        }
+
+        .navigation--list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            li {
+                a {
+                    display: inline-block;
+                    padding: 1.5em 1em;
+                    width: 100%;
+                    transition: $main-transition;
+                    
+                    &:hover, &.active {
+                        background-color: $background;
+                        border-left: .2em solid $links-color;
+                    }
+
+                    i {
+                        margin-right: .5em;
+                    }
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $border;
+                }
+            }
+        }
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: $main-transition;
+
+        .container--header {
+            background-color: $contrast;
+            border-bottom: 1px solid $border;
+            display: flex;
+            
+            button.container--header-mbutton {
+                font-size: 1.6em;
+                margin: .6em 0 .6em .6em;
+                padding: .6em;
+                border-radius: .2em;
+            }
+
+            h2 {
+                text-align: center;
+                padding: .5em 0;
+                width: 100%;
+                flex: 1;
+
+                .container--header-user {
+                    color: $user-color;
+                    display: block;
+                }
+                .container--header-role {
+                    color: $role-color;
+                    font-weight: normal;
+                    display: block;
+                }
+            }
+        }
+
+        .container--body {
+            padding: 4em 2em;
+            text-align: center;
+
+            .container--body-wrapper {
+                h1 {
+                    color: $purple-color
+                }
+                .container--body-wrapper-content {
+                    padding-top: 1em;
+                    text-align: left;
+
+                    & p:not(:last-child) {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $media-min-width) {
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        
+        .navigation {
+            display: inline-block;
+            position: fixed;
+            width: calc($navigation-width + 5em);
+            height: 100vh;
+        }
+    
+        .container {
+            display: inline-block;
+            flex: 1;
+            margin-left: calc(13rem + 5em);
+
+            .container--header {
+                display: none;
+            }
+
+            .container--body {
+                max-width: 60em;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import 'assets/styles/variables.scss';
+
+.experience-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .experience-item {
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
+
+        .experience-item--title {
+            font-weight: bold;
+            color: $green-color;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .experience-item--title-enterprice {
+                display: block;
+                i {
+                  font-size: .7em;  
+                  line-height: .7em;
+                }
+            }
+            .experience-item--title-date {
+                font-style: italic;
+                color: $gray-color;
+                display: block;
+            }
+        }
+
+        .experience-item-roles {
+            list-style: none;
+            margin: 0;
+            padding-left: 1em;
+
+            .experience-item-roles--role {
+                color: $white-black-color;
+                // text-align: left;
+            }
+        }
+    }
+}
+
+@media (min-width: $media-min-width) {
+    .experience-list {
+        .experience-item {
+            .experience-item--title {
+                align-content: space-between;
+                flex-direction: row;
+    
+                .experience-item--title-enterprice {
+                    flex: 1;
+                }
+                .experience-item--title-date {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

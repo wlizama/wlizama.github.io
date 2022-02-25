@@ -1,0 +1,56 @@
+@import url($font-url);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+body {
+    font-family: $body-font;
+    font-size: 1rem;
+    background-color: $background;
+    color: $text;
+    height: 100vh;
+    background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+}
+
+a {
+    color: $links-color;
+    text-decoration: none;
+}
+
+button {
+    background-color: $buttons;
+    border: none;
+    color: $text;
+    border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+h2  {
+    font-size: 1.6em;
+}
+h3  {
+    font-size: 0.6em;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-color-1 {
+    color: $white-black-color
+}
