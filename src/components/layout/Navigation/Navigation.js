@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Avatar from './Avatar'
+import NavigationLink from './NavigationLink'
 import { useOnClickOutside } from 'utils/helpers'
-import { Link } from 'react-router-dom'
 
 const Navigation = (props) => {
 
@@ -18,28 +18,28 @@ const Navigation = (props) => {
             <Avatar />
             <ul className='navigation--list'>
                 <li>
-                    <Link to="/about" onClick={() => { setIsOpenMenu(false) }}>
+                    <NavigationLink to="/about" onClick={() => { setIsOpenMenu(false) }}>
                         <i className='fa-solid fa-user icon-color-1'></i>
                         About
-                    </Link>
+                    </NavigationLink>
                 </li>
                 <li>
-                    <Link to="/education" onClick={() => { setIsOpenMenu(false) }}>
+                    <NavigationLink to="/education" onClick={() => { setIsOpenMenu(false) }}>
                         <i className='fa-solid fa-graduation-cap icon-color-1'></i>
                         Education
-                    </Link>
+                    </NavigationLink>
                 </li>
                 <li>
-                    <Link to="/experience" onClick={() => { setIsOpenMenu(false) }}>
+                    <NavigationLink to="/experience" onClick={() => { setIsOpenMenu(false) }}>
                         <i className='fa-solid fa-briefcase icon-color-1'></i>
                         Experiencie
-                    </Link>
+                    </NavigationLink>
                 </li>
                 <li>
-                    <Link to="/tech-stack" onClick={() => { setIsOpenMenu(false) }}>
+                    <NavigationLink to="/tech-stack" onClick={() => { setIsOpenMenu(false) }}>
                         <i className='fa-solid fa-pen-ruler icon-color-1'></i>
                         Tech Stack
-                    </Link>
+                    </NavigationLink>
                 </li>
             </ul>
         </nav>

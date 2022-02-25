@@ -78,10 +78,10 @@ $navigation-width: 13rem;
                     padding: 1.5em 1em;
                     width: 100%;
                     transition: $main-transition;
-                    &:hover {
+                    
+                    &:hover, &.active {
                         background-color: $background;
                         border-left: .2em solid $links-color;
-                        // padding-left: .6em;
                     }
 
                     i {
