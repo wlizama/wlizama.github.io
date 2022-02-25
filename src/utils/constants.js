@@ -1,6 +1,12 @@
 export const TEXTS = {
     USER: "Wilder Lizama",
-    OCUPATION: "Software developer"
+    OCUPATION: "Software developer",
+    USER_CONTACT: {
+        MAIL: "wilderlizama@gmail.com",
+        GITHUB: "wlizama",
+        LINKEDIN: "wilderlizama",
+        TWITTER: "@wilderlizama"
+    }
 }
 
 export const VALS = {
