@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8d97bad5.css",
+    "main.js": "/static/js/main.f6d7f454.js",
+    "static/media/logo-apache.svg": "/static/media/logo-apache.3461b52c8c5f34b95423c808240486d7.svg",
+    "static/media/logo-sqlserver.svg": "/static/media/logo-sqlserver.2b14e66fd8a72b84132aecc5c41cfccb.svg",
+    "static/media/logo-docker.svg": "/static/media/logo-docker.3253a6fe64f326e90f1716b7069eeeb8.svg",
+    "static/media/logo-tomcat.svg": "/static/media/logo-tomcat.14fd97358ee563a2f3cf75c6af00dbb3.svg",
+    "static/media/logo-postman.svg": "/static/media/logo-postman.e65afafee644ce9fe8a727d01b403189.svg",
+    "static/media/logo-jquery.svg": "/static/media/logo-jquery.fcc480227fd31fecc887db807010bf1d.svg",
+    "static/media/logo-nginx.svg": "/static/media/logo-nginx.aaccbe7bb34fb8019d0ec018b24773b6.svg",
+    "static/media/logo-mysql.svg": "/static/media/logo-mysql.0697e026464104aea8919845703174b9.svg",
+    "static/media/logo-redis.svg": "/static/media/logo-redis.ec8971a991f77974bf2f0dceb7359ac7.svg",
+    "static/media/logo-react.svg": "/static/media/logo-react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/logo-nodejs.svg": "/static/media/logo-nodejs.615ffbea9529ca7047ed8a912bfd94b2.svg",
+    "static/media/logo-gitkraken.svg": "/static/media/logo-gitkraken.09a18cd234c77d9968f518a4d5d36f0e.svg",
+    "static/media/logo-redux.svg": "/static/media/logo-redux.0e4fb1c819ac4c060c92343147d4ccf7.svg",
+    "static/media/logo-java.svg": "/static/media/logo-java.2c5d38eae4a3a352dd64b4fe904a14dd.svg",
+    "static/media/logo-python.svg": "/static/media/logo-python.e6d7dc739a91892bbf1f6262412046dd.svg",
+    "static/media/logo-bootstrap.svg": "/static/media/logo-bootstrap.997c463dca63c915b9a51f1caedef8e1.svg",
+    "static/media/logo-mongodb.svg": "/static/media/logo-mongodb.1aca075d5cce0819fea7ea0902d94ce4.svg",
+    "index.html": "/index.html",
+    "static/media/logo-javascript.svg": "/static/media/logo-javascript.00f3e5cf8bcf4ae623b3835ca5791b15.svg",
+    "static/media/logo-php.svg": "/static/media/logo-php.7c41b19923da57634a76372016ed129e.svg",
+    "static/media/logo-typescript.svg": "/static/media/logo-typescript.a6305a733dd55243980aec55f96f70c5.svg",
+    "static/media/logo-git.svg": "/static/media/logo-git.c60b7e5ae8ec2562f23fdddcab300026.svg",
+    "static/media/logo-vscode.svg": "/static/media/logo-vscode.b8b1e001813039750e6c05c236ab0d46.svg",
+    "static/media/logo-materialui.svg": "/static/media/logo-materialui.fd510ed8518b192069590b04e2e6348a.svg",
+    "static/media/logo-vue.svg": "/static/media/logo-vue.f04dfe30a8ad8eb5c4e01aaf1163cb53.svg",
+    "main.8d97bad5.css.map": "/static/css/main.8d97bad5.css.map",
+    "main.f6d7f454.js.map": "/static/js/main.f6d7f454.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d97bad5.css",
+    "static/js/main.f6d7f454.js"
+  ]
+}
