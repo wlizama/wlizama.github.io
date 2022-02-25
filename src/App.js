@@ -14,7 +14,7 @@ import {
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route path={process.env.PUBLIC_URL + '/'} element={<Layout />}>
                     <Route index element={<About />} />
