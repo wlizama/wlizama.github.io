@@ -13,6 +13,7 @@ body {
     background-color: $background;
     color: $text;
     height: 100vh;
+    // background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
 }
 
 a {
@@ -27,18 +28,20 @@ button {
     border-radius: 0;
 }
 
-h1 {
-    font-size: 2.8em;
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    font-size: 2.8em;
+}
 h2  {
     font-size: 1.8em;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+}
+h3  {
+    font-size: 0.8em;
 }
 
 p {

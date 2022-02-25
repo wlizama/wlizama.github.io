@@ -1,0 +1,44 @@
+@import 'assets/styles/variables.scss';
+
+.techstack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .techstack-group {
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
+
+        .techstack-group--title {
+            font-weight: bold;
+            color: $green-color;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        .techstack-group-items {
+            list-style: none;
+            margin: 0;
+            text-align: center;
+
+            .techstack-group-items--item {
+                display: inline-block;
+                text-align: center;
+                margin: 0 2.5em 4em 2.5em;
+
+                img {
+                    width: 4em;
+                    height: 4em;
+                    line-height: 4em;
+                    display: inline-block;
+                }
+                div {
+                    color: $white-black-color;
+                }
+            }
+        }
+    }
+}
