@@ -12,7 +12,7 @@
 /build
 
 # test folder
-/docs
+# /docs
 
 # misc
 .DS_Store
