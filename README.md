@@ -1,5 +1,5 @@
 # My portfolio
-My website portfolio
+My website portfolio published on Heroku
 
 ## Dev Links
 
