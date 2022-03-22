@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d97bad5.css",
-    "main.js": "/static/js/main.f6d7f454.js",
+    "main.css": "/static/css/main.4807cc7c.css",
+    "main.js": "/static/js/main.36c18755.js",
     "static/media/logo-apache.svg": "/static/media/logo-apache.3461b52c8c5f34b95423c808240486d7.svg",
     "static/media/logo-sqlserver.svg": "/static/media/logo-sqlserver.2b14e66fd8a72b84132aecc5c41cfccb.svg",
+    "static/media/not-found.svg": "/static/media/not-found.bdf1c60c297dc6528f56fe6a382dacdf.svg",
     "static/media/logo-docker.svg": "/static/media/logo-docker.3253a6fe64f326e90f1716b7069eeeb8.svg",
     "static/media/logo-tomcat.svg": "/static/media/logo-tomcat.14fd97358ee563a2f3cf75c6af00dbb3.svg",
     "static/media/logo-postman.svg": "/static/media/logo-postman.e65afafee644ce9fe8a727d01b403189.svg",
@@ -27,11 +28,11 @@
     "static/media/logo-vscode.svg": "/static/media/logo-vscode.b8b1e001813039750e6c05c236ab0d46.svg",
     "static/media/logo-materialui.svg": "/static/media/logo-materialui.fd510ed8518b192069590b04e2e6348a.svg",
     "static/media/logo-vue.svg": "/static/media/logo-vue.f04dfe30a8ad8eb5c4e01aaf1163cb53.svg",
-    "main.8d97bad5.css.map": "/static/css/main.8d97bad5.css.map",
-    "main.f6d7f454.js.map": "/static/js/main.f6d7f454.js.map"
+    "main.4807cc7c.css.map": "/static/css/main.4807cc7c.css.map",
+    "main.36c18755.js.map": "/static/js/main.36c18755.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d97bad5.css",
-    "static/js/main.f6d7f454.js"
+    "static/css/main.4807cc7c.css",
+    "static/js/main.36c18755.js"
   ]
 }
