@@ -7,52 +7,47 @@ const Education = () => {
 
     const educationList = [
         {
-            date: '2019 - currently',
-            title: 'Engineering career: Systems and computer engineering',
-            description: 'Technological University of Peru'
+            date: 'March 2019 – December 2022',
+            title: 'Bachelor\'s degree in Systems and Computer Engineering',
+            description: 'Universidad Tecnológica del Perú'
         },
         {
-            date: '2022 - currently',
-            title: 'Design Microservices Architecture with Patterns & Principles - Course',
+            date: 'January 2022 – March 2022',
+            title: 'Design Microservices Architecture with Patterns & Principles',
             description: 'Udemy e-learning platform'
         },
         {
-            date: '2020 - 2021',
+            date: 'January 2020 – April 2020',
             title: 'Developing native apps with Flutter',
             description: 'Udemy e-learning platform'
         },
         {
-            date: '2019 - 2019',
+            date: 'April 2019 – July 2019',
             title: 'ReactJS, Redux + ES6',
             description: 'Udemy e-learning platform'
         },
         {
-            date: '2018 - 2018',
+            date: 'February 2018 – July 2022',
             title: 'Backend development with Python and Django',
             description: 'Platzi e-learning platform'
         },
         {
-            date: '2018 - 2018',
+            date: 'July 2018 – November 2022',
             title: 'Java SE Basic Course',
             description: 'Platzi e-learning platform'
         },
         {
-            date: '2017 - 2018',
+            date: 'November 2017 – January 2018',
             title: 'Backend development with PHP',
             description: 'Platzi e-learning platform'
         },
         {
-            date: '2017 - 2017',
+            date: 'January 2017 – March 2017',
             title: 'Front end architecture',
             description: 'Platzi e-learning platform'
         },
         {
-            date: '2017 - 2017',
-            title: 'Linux Server Administration Course',
-            description: 'Platzi e-learning platform'
-        },
-        {
-            date: '2017 - 2017',
+            date: 'February 2016 – April 2016',
             title: 'Visual Studio 2015 Fundamentals - C#',
             description: 'Cibertec'
         }

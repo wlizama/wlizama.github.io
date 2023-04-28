@@ -27,6 +27,9 @@ import logo_apache from 'assets/images/logo-apache.svg'
 import logo_tomcat from 'assets/images/logo-tomcat.svg'
 import logo_postman from 'assets/images/logo-postman.svg'
 import logo_vscode from 'assets/images/logo-vscode.svg'
+import logo_dart from 'assets/images/logo-dart.svg'
+import logo_flutter from 'assets/images/logo-flutter.svg'
+import logo_react_native from 'assets/images/logo-react-native.svg'
 
 
 const TechStack = () => {
@@ -41,6 +44,7 @@ const TechStack = () => {
                 { name: 'PHP', logo: logo_php },
                 { name: 'Typescript', logo: logo_typescript },
                 { name: 'Node.js', logo: logo_nodejs },
+                { name: 'Dart', logo: logo_dart },
             ]
         },
         {
@@ -48,6 +52,8 @@ const TechStack = () => {
             items: [
                 { name: 'React JS', logo: logo_react },
                 { name: 'React Redux', logo: logo_redux },
+                { name: 'React Native', logo: logo_react_native },
+                { name: 'Flutter', logo: logo_flutter },
                 { name: 'Vue JS', logo: logo_vue },
                 { name: 'Bootstrap', logo: logo_bootstrap },
                 { name: 'Material UI', logo: logo_materialui },
