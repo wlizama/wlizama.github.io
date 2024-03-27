@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.10",
     "@astrojs/check": "^0.5.10",
+    "@fontsource-variable/roboto-mono": "^5.0.18",
+    "astro": "^4.5.10",
     "typescript": "^5.4.3"
   }
 }

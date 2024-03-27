@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.5.10
     version: 0.5.10(typescript@5.4.3)
+  '@fontsource-variable/roboto-mono':
+    specifier: ^5.0.18
+    version: 5.0.18
   astro:
     specifier: ^4.5.10
     version: 4.5.10(typescript@5.4.3)
@@ -786,6 +789,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/roboto-mono@5.0.18:
+    resolution: {integrity: sha512-AIqr9HYQDqiJjGcs/fHedGc0ZGfEGdixm87O9viAQ4PXfiLEelpCnE2jlviJaYcGi3UHxe9+Nn3SalcHhKFSjw==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.5:
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}

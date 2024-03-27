@@ -17,35 +17,50 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
+	/* Supports weights 100-700 */
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--color-primary: #3a89c9;
+		--color-secondary: #9cc4e4;
+		--color-tertiary: #e9f2f9;
+		--color-accent: #f26c4f;
+		--color-accent-light: #ffd866;
+		--color-dark: #2e303e;
+		--color-gray: #6c6f7e;
+		--color-light: #fcfcfa;
+	}
+
+	@font-face {
+		font-family: 'Roboto Mono Variable', monospace;
+		font-style: normal;
+		font-weight: 100 700;
+		font-display: swap;
+	}
+	body, html {
+		font-family: 'Roboto Mono Variable', monospace;
+		margin: 0;
+		padding: 0;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		scroll-behavior: smooth;
+		scrollbar-gutter: stable;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		background-image: radial-gradient(circle, var(--color-gray) 00%, var(--color-dark) 100%);
+		background-attachment: fixed;
+		height: 100vh;
+	}
+	main {
+		width: 80%;
+		max-width: 800px;
+		overflow-y: auto;
+		margin: 0 auto;
+		height: auto;
 	}
 </style>
