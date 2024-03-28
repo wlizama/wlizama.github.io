@@ -3,10 +3,12 @@ import Section from "../Section.astro";
 import { basics } from "@cv";
 import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
+import MapPin from "@/icons/MapPin.astro"
+import Mail from "@/icons/Mail.astro"
 
 type SocialIcon = Record<string, string | any>
 
-const { name, occupation, image, summary, profiles } = basics;
+const { name, occupation, image, summary, profiles, email } = basics;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
@@ -19,50 +21,49 @@ const SOCIAL_ICONS: SocialIcon = {
     <div>
       <h1>{name}</h1>
       <h2>{occupation}</h2>
-      <p>{summary}</p>
+      <p class="white-text">{summary}</p>
     </div>
     <figure>
       <img src={image} alt={name} width="160" height="160" />
     </figure>
   </div>
   <div class="footer">
-    <ul>
-      {profiles.map(({ network, url }) => {
-        const Icon = SOCIAL_ICONS[network]
-        return (
-          <li>
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={network}
-              title={`${network} Profile`}
-            >
-              <Icon />
-            </a>
-          </li>
-        )
-      })}
-    </ul>
+    <div class="info">
+      <span>
+        <Mail />
+        <a href={`mailto:${email}`}>{email}</a>
+      </span>
+      <span>
+        <MapPin />
+        <span class="mr-1">{basics.location.city}, {basics.location.region}</span>
+      </span>
+      <span>
+        <h4>Follow me on:</h4>
+        <ul>
+          {profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network]
+            return (
+              <li>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={network}
+                  title={`${network} Profile`}
+                >
+                  <Icon />
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </span>
+    </div>
     <button>Download CV</button>
   </div>
 </Section>
 
 <style>
-  h1 {
-    color: var(--color-primary);
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  h2 {
-    color: var(--color-accent);
-  }
-
-  h3 {
-    color: var(--color-tertiary);
-  }
   .card {
     display: flex;
     flex-direction: row;
@@ -81,8 +82,6 @@ const SOCIAL_ICONS: SocialIcon = {
     
     a {
       color: var(--color-light);
-      height: 32px;
-      width: 32px;
       transition: all 0.3s ease;
 
       &:hover {
@@ -92,7 +91,6 @@ const SOCIAL_ICONS: SocialIcon = {
   }
 
   p {
-    color: var(--color-light);
     margin-top: 1em;
   }
 
@@ -100,10 +98,27 @@ const SOCIAL_ICONS: SocialIcon = {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    align-items: center;
-    margin-top: .8em;
-    ul {
+    margin-top: 1em;
+    align-items: self-start;
+    .info {
       flex: 1;
+      display: grid;
+      column-gap: 1em;
+      grid-template-columns: 1fr auto;
+      grid-auto-rows: 3em;
+      align-self: center;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        color: var(--color-light);
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 
@@ -145,8 +160,16 @@ const SOCIAL_ICONS: SocialIcon = {
     }
     .footer {
       flex-direction: column;
+      .info {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 3em;
+        align-items: center;
+      }
+      h4 {
+        display: none;
+      }
     }
-    h1, h2, h3, ul {
+    h1, h2, h3 {
       text-align: center;
     }
   }

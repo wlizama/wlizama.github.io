@@ -10,9 +10,10 @@
     "location": {
       "address": "my address",
       "postalCode": "00000",
-      "city": "my city",
+      "city": "Lima",
       "countryCode": "PE",
-      "region": "Perú"
+      "region": "Perú",
+      "timezone": "GMT-5"
     },
     "profiles": [
       {
