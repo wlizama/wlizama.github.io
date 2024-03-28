@@ -17,35 +17,34 @@ const SOCIAL_ICONS: SocialIcon = {
 <Section>
   <div class="card">
     <div>
-      <div>
-        <h1>{name}</h1>
-        <h2>{occupation}</h2>
-      </div>
-      <div class="info">
-        <p>{summary}</p>
-        <ul>
-          {profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network]
-            return (
-              <li>
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={network}
-                  title={`${network} Profile`}
-                >
-                  <Icon />
-                </a>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+      <h1>{name}</h1>
+      <h2>{occupation}</h2>
+      <p>{summary}</p>
     </div>
     <figure>
       <img src={image} alt={name} width="160" height="160" />
     </figure>
+  </div>
+  <div class="footer">
+    <ul>
+      {profiles.map(({ network, url }) => {
+        const Icon = SOCIAL_ICONS[network]
+        return (
+          <li>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={network}
+              title={`${network} Profile`}
+            >
+              <Icon />
+            </a>
+          </li>
+        )
+      })}
+    </ul>
+    <button>Download CV</button>
   </div>
 </Section>
 
@@ -60,17 +59,15 @@ const SOCIAL_ICONS: SocialIcon = {
   h2 {
     color: var(--color-accent);
   }
+
+  h3 {
+    color: var(--color-tertiary);
+  }
   .card {
     display: flex;
     flex-direction: row;
-    padding: 1em;
     gap: 1em;
     align-items: center;
-    /* border: 1px solid var(--color-gray); */
-  }
-
-  .info {
-    margin-top: 1em;
   }
 
   figure img {
@@ -80,7 +77,6 @@ const SOCIAL_ICONS: SocialIcon = {
 
   ul li {
     display: inline-flex;
-    margin-top: 1em;
     margin-right: 1em;
     
     a {
@@ -97,6 +93,45 @@ const SOCIAL_ICONS: SocialIcon = {
 
   p {
     color: var(--color-light);
+    margin-top: 1em;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    margin-top: .8em;
+    ul {
+      flex: 1;
+    }
+  }
+
+  button {
+    padding: .8em 2.8em;
+    border: none;
+    border-radius: 0.5em;
+    color: var(--color-light);
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 70%);
+    animation: shrink 5s infinite;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+    @keyframes shrink {
+    0% {
+      background-size: 100% 100%;
+    }
+    50% {
+      background-size: 200% 200%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
   }
 
   @media (width <= 768px) {
@@ -106,6 +141,12 @@ const SOCIAL_ICONS: SocialIcon = {
     figure img{
       width: 100px;
       height: 100px;
+    }
+    .footer {
+      flex-direction: column;
+    }
+    h1, h2, h3, ul {
+      text-align: center;
     }
   }
 </style>
