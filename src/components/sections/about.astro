@@ -1,37 +1,111 @@
 ---
-import Container from "../Container.astro";
+import Section from "../Section.astro";
+import { basics } from "@cv";
+import LinkedIn from "@/icons/LinkedIn.astro"
+import GitHub from "@/icons/GitHub.astro"
+
+type SocialIcon = Record<string, string | any>
+
+const { name, occupation, image, summary, profiles } = basics;
+
+const SOCIAL_ICONS: SocialIcon = {
+  GitHub,
+  LinkedIn,
+}
 ---
 
-<Container>
-  <div>
-    <h1>Wilder H. Lizama</h1>
-    <h2>Software developer</h2>
+<Section>
+  <div class="card">
+    <div>
+      <div>
+        <h1>{name}</h1>
+        <h2>{occupation}</h2>
+      </div>
+      <div class="info">
+        <p>{summary}</p>
+        <ul>
+          {profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network]
+            return (
+              <li>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={network}
+                  title={`${network} Profile`}
+                >
+                  <Icon />
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
+    <figure>
+      <img src={image} alt={name} width="160" height="160" />
+    </figure>
   </div>
-</Container>
+</Section>
 
 <style>
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    border: 1px solid var(--color-gray);
-    border-radius: 1em;
-    background: rgba(255, 255, 255, .05);
-  }
-
   h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    color: var(--color-primary);
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--color-accent-light);
+    color: var(--color-accent);
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    gap: 1em;
+    align-items: center;
+    /* border: 1px solid var(--color-gray); */
+  }
+
+  .info {
+    margin-top: 1em;
+  }
+
+  figure img {
+    border-radius: 1em;
+    border: 2px solid var(--color-gray);
+  }
+
+  ul li {
+    display: inline-flex;
+    margin-top: 1em;
+    margin-right: 1em;
+    
+    a {
+      color: var(--color-light);
+      height: 32px;
+      width: 32px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  p {
+    color: var(--color-light);
+  }
+
+  @media (width <= 768px) {
+    .card {
+      flex-direction: column-reverse;
+    }
+    figure img{
+      width: 100px;
+      height: 100px;
+    }
   }
 </style>

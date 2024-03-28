@@ -1,0 +1,287 @@
+{
+  "basics": {
+    "name": "Wilder H. Lizama Garcia",
+    "occupation": "Software Developer 🚀",
+    "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
+    "email": "wilderlizama@gmail.com",
+    "phone": "+51 999 999 999",
+    "url": "wlizama.github.io",
+    "summary": "Hi there! I'm a software developer with 8 years of experience in various projects spanning both Backend and Frontend areas across web environments, APIs, desktop, mobile and services.",
+    "location": {
+      "address": "my address",
+      "postalCode": "00000",
+      "city": "my city",
+      "countryCode": "PE",
+      "region": "Perú"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "wilderlizama",
+        "url": "https://linkedin.com/in/wilderlizama"
+      },
+      {
+        "network": "GitHub",
+        "username": "wlizama",
+        "url": "https://github.com/wlizama"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "FTA DevBase LLC",
+      "position": "Front End Engineer ",
+      "url": "",
+      "startDate": "2022-04-01",
+      "endDate": null,
+      "summary": "",
+      "highlights": [
+        "Code migration from JavaScript to TypeScript and React.js for the portal of a nonprofit grantmaking application web app.",
+        "Development of new features and maintenance of a Native app with React Native for HVAC technicians.",
+        "Maintenance of a PWA for a company dedicated to the cash and bank accounts industry, utilizing APIs to process transactions.",
+        "Development of a library of user interface components using atomic design systems with Storybook for visual documentation."
+      ]
+    },
+    {
+      "name": "GNT Servicios Generales S.A",
+      "position": "Full Stack developer",
+      "url": "https://twitch.tv/wilderlizama",
+      "startDate": "2019-04-01",
+      "endDate": "2022-03-01",
+      "summary": "",
+      "highlights": [
+        "Migrated desktop applications to web applications developed with React.js and KendoUI.",
+        "Developed and maintained ERP software and web intranet using Material UI, Bootstrap, and GraphQL for enhanced efficiency and flexibility in data management.",
+        "Managed T-SQL structure and tables in SQL Server.",
+        "Provided support for IIS 6.0 and Ubuntu Server 14.04.",
+        "Developed applications for consuming Gmail APIs for automatic registration of electronic documents.",
+        "Developed Java services for background execution using threads installed on the server."
+      ]
+    },
+    {
+      "name": "Home Business Real Estate",
+      "position": "Front end developer",
+      "startDate": "2018-03-01",
+      "endDate": "2019-03-01",
+      "summary": "",
+      "highlights": [
+        "Full development of a corporation website using React JS.",
+        "Proposal and maintenance of web design along with APIs.",
+        "Software testing and deployment."
+      ]
+    },
+    {
+      "name": "828 Transporte",
+      "position": "Backend developer",
+      "startDate": "2017-01-01",
+      "endDate": "2018-02-01",
+      "summary": "",
+      "highlights": [
+        "Development and maintenance of desktop application accounting systems.",
+        "Management of T-SQL structure and tables.",
+        "Development of CLI scripts for server automation."
+      ]
+    },
+    {
+      "name": "Coast Pacific Group",
+      "position": "Full Stack developer",
+      "startDate": "2015-12-01",
+      "endDate": "2017-10-01",
+      "summary": "",
+      "highlights": [
+        "Development and maintenance of landing pages, as well as full JS website.",
+        "Software testing and deployment.",
+        "Development and maintenance of logistics ERP software, including the landing page.",
+        "Maintenance of the travel log system.",
+        "Software testing and deployment."
+      ]
+    }
+  ],
+  "volunteer": [{
+    "organization": "",
+    "position": "",
+    "url": "",
+    "startDate": "1999-01-01",
+    "endDate": "1999-01-01",
+    "summary": "Description…",
+    "highlights": []
+  }],
+  "education": [{
+    "institution": "Universidad Tecnológica del Perú",
+    "url": "",
+    "area": "Systems and computer Engineering",
+    "studyType": "Bachelor’s degree",
+    "startDate": "2019-03-01",
+    "endDate": "2022-12-30"
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "1999-12-01",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "1999-12-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tournament Organizer",
+      "isActive": true,
+      "description": "Web application to organize eSports tournaments with brackets and results.",
+      "highlights": [
+        "Developed with Next.js and Tailwind CSS",
+        "Database in PostgreSQL"
+      ],
+      "url": "https://github.com/wlizama/tournament-organizer"
+    },
+    {
+      "name": "Home Business Portal",
+      "isActive": true,
+      "description": "Web portal for a real estate company with magazine view and search filters.",
+      "highlights": [
+        "Developed with React.js and Material UI",
+        "Database in MySQL",
+        "APIs for data management deployed in AWS"
+      ],
+      "url": "http://162.212.130.247/",
+      "github": "https://github.com/wlizama/home-business-portal"
+    },
+    {
+      "name": "Pizza Delight",
+      "isActive": true,
+      "description": "E-commerce for a pizza restaurant with online ordering and delivery.",
+      "highlights": [
+        "Developed with Java and Spring ORM for the backend",
+        "Spring MVC for the frontend",
+        "Hibernate for database management",
+        "MySQL database management system"
+      ],
+      "url": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master"
+    },
+    {
+      "name": "Ecomerce PYME",
+      "isActive": true,
+      "description": "E-commerce para mediana empresa con carrito de compras y control de stock.",
+      "highlights": [
+        "Desarrollado con Python y Django",
+        "Base de datos en MySQL"
+      ],
+      "url": "https://github.com/wlizama/ecomerce_py"
+    },
+    {
+      "name": "SUNAT Billing status SOAP-Client",
+      "isActive": true,
+      "description": "Cliente SOAP para consultar el estado de comprobantes electrónicos en la SUNAT",
+      "highlights": [
+        "Desarrollado con Python y Zeep",
+        "Consulta de comprobantes en por consola",
+        "Descarga de comprobantes en PDF y XML"
+      ],
+      "url": "",
+      "github": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client"
+    },
+    {
+      "name": "Web Coast Pacific Group",
+      "isActive": true,
+      "description": "Landing page for a logistics company with a contact form and services.",
+      "highlights": [
+        "Developed with React.js and Bootstrap 4",
+        "Image gallery with Lightbox"
+      ],
+      "url": "https://github.com/wlizama/web-coast-pacific-group"
+    }
+  ]
+}
