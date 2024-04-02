@@ -20,9 +20,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Background />
-		<main>
 			<slot />
-		</main>
 	</body>
 </html>
 <style is:global>
@@ -60,6 +58,11 @@ const { title } = Astro.props;
 	html {
 		scroll-behavior: smooth;
 		scrollbar-gutter: stable;
+		scroll-snap-type: y mandatory;
+	}
+
+	html, body, section {
+		block-size: 100%;
 	}
 
 	body {
@@ -69,12 +72,7 @@ const { title } = Astro.props;
 		height: 100vh; */
 		position: relative;
 	}
-	main {
-		max-width: 800px;
-		overflow-y: auto;
-		margin: 0 auto;
-		height: auto;
-	}
+
 	p {
     text-wrap: pretty;
   }
@@ -108,7 +106,6 @@ const { title } = Astro.props;
 		font-size: 1rem;
 		color: var(--color-gray);
 	}
-
 
 	/* utility classes */
 	.white-text {
