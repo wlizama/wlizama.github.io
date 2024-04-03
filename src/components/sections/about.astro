@@ -5,6 +5,7 @@ import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import MapPin from "@/icons/MapPin.astro"
 import Mail from "@/icons/Mail.astro"
+import ExternalLink from "@/icons/ExternalLink.astro"
 
 type SocialIcon = Record<string, string | any>
 
@@ -59,9 +60,22 @@ const SOCIAL_ICONS: SocialIcon = {
         </ul>
       </span>
     </div>
-    <button>Download CV</button>
+    <button data-cv-url={basics.cv_url}>Download CV <ExternalLink /></button>
   </div>
 </Section>
+
+<script>
+  function openInNewTab(url?: string) {
+    const win = window.open(url, '_blank');
+    win?.focus();
+  }
+  const button = document.querySelector('button');
+
+  if (button) {
+    const data = button.dataset;
+    button?.addEventListener('click', e => openInNewTab(data.cvUrl));
+  }
+</script>
 
 <style>
   .card {
@@ -69,6 +83,7 @@ const SOCIAL_ICONS: SocialIcon = {
     flex-direction: row;
     gap: 1em;
     align-items: center;
+    margin-top: 4em;
   }
 
   figure img {
@@ -123,7 +138,7 @@ const SOCIAL_ICONS: SocialIcon = {
   }
 
   button {
-    padding: .8em 2.8em;
+    padding: .6em 1em;
     border: none;
     border-radius: 0.5em;
     color: var(--color-light);
@@ -134,8 +149,18 @@ const SOCIAL_ICONS: SocialIcon = {
     background-image: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 70%);
     background-size: 400% 400%;
     animation: shrink 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    font-size: 1em;
     &:hover {
       opacity: 0.8;
+    }
+
+    svg {
+      height: 1.4em;
+      width: 1.4em;
     }
   }
     @keyframes shrink {
@@ -154,7 +179,7 @@ const SOCIAL_ICONS: SocialIcon = {
     .card {
       flex-direction: column-reverse;
     }
-    figure img{
+    figure img {
       width: 100px;
       height: 100px;
     }
@@ -168,9 +193,13 @@ const SOCIAL_ICONS: SocialIcon = {
       h4 {
         display: none;
       }
-    }
-    h1, h2, h3 {
-      text-align: center;
+
+      button {
+        width: 80%;
+      }
+      h1, h2, h3 {
+        text-align: center;
+      }
     }
   }
 </style>
