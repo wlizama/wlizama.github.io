@@ -1,7 +1,24 @@
 ---
 import Section from "../Section.astro";
+import { work } from "@cv";
 
 ---
 <Section>
   <h2>Experience 🧑‍💻</h2>
+  <p>Here is a list of my work experience.</p>
+  <ul>
+    {work.map((job) => (
+      <li>
+        <h3>{job.name} at {job.position}</h3>
+        <time datetime="2018-07-07T20:00:00">{job.endDate}</time>
+        { job.highlights && (
+          <ul>
+            {job.highlights.map((highlight) => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
 </Section>
