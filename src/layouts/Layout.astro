@@ -77,9 +77,6 @@ const { title } = Astro.props;
 	h1 {
 		font-size: 2rem;
 		color: var(--color-primary);
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 	}
 	h2 {
 		font-size: 1.5rem;
@@ -91,7 +88,7 @@ const { title } = Astro.props;
 	}
 	h4 {
 		font-size: 1rem;
-		color: var(--color-gray);
+		color: var(--color-green);
 	}
 
 	/* utility classes */
@@ -100,5 +97,11 @@ const { title } = Astro.props;
 	}
 	.mr-1 {
 		margin-right: 1rem;
+	}
+
+	.gradient-image {
+		background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>

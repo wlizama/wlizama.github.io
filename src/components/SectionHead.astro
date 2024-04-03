@@ -1,0 +1,42 @@
+---
+import Briefcase from "@/icons/Briefcase.astro"
+
+type IconType = 'experience' | 'projects'
+
+interface Props {
+  icon: IconType
+  title: string
+}
+
+const { title, icon } = Astro.props;
+
+const IconMap: Record<IconType, any> = {
+  experience: Briefcase,
+  projects: Briefcase,
+}
+
+const Icon = IconMap[icon]
+---
+
+<div >
+  <Icon />
+  <h2 class="gradient-image">{title}</h2>
+</div>
+
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+
+    svg {
+      height: 2em;
+      width: 2em;
+      color: var(--color-primary);
+    }
+
+    h2 {
+      margin-left: .5em;
+    }
+  }
+</style>

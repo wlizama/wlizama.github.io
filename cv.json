@@ -41,6 +41,9 @@
         "Development of new features and maintenance of a Native app with React Native for HVAC technicians.",
         "Maintenance of a PWA for a company dedicated to the cash and bank accounts industry, utilizing APIs to process transactions.",
         "Development of a library of user interface components using atomic design systems with Storybook for visual documentation."
+      ],
+      "skills": [
+        "JavaScript", "React.js", "TypeScript", "React Native", "Redux", "Node.js", "AWS", "Next.js", "Git", "HTML", "CSS", "Tailwind CSS", "Docker", "MySQL", "PostgreSQL", "Storybook"
       ]
     },
     {
@@ -57,6 +60,9 @@
         "Provided support for IIS 6.0 and Ubuntu Server 14.04.",
         "Developed applications for consuming Gmail APIs for automatic registration of electronic documents.",
         "Developed Java services for background execution using threads installed on the server."
+      ],
+      "skills": [
+        "JavaScript", "React.js", "Node.js", "GraphQL", "Java", "Git", "HTML", "CSS", "KendoUI", "SqlServer", "MySQL", "Linux", "Bootstrap", "PHP", "ASP Classic", "Python", "Gmail APIs"
       ]
     },
     {
@@ -69,6 +75,9 @@
         "Full development of a corporation website using React JS.",
         "Proposal and maintenance of web design along with APIs.",
         "Software testing and deployment."
+      ],
+      "skills": [
+        "JavaScript", "React.js", "HTML", "CSS", "Python", "MySQL", "Git."
       ]
     },
     {
@@ -81,6 +90,9 @@
         "Development and maintenance of desktop application accounting systems.",
         "Management of T-SQL structure and tables.",
         "Development of CLI scripts for server automation."
+      ],
+      "skills": [
+        "JavaScript", "React.js", "HTML", "CSS", "SqlServer", "Visual Basic", "Java", "Git"
       ]
     },
     {
@@ -95,6 +107,9 @@
         "Development and maintenance of logistics ERP software, including the landing page.",
         "Maintenance of the travel log system.",
         "Software testing and deployment."
+      ],
+      "skills": [
+        "JavaScript", "React.js", "HTML", "CSS", "MySQL", "PHP", "Git"
       ]
     }
   ],

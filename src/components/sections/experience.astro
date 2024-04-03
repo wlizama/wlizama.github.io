@@ -1,24 +1,138 @@
 ---
-import Section from "../Section.astro";
 import { work } from "@cv";
+import Calendar from "@/icons/Calendar.astro";
+import Section from "../Section.astro";
+import SectionHead from "../SectionHead.astro";
 
+  const formatDate = (date: string | null) => {
+    if (!!date) {
+      const [year, month] = date.split("-");
+      const monthName = new Date(`${year}-${month}-01`).toLocaleString("default", { month: "long" });
+      return `${monthName} ${year}`;
+    }
+    else
+      return "Present";
+};
 ---
 <Section>
-  <h2>Experience 🧑‍💻</h2>
-  <p>Here is a list of my work experience.</p>
-  <ul>
+  <SectionHead icon={'experience'} title="Experience" />
+  <p>Here is a list of my work experience:</p>
+  <ul class="timeline">
     {work.map((job) => (
-      <li>
-        <h3>{job.name} at {job.position}</h3>
-        <time datetime="2018-07-07T20:00:00">{job.endDate}</time>
-        { job.highlights && (
-          <ul>
-            {job.highlights.map((highlight) => (
-              <li>{highlight}</li>
-            ))}
-          </ul>
-        )}
+      <li class="timeline-event">
+        <label class="timeline-event-icon" />
+        <div class="timeline-event-copy">
+          <div class="timeline-event-thumbnail">
+            <Calendar />
+            <span>{formatDate(job.startDate)} - {formatDate(job.endDate)}</span>
+          </div>
+          <h2>{job.position} <span class="separator">at</span> {job.name}</h2>
+          { job.highlights && (
+            <ul class="task-list">
+              {job.highlights.map((highlight) => (
+                <li>{highlight}</li>
+              ))}
+            </ul>
+            <div>
+              <h4>Skills:</h4>
+              <p class="skills">{job.skills.join(", ")}</p>
+            </div>
+          )}
+        </div>
       </li>
     ))}
   </ul>
 </Section>
+
+<style>
+  .timeline {
+    margin: 1em auto;
+    position: relative;
+  }
+  .timeline:before {
+    background-color: var(--color-secondary);
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    width: 2px;
+    height: 100%;
+  }
+
+  .timeline-event {
+    position: relative;
+  }
+  .timeline-event:hover .timeline-event-icon {
+    transform: rotate(-45deg);
+    background-color: var(--color-primary);
+  }
+  .timeline-event:hover .timeline-event-thumbnail {
+    color: var(--color-primary);
+  }
+
+  .timeline-event-copy {
+    padding: 2em 0;
+    position: relative;
+    top: -1.875em;
+    left: 3em;
+    width: 95%;
+
+    .separator {
+      color: var(--color-tertiary);
+    }
+  }
+
+  .timeline-event-icon {
+    transition: transform 0.2s ease-in;
+    transform: rotate(45deg);
+    background-color: var(--color-primary);
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    width: 1em;
+    height: 1em;
+    outline: 2px solid var(--color-secondary);
+  }
+
+  .timeline-event-thumbnail {
+    transition: color 0.5s ease-in 0.1s;
+    color: var(--color-tertiary);
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.5em;
+    align-items: center;
+    margin-bottom: 0.5em;
+
+    svg {
+      height: 1.4em;
+    }
+    span {
+      flex: 1;
+    }
+  }
+
+  .task-list {
+    list-style-type: square;
+    padding-left: 1em;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  .skills {
+    color: var(--color-tertiary);
+    font-style: italic;
+    font-size: .9em;
+  }
+
+  @media (width <= 768px) {
+    .timeline-event-copy {
+      width: 88%;
+    }
+  }
+
+</style>
