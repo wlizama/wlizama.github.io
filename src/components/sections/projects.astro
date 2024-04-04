@@ -1,7 +1,20 @@
 ---
+import { projects } from "@cv";
 import Section from "../Section.astro";
+import SectionHead from "../SectionHead.astro";
 
 ---
 <Section>
-  <h2>Projects 🔨</h2>
+  <SectionHead icon={'projects'} title="Projects" />
+  {projects.map((project, index) => (
+    <div>
+      <h3>{project.name}</h3>
+      <p>{project.description}</p>
+      <ul>
+        {project.highlights.map((highlight, index) => (
+          <li>{highlight}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
 </Section>

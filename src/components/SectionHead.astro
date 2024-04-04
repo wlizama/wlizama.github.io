@@ -1,5 +1,6 @@
 ---
 import Briefcase from "@/icons/Briefcase.astro"
+import Bulb from "@/icons/Bulb.astro";
 
 type IconType = 'experience' | 'projects'
 
@@ -12,7 +13,7 @@ const { title, icon } = Astro.props;
 
 const IconMap: Record<IconType, any> = {
   experience: Briefcase,
-  projects: Briefcase,
+  projects: Bulb,
 }
 
 const Icon = IconMap[icon]
