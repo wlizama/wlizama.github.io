@@ -6,17 +6,33 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const description = 'My portfolio website designed and developed by me.';
+const image = 'https://wlizama.github.io/images/banner.webp';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="theme-color" content="#ff6188" />
+
+		<meta name="author" content="Wilder Lizama" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://wlizama.github.io/" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
 	</head>
 	<body>
 		<Background />
