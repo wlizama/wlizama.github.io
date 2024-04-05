@@ -238,21 +238,17 @@
       "name": "Tournament Organizer",
       "isActive": true,
       "description": "Web application to organize eSports tournaments with brackets and results.",
-      "highlights": [
-        "Developed with Next.js and Tailwind CSS",
-        "Database in PostgreSQL"
-      ],
-      "url": "https://github.com/wlizama/tournament-organizer"
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "APIs", "Docker"],
+      "image": "esports.webp",
+      "url": "https://github.com/wlizama/tournament-organizer",
+      "github": "https://github.com/wlizama/tournament-organizer"
     },
     {
       "name": "Home Business Portal",
       "isActive": true,
       "description": "Web portal for a real estate company with magazine view and search filters.",
-      "highlights": [
-        "Developed with React.js and Material UI",
-        "Database in MySQL",
-        "APIs for data management deployed in AWS"
-      ],
+      "tags": ["React.js", "Node.js", "Bootstrap", "MySQL", "APIs", "Sequelize"],
+      "image": "home-business.webp",
       "url": "http://162.212.130.247/",
       "github": "https://github.com/wlizama/home-business-portal"
     },
@@ -260,45 +256,37 @@
       "name": "Pizza Delight",
       "isActive": true,
       "description": "E-commerce for a pizza restaurant with online ordering and delivery.",
-      "highlights": [
-        "Developed with Java and Spring ORM for the backend",
-        "Spring MVC for the frontend",
-        "Hibernate for database management",
-        "MySQL database management system"
-      ],
-      "url": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master"
+      "tags": ["JavaScript", "Bootstrap", "Java", "MySQL"],
+      "image": "pizzeria.webp",
+      "url": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master",
+      "github": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master"
     },
     {
       "name": "Ecomerce PYME",
       "isActive": true,
       "description": "E-commerce para mediana empresa con carrito de compras y control de stock.",
-      "highlights": [
-        "Desarrollado con Python y Django",
-        "Base de datos en MySQL"
-      ],
-      "url": "https://github.com/wlizama/ecomerce_py"
+      "tags": ["Python", "Django", "JavaScript", "Ajax", "PostgreSQL", "Heroku"],
+      "image": "ecomerce.webp",
+      "url": "https://github.com/wlizama/ecomerce_py",
+      "github": "https://github.com/wlizama/ecomerce_py"
     },
     {
       "name": "SUNAT Billing status SOAP-Client",
       "isActive": true,
       "description": "Cliente SOAP para consultar el estado de comprobantes electrónicos en la SUNAT",
-      "highlights": [
-        "Desarrollado con Python y Zeep",
-        "Consulta de comprobantes en por consola",
-        "Descarga de comprobantes en PDF y XML"
-      ],
-      "url": "",
+      "tags": ["Python", "Flask", "SOAP", "XML", "Web Services"],
+      "image": "sunat-billing-soap.gif",
+      "url": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client",
       "github": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client"
     },
     {
       "name": "Web Coast Pacific Group",
       "isActive": true,
       "description": "Landing page for a logistics company with a contact form and services.",
-      "highlights": [
-        "Developed with React.js and Bootstrap 4",
-        "Image gallery with Lightbox"
-      ],
-      "url": "https://github.com/wlizama/web-coast-pacific-group"
+      "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "GIT"],
+      "image": "coast-pacific-group.webp",
+      "url": "https://github.com/wlizama/web-coast-pacific-group",
+      "github": "https://github.com/wlizama/web-coast-pacific-group"
     }
   ]
 }
