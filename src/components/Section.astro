@@ -1,4 +1,7 @@
-<section>
+---
+const { id } = Astro.props
+---
+<section id={id}>
     <slot />
 </section>
 <style>

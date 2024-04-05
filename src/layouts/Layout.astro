@@ -1,4 +1,5 @@
 ---
+import Header from '@/components/Header.astro';
 import Background from '@/components/Background.astro';
 
 interface Props {
@@ -36,6 +37,7 @@ const image = 'https://wlizama.github.io/images/banner.webp';
 	</head>
 	<body>
 		<Background />
+			<Header />
 			<slot />
 	</body>
 </html>
@@ -74,6 +76,10 @@ const image = 'https://wlizama.github.io/images/banner.webp';
 	html {
 		scroll-behavior: smooth;
 		scrollbar-gutter: stable;
+	}
+
+	body {
+		padding: 3em 0;
 	}
 
 	p {
