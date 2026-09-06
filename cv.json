@@ -1,16 +1,13 @@
 {
   "basics": {
     "name": "Wilder H. Lizama Garcia",
-    "occupation": "Software Developer 🚀",
+    "occupation": "Frontend Engineer | React • React Native • Expo • TypeScript",
     "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
     "email": "wilderlizama@gmail.com",
-    "phone": "+51 999 999 999",
     "url": "wlizama.github.io",
     "cv_url": "https://drive.google.com/file/d/1EddUXqxrIzWKt6qCQ6uOoYhwS-ZzT5Sc/view?usp=drive_link",
-    "summary": "Hi there! I'm a software developer with 8 years of experience in various projects spanning both Backend and Frontend areas across web environments, APIs, desktop, mobile and services.",
+    "summary": "Frontend Engineer with 8+ years of experience building scalable web and mobile applications using React.js, React Native, TypeScript, JavaScript, and Next.js. Experienced working with remote international teams across fintech, ERP systems, nonprofit platforms, and mobile products. Strong expertise in frontend architecture, reusable UI systems, API integrations, PWAs, and cross-platform mobile development. Proven experience modernizing legacy systems, migrating JavaScript applications to TypeScript, and delivering maintainable, production-ready software. Skilled in collaborating with distributed teams in agile environments and focused on performance, scalability, maintainability, and user experience. Remote experience: 5+ years working with distributed international teams.",
     "location": {
-      "address": "my address",
-      "postalCode": "00000",
       "city": "Lima",
       "countryCode": "PE",
       "region": "Perú",
@@ -31,195 +28,186 @@
   },
   "work": [
     {
-      "name": "FTA DevBase LLC",
-      "position": "Front End Engineer ",
+      "name": "Rimac Seguros y Reaseguros",
+      "position": "Frontend Mobile Expert (Hybrid)",
       "url": "",
-      "startDate": "2022-04-01",
+      "startDate": "2024-08-01",
       "endDate": null,
       "summary": "",
       "highlights": [
-        "Code migration from JavaScript to TypeScript and React.js for the portal of a nonprofit grantmaking application web app.",
-        "Development of new features and maintenance of a Native app with React Native for HVAC technicians.",
-        "Maintenance of a PWA for a company dedicated to the cash and bank accounts industry, utilizing APIs to process transactions.",
-        "Development of a library of user interface components using atomic design systems with Storybook for visual documentation."
+        "Developed, published, and maintained Expo-based mobile applications for healthcare and insurance products, ensuring high performance, stability, and reliable release cycles.",
+        "Designed and developed a reusable mobile component library using Tamagui following the Atomic Design methodology, improving UI consistency, scalability, and code reuse across multiple projects.",
+        "Led the migration of mobile applications from Expo to React Native CLI, adapting native configurations, dependencies, and build processes to support advanced native capabilities and long-term maintainability.",
+        "Developed a healthcare mini app and integrated it into the Rimac Seguros Super App, delivering a seamless user experience within the company's mobile ecosystem.",
+        "Managed and maintained cloud infrastructure and services on Google Cloud Platform (GCP), supporting application deployment, monitoring, and operational reliability.",
+        "Leveraged AI-powered development tools to automate repetitive tasks, accelerate feature delivery, improve code quality, and enhance overall team productivity.",
+        "Collaborated with cross-functional teams in an Agile (Scrum) environment, participating in sprint planning, code reviews, technical discussions, and continuous delivery practices."
       ],
       "skills": [
-        "JavaScript", "React.js", "TypeScript", "React Native", "Redux", "Node.js", "AWS", "Next.js", "Git", "HTML", "CSS", "Tailwind CSS", "Docker", "MySQL", "PostgreSQL", "Storybook"
+        "React.js", "React Native", "Expo", "Next.js", "TypeScript", "Google Cloud Platform", "Artificial Intelligence", "Tamagui UI"
+      ]
+    },
+    {
+      "name": "FTA DevBase LLC",
+      "position": "Frontend Engineer (Remote)",
+      "url": "",
+      "startDate": "2022-04-01",
+      "endDate": "2026-06-01",
+      "summary": "",
+      "highlights": [
+        "Migrated a nonprofit grantmaking platform from JavaScript to TypeScript, improving maintainability and type safety across the frontend architecture.",
+        "Developed and maintained React Native features for a production mobile application used by HVAC field technicians.",
+        "Maintained and enhanced a Progressive Web Application (PWA) for a financial platform handling cash and bank account operations through API integrations.",
+        "Built reusable UI component libraries using Storybook and Atomic Design, reducing UI inconsistencies and accelerating frontend development.",
+        "Integrated REST APIs for transaction processing and backend communication.",
+        "Collaborated with distributed engineering teams in remote agile environments."
+      ],
+      "skills": [
+        "React.js", "React Native", "TypeScript", "Redux", "Next.js", "AWS", "Storybook", "Tailwind CSS", "PostgreSQL", "MySQL"
       ]
     },
     {
       "name": "GNT Servicios Generales S.A",
-      "position": "Full Stack developer",
-      "url": "https://twitch.tv/wilderlizama",
+      "position": "Full Stack Developer",
+      "url": "",
       "startDate": "2019-04-01",
       "endDate": "2022-03-01",
       "summary": "",
       "highlights": [
-        "Migrated desktop applications to web applications developed with React.js and KendoUI.",
-        "Developed and maintained ERP software and web intranet using Material UI, Bootstrap, and GraphQL for enhanced efficiency and flexibility in data management.",
-        "Managed T-SQL structure and tables in SQL Server.",
-        "Provided support for IIS 6.0 and Ubuntu Server 14.04.",
-        "Developed applications for consuming Gmail APIs for automatic registration of electronic documents.",
-        "Developed Java services for background execution using threads installed on the server."
+        "Led migration of desktop software into modern web applications using React.js and Kendo UI.",
+        "Developed and maintained ERP systems and enterprise intranet platforms focused on operational efficiency and business workflows.",
+        "Designed and maintained T-SQL database structures and optimized SQL Server operations.",
+        "Developed integrations with Gmail APIs to automate electronic document registration processes.",
+        "Built background Java services for asynchronous server-side execution.",
+        "Provided server support for IIS and Ubuntu Linux environments."
       ],
       "skills": [
-        "JavaScript", "React.js", "Node.js", "GraphQL", "Java", "Git", "HTML", "CSS", "KendoUI", "SqlServer", "MySQL", "Linux", "Bootstrap", "PHP", "ASP Classic", "Python", "Gmail APIs"
+        "React.js", "Node.js", "GraphQL", "SQL Server", "Java", "MySQL", "Kendo UI", "Material UI", "Bootstrap", "Linux"
       ]
     },
     {
-      "name": "Home Business Real Estate",
-      "position": "Front end developer",
+      "name": "Home Business Real Estate Magazine",
+      "position": "Frontend Developer (Remote)",
+      "url": "",
       "startDate": "2018-03-01",
       "endDate": "2019-03-01",
       "summary": "",
       "highlights": [
-        "Full development of a corporation website using React JS.",
-        "Proposal and maintenance of web design along with APIs.",
-        "Software testing and deployment."
+        "Built a corporate web platform using React.js from development to deployment.",
+        "Maintained frontend architecture and collaborated on API integrations.",
+        "Participated in testing, deployment, and continuous maintenance efforts."
       ],
       "skills": [
-        "JavaScript", "React.js", "HTML", "CSS", "Python", "MySQL", "Git."
+        "React.js", "JavaScript", "HTML", "CSS", "Python", "MySQL"
       ]
     },
     {
       "name": "828 Transporte",
-      "position": "Backend developer",
+      "position": "Backend Developer (Remote)",
+      "url": "",
       "startDate": "2017-01-01",
       "endDate": "2018-02-01",
       "summary": "",
       "highlights": [
-        "Development and maintenance of desktop application accounting systems.",
-        "Management of T-SQL structure and tables.",
-        "Development of CLI scripts for server automation."
+        "Developed and maintained accounting desktop applications.",
+        "Managed SQL Server database structures and T-SQL operations.",
+        "Built CLI automation scripts to improve server-side operational workflows."
       ],
       "skills": [
-        "JavaScript", "React.js", "HTML", "CSS", "SqlServer", "Visual Basic", "Java", "Git"
+        "SQL Server", "Java", "Visual Basic", "JavaScript", "Git"
       ]
     },
     {
       "name": "Coast Pacific Group",
-      "position": "Full Stack developer",
-      "startDate": "2015-12-01",
-      "endDate": "2017-10-01",
+      "position": "Full Stack Developer (Remote)",
+      "url": "",
+      "startDate": "2015-10-01",
+      "endDate": "2017-12-01",
       "summary": "",
       "highlights": [
-        "Development and maintenance of landing pages, as well as full JS website.",
-        "Software testing and deployment.",
-        "Development and maintenance of logistics ERP software, including the landing page.",
-        "Maintenance of the travel log system.",
-        "Software testing and deployment."
+        "Developed and maintained landing pages and JavaScript-based web platforms.",
+        "Participated in development and maintenance of logistics ERP systems.",
+        "Maintained internal operational systems and travel log applications.",
+        "Conducted testing, deployment, and production support."
       ],
       "skills": [
-        "JavaScript", "React.js", "HTML", "CSS", "MySQL", "PHP", "Git"
+        "JavaScript", "React.js", "PHP", "MySQL", "Git"
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "",
-    "position": "",
-    "url": "",
-    "startDate": "1999-01-01",
-    "endDate": "1999-01-01",
-    "summary": "Description…",
-    "highlights": []
-  }],
-  "education": [{
-    "institution": "Universidad Tecnológica del Perú",
-    "url": "",
-    "area": "Systems and computer Engineering",
-    "studyType": "Bachelor’s degree",
-    "startDate": "2019-03-01",
-    "endDate": "2022-12-30"
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "1999-12-01",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "1999-12-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
+  "education": [
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "",
+      "area": "Systems and Computer Engineering",
+      "studyType": "Professional Engineering Degree",
+      "startDate": null,
+      "endDate": "2023"
+    },
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "",
+      "area": "Systems and Computer Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2019",
+      "endDate": "2022"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microservices Architecture with Patterns & Principles",
+      "date": "2022",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
+      "name": "ReactJS, Redux + ES6",
+      "date": "2019",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
+      "name": "Backend Development with Python & Django",
+      "date": "",
+      "issuer": "Platzi",
+      "url": ""
+    },
+    {
+      "name": "Linux Server Administration",
+      "date": "",
+      "issuer": "Platzi",
+      "url": ""
+    },
+    {
+      "name": "Native App Development with Flutter",
+      "date": "",
+      "issuer": "Udemy",
+      "url": ""
+    }
+  ],
   "skills": [
     {
-      "name": "HTML",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
+      "category": "Frontend Development",
+      "items": [
+        "React.js", "React Native", "Expo", "Next.js", "JavaScript (ES6+)", "TypeScript", "Redux", "HTML5", "CSS3", "Tamagui", "Tailwind CSS", "Material UI", "Bootstrap", "Kendo UI", "Storybook", "Atomic Design"
       ]
     },
     {
-      "name": "CSS",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      "category": "Backend & APIs",
+      "items": [
+        "Node.js", "REST APIs", "GraphQL", "Java", "PHP", "Python"
       ]
     },
     {
-      "name": "JavaScript",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      "category": "Cloud, DevOps & Tools",
+      "items": [
+        "AWS", "Google Cloud Platform", "Docker", "Git", "Linux", "CI/CD", "Agile", "Scrum"
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      "category": "Databases",
+      "items": [
+        "PostgreSQL", "MySQL", "SQL Server", "T-SQL"
       ]
     }
   ],
@@ -264,7 +252,7 @@
     {
       "name": "Ecomerce PYME",
       "isActive": true,
-      "description": "E-commerce para mediana empresa con carrito de compras y control de stock.",
+      "description": "E-commerce for a mid-sized business with shopping cart and stock control.",
       "tags": ["Python", "Django", "JavaScript", "Ajax", "PostgreSQL", "Heroku"],
       "image": "ecomerce.webp",
       "url": "https://github.com/wlizama/ecomerce_py",
@@ -273,7 +261,7 @@
     {
       "name": "SUNAT Billing status SOAP-Client",
       "isActive": true,
-      "description": "Cliente SOAP para consultar el estado de comprobantes electrónicos en la SUNAT",
+      "description": "SOAP client to check the status of electronic invoices with SUNAT (Peru's tax authority).",
       "tags": ["Python", "Flask", "SOAP", "XML", "Web Services"],
       "image": "sunat-billing-soap.gif",
       "url": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client",
