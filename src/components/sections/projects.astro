@@ -13,7 +13,7 @@ import GitHubOutline from "@/icons/GitHubOutline.astro";
   {projects.map((project) => (
     <div class="card">
       <figure>
-        <img src={`/images/${project.image}`} alt={project.name} />
+        <img src={`/images/${project.image}`} alt={project.name} loading="lazy" decoding="async" />
       </figure>
       <div class="card-body">
         <h2>{project.name}</h2>

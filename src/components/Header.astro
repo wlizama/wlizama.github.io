@@ -22,7 +22,7 @@ const menuItems = [
     <figure class="gradient-image">
       <Logo />
     </figure>
-    <nav>
+    <nav aria-label="Primary">
       <ul>
         {menuItems.map((item) => (
           <li>
@@ -81,17 +81,6 @@ const menuItems = [
   nav ul li a:hover {
     color: var(--color-primary);
     text-decoration: underline;
-  }
-
-  .menu-icon, .close-icon {
-    display: none;
-    height: 50px;
-    width: 50px;
-    margin-bottom: 2em;
-    color: var(--color-primary);
-    margin-top: 2em;
-    margin-bottom: 4em;
-    align-self: flex-end;
   }
 
   @media (max-width: 768px) {
