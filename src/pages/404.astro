@@ -6,9 +6,9 @@ import Section from '@/components/Section.astro';
 <Layout title="Page Not Found | Wilder Lizama">
 	<Section id="not-found">
 		<div class="not-found">
-			<h1 class="gradient-image">404</h1>
+			<h1>404</h1>
 			<h2>Page not found</h2>
-			<p class="white-text">The page you're looking for doesn't exist or was moved.</p>
+			<p>The page you're looking for doesn't exist or was moved.</p>
 			<a href="/">Back to home</a>
 		</div>
 	</Section>
@@ -18,6 +18,10 @@ import Section from '@/components/Section.astro';
 	.not-found {
 		text-align: center;
 		margin-top: 6em;
+	}
+
+	.not-found h1 {
+		color: var(--color-accent);
 	}
 
 	p {

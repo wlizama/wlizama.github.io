@@ -19,7 +19,7 @@ const menuItems = [
 
 <header>
   <div class="container">
-    <figure class="gradient-image">
+    <figure>
       <Logo />
     </figure>
     <nav aria-label="Primary">
@@ -34,9 +34,26 @@ const menuItems = [
   </div>
 </header>
 
+<script>
+  const header = document.querySelector("header");
+
+  if (header) {
+    const setHeaderHeight = () => {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${header.offsetHeight}px`
+      );
+    };
+
+    setHeaderHeight();
+    new ResizeObserver(setHeaderHeight).observe(header);
+  }
+</script>
+
 <style>
   header {
     width: 100%;
+    background: rgba(var(--color-bg-rgb), 0.72);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
@@ -48,7 +65,7 @@ const menuItems = [
   }
 
   figure {
-    color: var(--color-primary);
+    color: var(--color-accent);
     width: 50px;
     height: 50px;
   }
@@ -71,15 +88,16 @@ const menuItems = [
   }
 
   nav ul li a {
-    color: var(--color-light);
+    color: var(--color-text);
     padding: 1.2em 1em;
     text-decoration: none;
     display: block;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
   }
 
-  nav ul li a:hover {
-    color: var(--color-primary);
+  nav ul li a:hover,
+  nav ul li a:focus-visible {
+    color: var(--color-accent);
     text-decoration: underline;
   }
 

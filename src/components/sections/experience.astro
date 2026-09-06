@@ -50,7 +50,7 @@ import SectionHead from "../SectionHead.astro";
     position: relative;
   }
   .timeline:before {
-    background-color: var(--color-secondary);
+    background-color: var(--color-muted);
     content: '';
     margin-left: -1px;
     position: absolute;
@@ -65,10 +65,9 @@ import SectionHead from "../SectionHead.astro";
   }
   .timeline-event:hover .timeline-event-icon {
     transform: rotate(-45deg);
-    background-color: var(--color-primary);
   }
   .timeline-event:hover .timeline-event-thumbnail {
-    color: var(--color-primary);
+    color: var(--color-accent-3);
   }
 
   .timeline-event-copy {
@@ -79,14 +78,14 @@ import SectionHead from "../SectionHead.astro";
     width: 95%;
 
     .separator {
-      color: var(--color-tertiary);
+      color: var(--color-muted);
     }
   }
 
   .timeline-event-icon {
     transition: transform 0.2s ease-in;
     transform: rotate(45deg);
-    background-color: var(--color-primary);
+    background-color: var(--color-accent-3);
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
     position: absolute;
@@ -94,12 +93,12 @@ import SectionHead from "../SectionHead.astro";
     left: 1em;
     width: 1em;
     height: 1em;
-    outline: 2px solid var(--color-secondary);
+    outline: 2px solid var(--color-bg);
   }
 
   .timeline-event-thumbnail {
-    transition: color 0.5s ease-in 0.1s;
-    color: var(--color-tertiary);
+    transition: color 0.2s ease;
+    color: var(--color-muted);
     font-weight: 700;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -124,7 +123,7 @@ import SectionHead from "../SectionHead.astro";
     }
   }
   .skills {
-    color: var(--color-tertiary);
+    color: var(--color-muted);
     font-style: italic;
     font-size: .9em;
   }
