@@ -19,9 +19,9 @@ const IconMap: Record<IconType, any> = {
 const Icon = IconMap[icon]
 ---
 
-<div >
+<div>
   <Icon />
-  <h2 class="gradient-image">{title}</h2>
+  <h2>{title}</h2>
 </div>
 
 <style>
@@ -33,7 +33,7 @@ const Icon = IconMap[icon]
     svg {
       height: 2em;
       width: 2em;
-      color: var(--color-primary);
+      color: var(--color-accent-2);
     }
 
     h2 {

@@ -47,24 +47,28 @@ import GitHubOutline from "@/icons/GitHubOutline.astro";
   }
   .tag {
     display: inline-block;
-    padding: .25em .5em;
-    margin: .25em;
-    border-radius: .5em;
+    padding: .25em .6em;
+    margin: .25em .25em .25em 0;
+    border-radius: 1em;
     font-size: .75em;
-    background-color: var(--color-green);
-    color: var(--color-light);
+    background-color: var(--color-accent-3-soft);
+    color: var(--color-accent-3);
+    border: 1px solid var(--color-accent-3-soft-border);
   }
 
   .card {
     margin: 1rem 0;
-    border: 1px solid var(--color-blue);
-    transition: box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: .75em;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
 
     &:hover {
-      box-shadow: 0 0 10px 0 var(--color-primary), 0 0 10px 0 var(--color-secondary);
-      border-radius: .5em;
+      transform: translateY(-4px);
+      border-color: var(--color-accent-3-soft-border);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
     }
 
     .card-body {
@@ -82,6 +86,7 @@ import GitHubOutline from "@/icons/GitHubOutline.astro";
       padding: 0 1em 1em;
       
       a {
+        color: var(--color-muted);
         border-radius: 50%;
         width: 2.5em;
         height: 2.5em;
@@ -89,9 +94,11 @@ import GitHubOutline from "@/icons/GitHubOutline.astro";
         justify-content: center;
         align-items: center;
         text-align: center;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        &:hover {
-          background-color: var(--color-primary);
+        transition: background-color 0.2s ease, color 0.2s ease;
+        &:hover,
+        &:focus-visible {
+          background-color: var(--color-accent);
+          color: var(--color-bg);
         }
       }
 

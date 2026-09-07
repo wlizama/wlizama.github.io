@@ -1,14 +1,32 @@
 ---
 import '@fontsource-variable/roboto-mono';
 import Header from '@/components/Header.astro';
-import Background from '@/components/Background.astro';
 import { basics } from '@cv';
+
+export type Theme = 'midnight' | 'monokai' | 'one-dark-pro' | 'material-dark' | 'dracula' | 'nord' | 'solarized';
+
+// The whole site's color theme is driven by this single value — no UI needed.
+// Change it (or pass a `theme` prop to <Layout>) to re-skin every page at once.
+const DEFAULT_THEME: Theme = 'midnight';
 
 interface Props {
 	title: string;
+	theme?: Theme;
 }
 
-const { title } = Astro.props;
+const { title, theme = DEFAULT_THEME } = Astro.props;
+
+// Kept in sync with the --color-accent value of each theme below, since a
+// <meta> tag can't read CSS custom properties.
+const THEME_ACCENT: Record<Theme, string> = {
+	midnight: '#ff6188',
+	monokai: '#ff6b9d',
+	'one-dark-pro': '#61afef',
+	'material-dark': '#c792ea',
+	dracula: '#bd93f9',
+	nord: '#88c0d0',
+	solarized: '#b58900',
+};
 
 const description = 'My portfolio website designed and developed by me.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -32,7 +50,7 @@ const personLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme={theme}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -41,7 +59,7 @@ const personLd = {
 		<link rel="canonical" href={canonicalURL} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta name="theme-color" content="#ff6188" />
+		<meta name="theme-color" content={THEME_ACCENT[theme]} />
 
 		<meta name="author" content={basics.name} />
 		<meta property="og:type" content="website" />
@@ -59,25 +77,130 @@ const personLd = {
 	</head>
 	<body>
 		<a href="#about" class="skip-link">Skip to content</a>
-		<Background />
-			<Header />
-			<slot />
+		<Header />
+		<slot />
 	</body>
 </html>
 <style is:global>
 	/* Supports weights 100-700 */
 	:root {
-		color-scheme: dark light;
+		color-scheme: dark;
 
-		--color-primary: #ff6188;
-		--color-secondary: #9cc4e4;
-		--color-tertiary: #bdc5cb;
-		--color-accent: #ffd866;
-		--color-dark: #0f172a;
-		--color-light: #fcfcfa;
-		--color-gray: #6c6f7e;
-		--color-blue: #1f3c88;
-		--color-green: #00b159;
+		--header-height: 80px;
+
+		/* Neutral, theme-agnostic border tint — a translucent white reads fine
+		   over every dark palette below, so it isn't overridden per theme. */
+		--color-border: rgba(255, 255, 255, 0.12);
+
+		/*
+		 * Each theme below defines the same 9 roles, editor-theme style:
+		 *   bg / surface           — page background and card surfaces
+		 *   heading / text / muted — text emphasis scale (grayscale-ish)
+		 *   accent                 — primary: links, nav, logo, the CTA button
+		 *   accent-2               — secondary: headings/titles (h2 everywhere)
+		 *   accent-3               — tertiary: tags, timeline markers/dates
+		 * Three genuinely different hues per theme is what makes it read as a
+		 * real color scheme instead of "one color + gray".
+		 */
+
+		/* midnight (default) */
+		--color-bg: #0f172a;
+		--color-bg-rgb: 15, 23, 42;
+		--color-surface: #141d33;
+		--color-heading: #f8fafc;
+		--color-text: #cbd5e1;
+		--color-muted: #8b94a8;
+		--color-accent: #ff6188;
+		--color-accent-rgb: 255, 97, 136;
+		--color-accent-2: #ffd866;
+		--color-accent-3: #9cc4e4;
+		--color-accent-3-rgb: 156, 196, 228;
+		--color-accent-3-soft: rgba(var(--color-accent-3-rgb), 0.12);
+		--color-accent-3-soft-border: rgba(var(--color-accent-3-rgb), 0.35);
+	}
+
+	:root[data-theme='monokai'] {
+		--color-bg: #272822;
+		--color-bg-rgb: 39, 40, 34;
+		--color-surface: #34352d;
+		--color-heading: #f8f8f2;
+		--color-text: #cfcfc2;
+		--color-muted: #948e7f;
+		--color-accent: #ff6b9d;
+		--color-accent-rgb: 255, 107, 157;
+		--color-accent-2: #66d9ef;
+		--color-accent-3: #e6db74;
+		--color-accent-3-rgb: 230, 219, 116;
+	}
+
+	:root[data-theme='one-dark-pro'] {
+		--color-bg: #282c34;
+		--color-bg-rgb: 40, 44, 52;
+		--color-surface: #2f333d;
+		--color-heading: #d7dae0;
+		--color-text: #abb2bf;
+		--color-muted: #949cae;
+		--color-accent: #61afef;
+		--color-accent-rgb: 97, 175, 239;
+		--color-accent-2: #c678dd;
+		--color-accent-3: #98c379;
+		--color-accent-3-rgb: 152, 195, 121;
+	}
+
+	:root[data-theme='material-dark'] {
+		--color-bg: #263238;
+		--color-bg-rgb: 38, 50, 56;
+		--color-surface: #2e3c43;
+		--color-heading: #eeffff;
+		--color-text: #b0bec5;
+		--color-muted: #8aa2ab;
+		--color-accent: #c792ea;
+		--color-accent-rgb: 199, 146, 234;
+		--color-accent-2: #89ddff;
+		--color-accent-3: #f78c6c;
+		--color-accent-3-rgb: 247, 140, 108;
+	}
+
+	:root[data-theme='dracula'] {
+		--color-bg: #282a36;
+		--color-bg-rgb: 40, 42, 54;
+		--color-surface: #343746;
+		--color-heading: #f8f8f2;
+		--color-text: #e2e2dc;
+		--color-muted: #9aa1c4;
+		--color-accent: #bd93f9;
+		--color-accent-rgb: 189, 147, 249;
+		--color-accent-2: #ff79c6;
+		--color-accent-3: #50fa7b;
+		--color-accent-3-rgb: 80, 250, 123;
+	}
+
+	:root[data-theme='nord'] {
+		--color-bg: #2e3440;
+		--color-bg-rgb: 46, 52, 64;
+		--color-surface: #3b4252;
+		--color-heading: #eceff4;
+		--color-text: #d8dee9;
+		--color-muted: #9aa5b1;
+		--color-accent: #88c0d0;
+		--color-accent-rgb: 136, 192, 208;
+		--color-accent-2: #c5a5c0;
+		--color-accent-3: #ebcb8b;
+		--color-accent-3-rgb: 235, 203, 139;
+	}
+
+	:root[data-theme='solarized'] {
+		--color-bg: #002b36;
+		--color-bg-rgb: 0, 43, 54;
+		--color-surface: #073642;
+		--color-heading: #eee8d5;
+		--color-text: #93a1a1;
+		--color-muted: #7c9598;
+		--color-accent: #b58900;
+		--color-accent-rgb: 181, 137, 0;
+		--color-accent-2: #54a8e3;
+		--color-accent-3: #ea7ab4;
+		--color-accent-3-rgb: 234, 122, 180;
 	}
 
 	*, *::before, *::after {
@@ -93,19 +216,27 @@ const personLd = {
 	html {
 		scroll-behavior: smooth;
 		scrollbar-gutter: stable;
+		scroll-padding-top: var(--header-height);
 	}
 
 	body {
 		padding: 3em 0;
+		min-height: 100vh;
+		background: radial-gradient(circle at 15% -10%, var(--color-surface) 0%, var(--color-bg) 60%);
 	}
 
 	p {
     text-wrap: pretty;
+    color: var(--color-text);
   }
 
 	a {
+    text-decoration: none;
+		color: var(--color-accent);
+  }
+  a:hover,
+  a:focus-visible {
     text-decoration: underline;
-		color: var(--color-light);
   }
 
   ul {
@@ -115,33 +246,24 @@ const personLd = {
   }
 	h1 {
 		font-size: 2rem;
-		color: var(--color-primary);
+		color: var(--color-heading);
 	}
 	h2 {
 		font-size: 1.5rem;
-		color: var(--color-accent);
+		color: var(--color-accent-2);
 	}
 	h3 {
 		font-size: 1.25rem;
-		color: var(--color-tertiary);
+		color: var(--color-heading);
 	}
 	h4 {
 		font-size: 1rem;
-		color: var(--color-green);
+		color: var(--color-muted);
 	}
 
 	/* utility classes */
-	.white-text {
-		color: var(--color-light);
-	}
 	.mr-1 {
 		margin-right: 1rem;
-	}
-
-	.gradient-image {
-		background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 
 	.skip-link {
@@ -150,8 +272,9 @@ const personLd = {
 		left: 0;
 		z-index: 2000;
 		padding: 0.75em 1em;
-		background: var(--color-dark);
-		color: var(--color-light);
+		border-radius: 0 0 0.5em 0;
+		background: var(--color-surface);
+		color: var(--color-heading);
 		text-decoration: none;
 		transition: top 0.2s ease;
 	}
