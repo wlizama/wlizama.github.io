@@ -21,7 +21,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 | Nav EN | Estilo terminal: `./experience`, `./projects`, `./stack`, `./contact` |
 | Fuentes | Self-host con `@fontsource` (reemplaza Roboto Mono) |
 | CV PDF | Un `cv_url` por idioma |
-| Plan / PRs | `PLAN.md` en la raíz; un PR por fase, cada rama sale de `master` tras mergear la anterior |
+| Plan / PRs | `PLAN.md` en la raíz; rama de integración `redesign-main` (desde `master`). Cada fase sale de `redesign-main` y abre su PR contra ella; al terminar el diseño completo, un PR de `redesign-main` a `master` |
 
 ## Pendientes de Wilder
 
