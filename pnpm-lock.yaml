@@ -11,9 +11,12 @@ dependencies:
   '@astrojs/sitemap':
     specifier: ^3.1.4
     version: 3.1.4
-  '@fontsource-variable/roboto-mono':
-    specifier: ^5.0.18
-    version: 5.0.18
+  '@fontsource-variable/jetbrains-mono':
+    specifier: ^5.3.0
+    version: 5.3.0
+  '@fontsource/ibm-plex-sans':
+    specifier: ^5.3.0
+    version: 5.3.0
   astro:
     specifier: ^4.5.10
     version: 4.5.10(typescript@5.4.3)
@@ -812,8 +815,12 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/roboto-mono@5.0.18:
-    resolution: {integrity: sha512-AIqr9HYQDqiJjGcs/fHedGc0ZGfEGdixm87O9viAQ4PXfiLEelpCnE2jlviJaYcGi3UHxe9+Nn3SalcHhKFSjw==}
+  /@fontsource-variable/jetbrains-mono@5.3.0:
+    resolution: {integrity: sha512-F32xpS2NsGYoQi2ADSkKTgpJj7ozajsGgDJ8woTnqjmIB+dxDIqImjl4pXZVEExu8UFZ2ndhmX18EBS/hdz3Lw==}
+    dev: false
+
+  /@fontsource/ibm-plex-sans@5.3.0:
+    resolution: {integrity: sha512-CbE4CbbEEZJX860XyUiRpsksXIQR8Rp2XDva2VO53NJox9tVNtusrysd2x5YkUEY3ErQ66W1IiiQL8/wihhw5w==}
     dev: false
 
   /@img/sharp-darwin-arm64@0.33.5:
