@@ -1,19 +1,17 @@
 ---
+import Container from './Container.astro';
+
 const { id } = Astro.props
 ---
-<section id={id}>
+<Container as="section" id={id} class="section">
     <slot />
-</section>
+</Container>
 <style>
-  section {
+  .section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
+    padding-block: 1em;
     margin-top: 2em;
-
-    /* border: 1px solid red; */
   }
 </style>
