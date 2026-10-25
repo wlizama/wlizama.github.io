@@ -1,0 +1,20 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '@/layouts/Layout.astro';
+import About from '@/components/sections/about.astro';
+import Experience from '@/components/sections/experience.astro';
+import Projects from '@/components/sections/projects.astro';
+import { languages, useTranslations, type Lang } from '@/i18n/ui';
+
+export const getStaticPaths = (() =>
+	(Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }))) satisfies GetStaticPaths;
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+---
+
+<Layout title={t('meta.title')} lang={lang}>
+	<About lang={lang} />
+	<Experience lang={lang} />
+	<Projects lang={lang} />
+</Layout>

@@ -1,14 +1,22 @@
 ---
-import { projects } from "@cv";
 import Section from "../Section.astro";
 import SectionHead from "../SectionHead.astro";
 import Link from "@/icons/Link.astro"
 import GitHubOutline from "@/icons/GitHubOutline.astro";
+import { getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { projects } = getCV(lang);
 
 ---
-<Section id="projects">
-  <SectionHead icon={'projects'} title="Projects" />
-  <p>Here are some of the projects I've worked on.</p>
+<Section id={sectionIds[lang].projects}>
+  <SectionHead icon={'projects'} title={t("section.projects")} />
+  <p>{t("projects.intro")}</p>
   <div class="grid">
   {projects.map((project) => (
     <div class="card">

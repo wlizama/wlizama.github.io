@@ -25,7 +25,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Pendientes de Wilder
 
-- [ ] Enlace del PDF del CV en español (para `cv_url` en `cv.es.json`)
+- [ ] Enlace del PDF del CV en español (por ahora `cv.es.json` usa el mismo `cv_url` que el inglés)
 - [ ] Revisar la traducción de `cv.es.json`
 
 ## Fase 1 — Fundamentos
@@ -39,16 +39,18 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Fase 2 — Datos e i18n
 
-- [ ] `cv.json`: añadir `basics.headline`, `basics.tagline`, `work[].summary`; `isActive: false` en los 2 proyectos ocultos
-- [ ] `cv.es.json` con la misma estructura, traducido
-- [ ] `validate-cv.mjs` valida ambos archivos y que tengan las mismas claves
-- [ ] Alias `@cv-es` en `tsconfig.json` (o loader `getCV(lang)`)
-- [ ] Diccionario de textos de UI (`src/i18n/ui.ts`): nav, CTAs, títulos de sección, "Ver {n} roles anteriores", etc.
-- [ ] Rutas `src/pages/en/index.astro` y `src/pages/es/index.astro` (config `i18n` de Astro)
-- [ ] `src/pages/index.astro`: redirect por `navigator.language` con fallback a `/en/`; `<noscript>` con enlaces a ambos idiomas
-- [ ] `<html lang>`, `hreflang` alternates, canonical y meta description por idioma
-- [ ] Formato de fechas por idioma (`ago 2024 — actualidad` / `Aug 2024 — Present`)
-- [ ] `pnpm build` pasa
+- [x] `cv.json`: añadir `basics.headline`, `basics.tagline`, `work[].summary`; `isActive: false` en los 2 proyectos ocultos
+- [x] `cv.es.json` con la misma estructura, traducido
+- [x] `validate-cv.mjs` valida ambos archivos y que tengan las mismas claves
+- [x] Alias `@cv-es` en `tsconfig.json` + loader `getCV(lang)` en `src/i18n/ui.ts`
+- [x] Diccionario de textos de UI (`src/i18n/ui.ts`): nav, CTAs, títulos de sección, "Ver {n} roles anteriores", etc.
+- [x] Rutas `/en/` y `/es/` con `src/pages/[lang]/index.astro` (config `i18n` de Astro, `prefixDefaultLocale`)
+- [x] `src/pages/index.astro`: redirect por el idioma principal (`navigator.language`) con fallback a `/en/`; `<noscript>` con enlaces a ambos idiomas; fuera del sitemap y `noindex`
+- [x] `<html lang>`, `hreflang` alternates, canonical y meta description por idioma
+- [x] Formato de fechas por idioma (`ago 2024 — actualidad` / `Aug 2024 — Present`)
+- [x] Anclas de sección por idioma (`#experiencia`, `#proyectos`, `#contacto` en ES)
+- [x] Página 404 con textos del diccionario (en inglés: GitHub Pages sirve un único `404.html`)
+- [x] `pnpm build` pasa
 
 ## Fase 3 — Estructura
 

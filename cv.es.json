@@ -1,0 +1,389 @@
+{
+  "basics": {
+    "name": "Wilder H. Lizama Garcia",
+    "occupation": "Frontend Engineer | React • React Native • Expo • TypeScript",
+    "headline": "Frontend Engineer que construye apps web y móviles escalables con React, React Native y TypeScript.",
+    "tagline": "Arquitectura frontend, sistemas de UI reutilizables y migraciones de sistemas legacy, trabajando con equipos remotos internacionales en fintech, ERP, salud y plataformas sin fines de lucro.",
+    "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
+    "email": "wilderlizama@gmail.com",
+    "url": "wlizama.github.io",
+    "cv_url": "https://drive.google.com/file/d/1EddUXqxrIzWKt6qCQ6uOoYhwS-ZzT5Sc/view?usp=drive_link",
+    "summary": "Frontend Engineer con más de 8 años de experiencia construyendo aplicaciones web y móviles escalables con React.js, React Native, TypeScript, JavaScript y Next.js. Experiencia trabajando con equipos remotos internacionales en fintech, sistemas ERP, plataformas sin fines de lucro y productos móviles. Sólida experiencia en arquitectura frontend, sistemas de UI reutilizables, integraciones de APIs, PWAs y desarrollo móvil multiplataforma. Experiencia comprobada modernizando sistemas legacy, migrando aplicaciones de JavaScript a TypeScript y entregando software mantenible y listo para producción. Habilidad para colaborar con equipos distribuidos en entornos ágiles, con foco en rendimiento, escalabilidad, mantenibilidad y experiencia de usuario. Experiencia remota: más de 5 años trabajando con equipos internacionales distribuidos.",
+    "location": {
+      "city": "Lima",
+      "countryCode": "PE",
+      "region": "Perú",
+      "timezone": "GMT-5"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "wilderlizama",
+        "url": "https://linkedin.com/in/wilderlizama"
+      },
+      {
+        "network": "GitHub",
+        "username": "wlizama",
+        "url": "https://github.com/wlizama"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Rimac Seguros y Reaseguros",
+      "position": "Frontend Mobile Expert (Híbrido)",
+      "url": "",
+      "startDate": "2024-08-01",
+      "endDate": null,
+      "summary": "Apps móviles con Expo para seguros y salud, una librería de componentes con Tamagui y Atomic Design, y la migración de Expo a React Native CLI.",
+      "highlights": [
+        "Desarrollé, publiqué y mantuve aplicaciones móviles con Expo para productos de salud y seguros, asegurando alto rendimiento, estabilidad y ciclos de release confiables.",
+        "Diseñé y desarrollé una librería de componentes móviles reutilizables con Tamagui siguiendo la metodología Atomic Design, mejorando la consistencia de la UI, la escalabilidad y la reutilización de código en varios proyectos.",
+        "Lideré la migración de aplicaciones móviles de Expo a React Native CLI, adaptando configuraciones nativas, dependencias y procesos de build para soportar capacidades nativas avanzadas y la mantenibilidad a largo plazo.",
+        "Desarrollé una mini app de salud y la integré en la Super App de Rimac Seguros, ofreciendo una experiencia de usuario fluida dentro del ecosistema móvil de la empresa.",
+        "Gestioné y mantuve infraestructura y servicios en Google Cloud Platform (GCP), dando soporte al despliegue, monitoreo y confiabilidad operativa de las aplicaciones.",
+        "Utilicé herramientas de desarrollo con IA para automatizar tareas repetitivas, acelerar la entrega de funcionalidades, mejorar la calidad del código y la productividad del equipo.",
+        "Colaboré con equipos multidisciplinarios en un entorno ágil (Scrum), participando en sprint plannings, code reviews, discusiones técnicas y prácticas de entrega continua."
+      ],
+      "skills": [
+        "React.js",
+        "React Native",
+        "Expo",
+        "Next.js",
+        "TypeScript",
+        "Google Cloud Platform",
+        "Artificial Intelligence",
+        "Tamagui UI"
+      ]
+    },
+    {
+      "name": "FTA DevBase LLC",
+      "position": "Frontend Engineer (Remoto)",
+      "url": "",
+      "startDate": "2022-04-01",
+      "endDate": "2026-06-01",
+      "summary": "Migración de una plataforma de subvenciones de JavaScript a TypeScript, una PWA financiera y librerías de UI con Storybook.",
+      "highlights": [
+        "Migré una plataforma de subvenciones para organizaciones sin fines de lucro de JavaScript a TypeScript, mejorando la mantenibilidad y la seguridad de tipos en toda la arquitectura frontend.",
+        "Desarrollé y mantuve funcionalidades en React Native para una aplicación móvil en producción usada por técnicos de campo de HVAC.",
+        "Mantuve y mejoré una Progressive Web Application (PWA) para una plataforma financiera que gestiona operaciones de caja y cuentas bancarias mediante integraciones con APIs.",
+        "Construí librerías de componentes de UI reutilizables con Storybook y Atomic Design, reduciendo inconsistencias de UI y acelerando el desarrollo frontend.",
+        "Integré APIs REST para el procesamiento de transacciones y la comunicación con el backend.",
+        "Colaboré con equipos de ingeniería distribuidos en entornos ágiles remotos."
+      ],
+      "skills": [
+        "React.js",
+        "React Native",
+        "TypeScript",
+        "Redux",
+        "Next.js",
+        "AWS",
+        "Storybook",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "GNT Servicios Generales S.A",
+      "position": "Full Stack Developer",
+      "url": "",
+      "startDate": "2019-04-01",
+      "endDate": "2022-03-01",
+      "summary": "Migración de software de escritorio a aplicaciones web con React y Kendo UI; sistemas ERP e intranets corporativas.",
+      "highlights": [
+        "Lideré la migración de software de escritorio a aplicaciones web modernas con React.js y Kendo UI.",
+        "Desarrollé y mantuve sistemas ERP e intranets corporativas enfocadas en la eficiencia operativa y los flujos de negocio.",
+        "Diseñé y mantuve estructuras de base de datos en T-SQL y optimicé operaciones en SQL Server.",
+        "Desarrollé integraciones con las APIs de Gmail para automatizar el registro de documentos electrónicos.",
+        "Construí servicios en segundo plano con Java para la ejecución asíncrona en el servidor.",
+        "Brindé soporte de servidores en entornos IIS y Ubuntu Linux."
+      ],
+      "skills": [
+        "React.js",
+        "Node.js",
+        "GraphQL",
+        "SQL Server",
+        "Java",
+        "MySQL",
+        "Kendo UI",
+        "Material UI",
+        "Bootstrap",
+        "Linux"
+      ]
+    },
+    {
+      "name": "Home Business Real Estate Magazine",
+      "position": "Frontend Developer (Remoto)",
+      "url": "",
+      "startDate": "2018-03-01",
+      "endDate": "2019-03-01",
+      "summary": "Plataforma web corporativa con React, desde el desarrollo hasta el despliegue, con integraciones de APIs.",
+      "highlights": [
+        "Construí una plataforma web corporativa con React.js, desde el desarrollo hasta el despliegue.",
+        "Mantuve la arquitectura frontend y colaboré en integraciones de APIs.",
+        "Participé en tareas de testing, despliegue y mantenimiento continuo."
+      ],
+      "skills": [
+        "React.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "828 Transporte",
+      "position": "Backend Developer (Remoto)",
+      "url": "",
+      "startDate": "2017-01-01",
+      "endDate": "2018-02-01",
+      "summary": "Aplicaciones de escritorio contables, bases de datos en SQL Server y scripts de automatización CLI.",
+      "highlights": [
+        "Desarrollé y mantuve aplicaciones de escritorio contables.",
+        "Gestioné estructuras de base de datos en SQL Server y operaciones en T-SQL.",
+        "Construí scripts de automatización CLI para mejorar los flujos operativos del servidor."
+      ],
+      "skills": [
+        "SQL Server",
+        "Java",
+        "Visual Basic",
+        "JavaScript",
+        "Git"
+      ]
+    },
+    {
+      "name": "Coast Pacific Group",
+      "position": "Full Stack Developer (Remoto)",
+      "url": "",
+      "startDate": "2015-10-01",
+      "endDate": "2017-12-01",
+      "summary": "Landing pages, plataformas web con JavaScript y sistemas ERP de logística.",
+      "highlights": [
+        "Desarrollé y mantuve landing pages y plataformas web basadas en JavaScript.",
+        "Participé en el desarrollo y mantenimiento de sistemas ERP de logística.",
+        "Mantuve sistemas operativos internos y aplicaciones de bitácoras de viaje.",
+        "Realicé testing, despliegues y soporte en producción."
+      ],
+      "skills": [
+        "JavaScript",
+        "React.js",
+        "PHP",
+        "MySQL",
+        "Git"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "",
+      "area": "Ingeniería de Sistemas y Cómputo",
+      "studyType": "Título Profesional de Ingeniero",
+      "startDate": null,
+      "endDate": "2023"
+    },
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "",
+      "area": "Ingeniería de Sistemas y Cómputo",
+      "studyType": "Bachiller",
+      "startDate": "2019",
+      "endDate": "2022"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Arquitectura de Microservicios con Patrones y Principios",
+      "date": "2022",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
+      "name": "ReactJS, Redux + ES6",
+      "date": "2019",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
+      "name": "Desarrollo Backend con Python y Django",
+      "date": "",
+      "issuer": "Platzi",
+      "url": ""
+    },
+    {
+      "name": "Administración de Servidores Linux",
+      "date": "",
+      "issuer": "Platzi",
+      "url": ""
+    },
+    {
+      "name": "Desarrollo de Apps Nativas con Flutter",
+      "date": "",
+      "issuer": "Udemy",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "category": "Desarrollo Frontend",
+      "items": [
+        "React.js",
+        "React Native",
+        "Expo",
+        "Next.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Redux",
+        "HTML5",
+        "CSS3",
+        "Tamagui",
+        "Tailwind CSS",
+        "Material UI",
+        "Bootstrap",
+        "Kendo UI",
+        "Storybook",
+        "Atomic Design"
+      ]
+    },
+    {
+      "category": "Backend y APIs",
+      "items": [
+        "Node.js",
+        "REST APIs",
+        "GraphQL",
+        "Java",
+        "PHP",
+        "Python"
+      ]
+    },
+    {
+      "category": "Cloud, DevOps y Herramientas",
+      "items": [
+        "AWS",
+        "Google Cloud Platform",
+        "Docker",
+        "Git",
+        "Linux",
+        "CI/CD",
+        "Agile",
+        "Scrum"
+      ]
+    },
+    {
+      "category": "Bases de datos",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "T-SQL"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Inglés",
+      "fluency": "Intermedio"
+    },
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tournament Organizer",
+      "isActive": true,
+      "description": "Aplicación web para organizar torneos de eSports con brackets y resultados.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "APIs",
+        "Docker"
+      ],
+      "image": "esports.webp",
+      "url": "https://github.com/wlizama/tournament-organizer",
+      "github": "https://github.com/wlizama/tournament-organizer"
+    },
+    {
+      "name": "Home Business Portal",
+      "isActive": true,
+      "description": "Portal web para una inmobiliaria con vista de revista y filtros de búsqueda.",
+      "tags": [
+        "React.js",
+        "Node.js",
+        "Bootstrap",
+        "MySQL",
+        "APIs",
+        "Sequelize"
+      ],
+      "image": "home-business.webp",
+      "url": "http://162.212.130.247/",
+      "github": "https://github.com/wlizama/home-business-portal"
+    },
+    {
+      "name": "Pizza Delight",
+      "isActive": true,
+      "description": "E-commerce para una pizzería con pedidos en línea y delivery.",
+      "tags": [
+        "JavaScript",
+        "Bootstrap",
+        "Java",
+        "MySQL"
+      ],
+      "image": "pizzeria.webp",
+      "url": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master",
+      "github": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master"
+    },
+    {
+      "name": "Ecomerce PYME",
+      "isActive": true,
+      "description": "E-commerce para una mediana empresa con carrito de compras y control de stock.",
+      "tags": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "Ajax",
+        "PostgreSQL",
+        "Heroku"
+      ],
+      "image": "ecomerce.webp",
+      "url": "https://github.com/wlizama/ecomerce_py",
+      "github": "https://github.com/wlizama/ecomerce_py"
+    },
+    {
+      "name": "SUNAT Billing status SOAP-Client",
+      "isActive": false,
+      "description": "Cliente SOAP para consultar el estado de comprobantes electrónicos en SUNAT.",
+      "tags": [
+        "Python",
+        "Flask",
+        "SOAP",
+        "XML",
+        "Web Services"
+      ],
+      "image": "sunat-billing-soap.gif",
+      "url": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client",
+      "github": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client"
+    },
+    {
+      "name": "Web Coast Pacific Group",
+      "isActive": false,
+      "description": "Landing page para una empresa de logística con formulario de contacto y servicios.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "GIT"
+      ],
+      "image": "coast-pacific-group.webp",
+      "url": "https://github.com/wlizama/web-coast-pacific-group",
+      "github": "https://github.com/wlizama/web-coast-pacific-group"
+    }
+  ]
+}

@@ -1,22 +1,20 @@
 ---
-import { work } from "@cv";
 import Calendar from "@/icons/Calendar.astro";
 import Section from "../Section.astro";
 import SectionHead from "../SectionHead.astro";
+import { formatMonthYear, getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
 
-  const formatDate = (date: string | null) => {
-    if (!!date) {
-      const [year, month] = date.split("-");
-      const monthName = new Date(`${year}-${month}-01`).toLocaleString("default", { month: "long", timeZone: "UTC" });
-      return `${monthName} ${year}`;
-    }
-    else
-      return "Present";
-};
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { work } = getCV(lang);
 ---
-<Section id="experience">
-  <SectionHead icon={'experience'} title="Experience" />
-  <p>Here is a list of my work experience:</p>
+<Section id={sectionIds[lang].experience}>
+  <SectionHead icon={'experience'} title={t("section.experience")} />
+  <p>{t("experience.intro")}</p>
   <ul class="timeline">
     {work.map((job) => (
       <li class="timeline-event">
@@ -24,7 +22,7 @@ import SectionHead from "../SectionHead.astro";
         <div class="timeline-event-copy">
           <div class="timeline-event-thumbnail">
             <Calendar />
-            <span>{formatDate(job.startDate)} - {formatDate(job.endDate)}</span>
+            <span>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</span>
           </div>
           <h2>{job.position} <span class="separator">at</span> {job.name}</h2>
           { job.highlights && (

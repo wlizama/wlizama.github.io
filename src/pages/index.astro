@@ -1,12 +1,48 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import About from '@/components/sections/about.astro';
-import Experience from '@/components/sections/experience.astro';
-import Projects from '@/components/sections/projects.astro';
+// GitHub Pages is static, so `/` picks the language in the browser:
+// Spanish systems go to /es/, everything else to /en/; without JS it lists both.
+import { defaultLang, languages, type Lang } from '@/i18n/ui';
+
+const codes = Object.keys(languages) as Lang[];
+const alternates = codes.map((code) => ({ code, href: new URL(`/${code}/`, Astro.site).toString() }));
 ---
 
-<Layout title="My Portfolio | Wilder Lizama">
-	<About />
-	<Experience />
-	<Projects />
-</Layout>
+<!doctype html>
+<html lang={defaultLang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="noindex" />
+		<title>Wilder Lizama</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href={new URL(`/${defaultLang}/`, Astro.site)} />
+		{alternates.map(({ code, href }) => <link rel="alternate" hreflang={code} href={href} />)}
+		<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+		<script is:inline define:vars={{ codes, defaultLang }}>
+			// Only the primary system language counts: es-* → /es/, anything else → /en/.
+			const primary = (navigator.language || '').toLowerCase().split('-')[0];
+			location.replace(`/${codes.includes(primary) ? primary : defaultLang}/${location.hash}`);
+		</script>
+		<style>
+			body {
+				margin: 0;
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				background: #0d1117;
+				color: #c9d1d9;
+				font-family: system-ui, sans-serif;
+			}
+			a { color: #ff6188; }
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<p>
+				{alternates.map(({ code, href }, i) => (
+					<>{i > 0 && ' · '}<a href={href} hreflang={code} lang={code}>{languages[code]}</a></>
+				))}
+			</p>
+		</noscript>
+	</body>
+</html>
