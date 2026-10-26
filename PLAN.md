@@ -26,7 +26,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 ## Pendientes de Wilder
 
 - [x] Enlace del PDF del CV en español (`cv.es.json` tiene su propio `cv_url`; el inglés también se actualizó)
-- [ ] Revisar la traducción de `cv.es.json`
+- [x] Revisar la traducción de `cv.es.json`
 
 ## Fase 1 — Fundamentos
 
@@ -80,7 +80,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 - [x] Imagen OG por idioma (`public/images/og-{en,es}.png`, 1200×630, captura del hero) con `og:image:width/height/alt`; se elimina `banner.webp`
 - [x] Contraste AA de todos los textos (mínimo 5.62:1: `muted` sobre `surface`)
 - [x] Página 404 con el estilo nuevo; los enlaces del header pasan a `/{lang}/#sección` para funcionar desde la 404
-- [ ] Lighthouse móvil y escritorio (rendimiento, accesibilidad, SEO) — Lighthouse no está instalado en el entorno
+- [x] Lighthouse móvil y escritorio sobre el build (`pnpm preview`), `/en/` y `/es/`: móvil 99 / 100 / 100 / 100 (FCP 1.7 s, LCP 1.9 s); escritorio 100 / 100 / 100 / 100 (rendimiento / accesibilidad / buenas prácticas / SEO)
 - [x] Revisión visual a 375, 768 y 1280px en ambos idiomas, y 404
 - [x] Actualizar las capturas del README (`docs/screenshots/`)
 
