@@ -1,0 +1,29 @@
+---
+interface Props {
+  items: string[];
+  class?: string;
+  [key: string]: any;
+}
+
+// Rest attributes carry the parent's scope attribute, so its styles still apply.
+const { items, class: className, ...rest } = Astro.props;
+---
+
+<!-- Each separator sticks to the item before it, so no line starts with "·". -->
+<ul class:list={["tech mono", className]} {...rest}>
+  {items.map((item) => <li>{item}</li>)}
+</ul>
+
+<style>
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6em;
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+  }
+
+  li:not(:last-child)::after {
+    content: " ·";
+  }
+</style>

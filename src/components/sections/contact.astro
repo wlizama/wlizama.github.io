@@ -60,6 +60,12 @@ const { basics } = getCV(lang);
     overflow-wrap: anywhere;
   }
 
+  @media (width < 640px) {
+    .contact {
+      padding-block: 56px 0;
+    }
+  }
+
   @media (width <= 480px) {
     .card {
       padding: var(--space-8) var(--space-6);
