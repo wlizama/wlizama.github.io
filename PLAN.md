@@ -13,7 +13,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 | Idiomas | EN + ES. `/` redirige según `navigator.language` → `/en/` o `/es/`; si no es ES/EN (o sin JS) → inglés |
 | Contenido ES | `cv.es.json` aparte con la misma estructura (traducción redactada por Claude, revisada por Wilder) |
 | Hero | Copy de B: nuevos campos `headline` y `tagline`; el `summary` largo deja de mostrarse |
-| Experiencia | 3 roles recientes con `summary` corto (campo nuevo) + highlights en desplegable; los 3 roles anteriores tras "Ver {n} roles anteriores" |
+| Experiencia | 3 roles recientes con `summary` corto (campo nuevo), sin highlights (igual que B); los 3 roles anteriores tras "Ver {n} roles anteriores" |
 | Proyectos | Solo los 4 de B visibles; SUNAT SOAP-Client y Web Coast Pacific Group → `isActive: false` |
 | Stack | Todas las skills de `cv.json` |
 | Educación / Certificaciones | No se muestran (igual que B); los idiomas solo en la tarjeta `perfil.json` |
@@ -66,7 +66,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 - [x] Hero: `$ whoami`, `h1` con cursor `_` (nuevo `basics.displayName`), headline, tagline, CTAs (Descargar CV como `<a>`, Contactar)
 - [x] Tarjeta `perfil.json` generada desde los datos (nuevo `basics.profile` + ubicación e idiomas de `cv.json`)
-- [x] `# Experiencia`: timeline sin el hack `top: -1.875em`, marcador `aria-hidden`, fecha mono, `summary`, highlights en `<details>`, skills en línea mono (componente `Role`)
+- [x] `# Experiencia`: timeline sin el hack `top: -1.875em`, marcador `aria-hidden`, fecha mono, `summary`, skills en línea mono (componente `Role`)
 - [x] "Ver {n} roles anteriores" despliega los roles 4–6
 - [x] `# Proyectos`: filas de B con hover, solo `isActive`, imágenes con `astro:assets` (movidas a `src/assets/projects`), enlace `código ↗`
 - [x] `# Stack`: categorías con chips, todas las skills
@@ -83,3 +83,8 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 - [ ] Lighthouse móvil y escritorio (rendimiento, accesibilidad, SEO) — Lighthouse no está instalado en el entorno
 - [x] Revisión visual a 375, 768 y 1280px en ambos idiomas, y 404
 - [x] Actualizar las capturas del README (`docs/screenshots/`)
+
+## Ajustes tras revisar contra B
+
+- [x] Quitar el desplegable de highlights de Experiencia (no está en B)
+- [x] Marcadores del timeline a 20px con anillo del fondo, como en B (`box-sizing: content-box`)
