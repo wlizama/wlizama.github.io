@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Section from "../Section.astro";
-import { basics } from "@cv";
+import { getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
 import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import MapPin from "@/icons/MapPin.astro"
@@ -10,6 +10,13 @@ import ExternalLink from "@/icons/ExternalLink.astro"
 
 type SocialIcon = Record<string, string | any>
 
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { basics } = getCV(lang);
 const { name, occupation, image, summary, profiles, email } = basics;
 
 const SOCIAL_ICONS: SocialIcon = {
@@ -18,7 +25,7 @@ const SOCIAL_ICONS: SocialIcon = {
 }
 ---
 
-<Section id="about">
+<Section id={sectionIds[lang].about}>
   <div class="card">
     <div>
       <h1>{name}</h1>
@@ -40,7 +47,7 @@ const SOCIAL_ICONS: SocialIcon = {
         <span class="mr-1">{basics.location.city}, {basics.location.region}</span>
       </span>
       <span>
-        <h4>Follow me on:</h4>
+        <h4>{t("about.follow")}</h4>
         <ul>
           {profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network]
@@ -61,7 +68,7 @@ const SOCIAL_ICONS: SocialIcon = {
         </ul>
       </span>
     </div>
-    <button data-cv-url={basics.cv_url}>Download CV <ExternalLink /></button>
+    <button data-cv-url={basics.cv_url}>{t("cta.cv")} <ExternalLink /></button>
   </div>
 </Section>
 

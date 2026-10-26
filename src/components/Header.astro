@@ -1,19 +1,28 @@
 ---
 import Logo from "@/icons/Logo.astro";
 import Container from "@/components/Container.astro";
+import { sectionIds, useTranslations, type Lang } from "@/i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const ids = sectionIds[lang];
 
 const menuItems = [
   {
-    name: "About",
-    link: "#about",
+    name: t("section.about"),
+    link: `#${ids.about}`,
   },
   {
-    name: "Experience",
-    link: "#experience",
+    name: t("section.experience"),
+    link: `#${ids.experience}`,
   },
   {
-    name: "Projects",
-    link: "#projects",
+    name: t("section.projects"),
+    link: `#${ids.projects}`,
   },
 ];
 ---
@@ -23,7 +32,7 @@ const menuItems = [
     <figure>
       <Logo />
     </figure>
-    <nav aria-label="Primary">
+    <nav aria-label={t("nav.label")}>
       <ul>
         {menuItems.map((item) => (
           <li>
