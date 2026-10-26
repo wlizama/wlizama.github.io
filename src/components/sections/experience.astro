@@ -24,7 +24,7 @@ const { work } = getCV(lang);
             <Calendar />
             <span>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</span>
           </div>
-          <h2>{job.position} <span class="separator">at</span> {job.name}</h2>
+          <h3>{job.position} <span class="separator">{t("experience.at")}</span> {job.name}</h3>
           { job.highlights && (
             <ul class="task-list">
               {job.highlights.map((highlight) => (
@@ -32,7 +32,7 @@ const { work } = getCV(lang);
               ))}
             </ul>
             <div>
-              <h4>Skills:</h4>
+              <h4>{t("experience.skills")}</h4>
               <p class="skills">{job.skills.join(", ")}</p>
             </div>
           )}

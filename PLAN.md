@@ -54,12 +54,13 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Fase 3 — Estructura
 
-- [ ] Header de B: logo `~/wlizama`, nav con `./`, selector EN/ES (`aria-current`), botón "Descargar CV"
-- [ ] Navegación que se acomoda en móvil (los ítems pasan a la siguiente línea, como en B)
-- [ ] Footer: © año · nombre, ciudad · zona horaria
-- [ ] Jerarquía de encabezados: un `h1`, `h2` por sección, `h3` por ítem
-- [ ] Quitar el uso de `Logo.astro` y del avatar en el layout
-- [ ] `pnpm build` pasa
+- [x] Header de B (sticky): logo `~/wlizama`, nav con `./`, selector EN/ES (`aria-current`), botón "Descargar CV" con el `cv_url` de cada idioma
+- [x] Landmark `<main id="main">`; el skip link apunta a él
+- [x] Navegación que se acomoda en móvil (los ítems pasan a la siguiente línea, como en B)
+- [x] Footer: © año · nombre, ciudad · zona horaria
+- [x] Jerarquía de encabezados: un `h1`, `h2` por sección, `h3` por ítem
+- [x] Quitar `Logo.astro` (archivo eliminado) y el avatar
+- [x] `pnpm build` pasa
 
 ## Fase 4 — Secciones
 

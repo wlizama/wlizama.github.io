@@ -1,0 +1,38 @@
+---
+import Container from "@/components/Container.astro";
+import { getCV, type Lang } from "@/i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+
+const { basics } = getCV(Astro.props.lang);
+const { city, region, timezone } = basics.location;
+---
+
+<footer>
+  <Container class="footer-inner mono">
+    <p>© {new Date().getFullYear()} {basics.name}</p>
+    <p>{city}, {region} · {timezone}</p>
+  </Container>
+</footer>
+
+<style>
+  footer {
+    margin-top: var(--space-24);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: 28px;
+    font-size: var(--text-xs);
+
+    p {
+      color: var(--color-muted);
+    }
+  }
+</style>
