@@ -77,9 +77,9 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Fase 5 — Calidad y verificación
 
-- [ ] Imagen OG actualizada
-- [ ] Contraste AA de todos los textos
-- [ ] Página 404 con el estilo nuevo
-- [ ] Lighthouse móvil y escritorio (rendimiento, accesibilidad, SEO)
-- [ ] Revisión visual a 375, 768 y 1280px en ambos idiomas
-- [ ] Actualizar las capturas del README
+- [x] Imagen OG por idioma (`public/images/og-{en,es}.png`, 1200×630, captura del hero) con `og:image:width/height/alt`; se elimina `banner.webp`
+- [x] Contraste AA de todos los textos (mínimo 5.62:1: `muted` sobre `surface`)
+- [x] Página 404 con el estilo nuevo; los enlaces del header pasan a `/{lang}/#sección` para funcionar desde la 404
+- [ ] Lighthouse móvil y escritorio (rendimiento, accesibilidad, SEO) — Lighthouse no está instalado en el entorno
+- [x] Revisión visual a 375, 768 y 1280px en ambos idiomas, y 404
+- [x] Actualizar las capturas del README (`docs/screenshots/`)

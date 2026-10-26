@@ -11,11 +11,14 @@ const t = useTranslations(lang);
 const ids = sectionIds[lang];
 const { basics } = getCV(lang);
 
+// Absolute links so the nav also works from pages without these sections (404);
+// on the home page they stay same-document jumps.
+const home = `/${lang}/`;
 const menuItems = [
-  { name: t("nav.experience"), link: `#${ids.experience}` },
-  { name: t("nav.projects"), link: `#${ids.projects}` },
-  { name: t("nav.stack"), link: `#${ids.stack}` },
-  { name: t("nav.contact"), link: `#${ids.contact}` },
+  { name: t("nav.experience"), link: `${home}#${ids.experience}` },
+  { name: t("nav.projects"), link: `${home}#${ids.projects}` },
+  { name: t("nav.stack"), link: `${home}#${ids.stack}` },
+  { name: t("nav.contact"), link: `${home}#${ids.contact}` },
 ];
 
 const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
@@ -27,7 +30,7 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
 
 <header>
   <Container as="nav" class="header-inner mono" aria-label={t("nav.label")}>
-    <a href={`/${lang}/`} class="logo"><span aria-hidden="true">~/</span>{basics.profiles.find((p) => p.network === "GitHub")?.username}</a>
+    <a href={home} class="logo"><span aria-hidden="true">~/</span>{basics.profiles.find((p) => p.network === "GitHub")?.username}</a>
     <ul class="menu">
       {menuItems.map((item) => (
         <li>
