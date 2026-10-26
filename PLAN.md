@@ -25,7 +25,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Pendientes de Wilder
 
-- [ ] Enlace del PDF del CV en español (por ahora `cv.es.json` usa el mismo `cv_url` que el inglés)
+- [x] Enlace del PDF del CV en español (`cv.es.json` tiene su propio `cv_url`; el inglés también se actualizó)
 - [ ] Revisar la traducción de `cv.es.json`
 
 ## Fase 1 — Fundamentos
