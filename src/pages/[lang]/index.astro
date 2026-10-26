@@ -1,9 +1,11 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import Layout from '@/layouts/Layout.astro';
-import About from '@/components/sections/about.astro';
+import Hero from '@/components/sections/hero.astro';
 import Experience from '@/components/sections/experience.astro';
 import Projects from '@/components/sections/projects.astro';
+import Stack from '@/components/sections/stack.astro';
+import Contact from '@/components/sections/contact.astro';
 import { languages, useTranslations, type Lang } from '@/i18n/ui';
 
 export const getStaticPaths = (() =>
@@ -14,7 +16,9 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t('meta.title')} lang={lang}>
-	<About lang={lang} />
+	<Hero lang={lang} />
 	<Experience lang={lang} />
 	<Projects lang={lang} />
+	<Stack lang={lang} />
+	<Contact lang={lang} />
 </Layout>

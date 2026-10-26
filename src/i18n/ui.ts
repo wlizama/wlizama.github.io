@@ -35,19 +35,22 @@ export const ui = {
 		'lang.label': 'Language',
 		'cta.cv': 'Download CV',
 		'cta.contact': 'Contact',
-		'section.about': 'About',
+		'hero.command': 'whoami',
+		'profile.file': 'profile.json',
+		'profile.role': 'role',
+		'profile.experience': 'experience',
+		'profile.remote': 'remote',
+		'profile.stack': 'stack',
+		'profile.location': 'location',
+		'profile.languages': 'languages',
 		'section.experience': 'Experience',
 		'section.projects': 'Projects',
 		'section.stack': 'Stack',
-		'about.follow': 'Follow me on:',
-		'experience.intro': 'Here is a list of my work experience:',
-		'projects.intro': "Here are some of the projects I've worked on.",
 		'experience.present': 'Present',
-		'experience.at': 'at',
-		'experience.skills': 'Skills:',
 		'experience.highlights': 'Highlights',
-		'experience.older': 'See {n} earlier roles',
+		'experience.older': 'See {n} earlier roles ({from} — {to})',
 		'projects.source': 'code ↗',
+		'projects.sourceLabel': 'Source code of {name} (opens in a new tab)',
 		'contact.command': './contact --now',
 		'contact.title': 'Looking for a Frontend Engineer for your team?',
 		'notFound.title': 'Page not found',
@@ -67,19 +70,22 @@ export const ui = {
 		'lang.label': 'Idioma',
 		'cta.cv': 'Descargar CV',
 		'cta.contact': 'Contactar',
-		'section.about': 'Sobre mí',
+		'hero.command': 'whoami',
+		'profile.file': 'perfil.json',
+		'profile.role': 'rol',
+		'profile.experience': 'experiencia',
+		'profile.remote': 'remoto',
+		'profile.stack': 'stack',
+		'profile.location': 'ubicación',
+		'profile.languages': 'idiomas',
 		'section.experience': 'Experiencia',
 		'section.projects': 'Proyectos',
 		'section.stack': 'Stack',
-		'about.follow': 'Sígueme en:',
-		'experience.intro': 'Esta es mi experiencia laboral:',
-		'projects.intro': 'Estos son algunos de los proyectos en los que he trabajado.',
 		'experience.present': 'actualidad',
-		'experience.at': 'en',
-		'experience.skills': 'Habilidades:',
 		'experience.highlights': 'Logros',
-		'experience.older': 'Ver {n} roles anteriores',
+		'experience.older': 'Ver {n} roles anteriores ({from} — {to})',
 		'projects.source': 'código ↗',
+		'projects.sourceLabel': 'Código fuente de {name} (se abre en una pestaña nueva)',
 		'contact.command': './contactar --ahora',
 		'contact.title': '¿Buscas un Frontend Engineer para tu equipo?',
 		'notFound.title': 'Página no encontrada',
@@ -94,7 +100,7 @@ export function useTranslations(lang: Lang) {
 	return (key: UIKey, params?: Record<string, string | number>) => {
 		let text: string = ui[lang][key] ?? ui[defaultLang][key];
 		for (const [name, value] of Object.entries(params ?? {})) {
-			text = text.replace(`{${name}}`, String(value));
+			text = text.replaceAll(`{${name}}`, String(value));
 		}
 		return text;
 	};
@@ -102,8 +108,8 @@ export function useTranslations(lang: Lang) {
 
 // Section anchors are localized too, so the URL reads naturally (/es/#proyectos).
 export const sectionIds = {
-	en: { about: 'about', experience: 'experience', projects: 'projects', stack: 'stack', contact: 'contact' },
-	es: { about: 'sobre-mi', experience: 'experiencia', projects: 'proyectos', stack: 'stack', contact: 'contacto' },
+	en: { top: 'top', experience: 'experience', projects: 'projects', stack: 'stack', contact: 'contact' },
+	es: { top: 'inicio', experience: 'experiencia', projects: 'proyectos', stack: 'stack', contact: 'contacto' },
 } as const satisfies Record<Lang, Record<string, string>>;
 
 const dateLocales: Record<Lang, string> = { en: 'en-US', es: 'es-PE' };

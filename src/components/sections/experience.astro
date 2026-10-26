@@ -1,135 +1,121 @@
 ---
-import Calendar from "@/icons/Calendar.astro";
 import Section from "../Section.astro";
-import SectionHead from "../SectionHead.astro";
-import { formatMonthYear, getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
+import Role from "../Role.astro";
+import { getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
 
 interface Props {
   lang: Lang
 }
 
+// Roles shown up front; the rest sit behind "See {n} earlier roles".
+const VISIBLE_ROLES = 3;
+
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const { work } = getCV(lang);
+
+const recent = work.slice(0, VISIBLE_ROLES);
+const earlier = work.slice(VISIBLE_ROLES);
+const year = (date: string | null) => date?.slice(0, 4) ?? "";
 ---
-<Section id={sectionIds[lang].experience}>
-  <SectionHead icon={'experience'} title={t("section.experience")} />
-  <p>{t("experience.intro")}</p>
-  <ul class="timeline">
-    {work.map((job) => (
-      <li class="timeline-event">
-        <label class="timeline-event-icon" />
-        <div class="timeline-event-copy">
-          <div class="timeline-event-thumbnail">
-            <Calendar />
-            <span>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</span>
-          </div>
-          <h3>{job.position} <span class="separator">{t("experience.at")}</span> {job.name}</h3>
-          { job.highlights && (
-            <ul class="task-list">
-              {job.highlights.map((highlight) => (
-                <li>{highlight}</li>
-              ))}
-            </ul>
-            <div>
-              <h4>{t("experience.skills")}</h4>
-              <p class="skills">{job.skills.join(", ")}</p>
-            </div>
-          )}
-        </div>
+<Section id={sectionIds[lang].experience} title={t("section.experience")}>
+  <ol class="timeline">
+    {recent.map((job) => {
+      const current = !job.endDate;
+      return (
+        <li class:list={["role", { current }]}>
+          <span class="marker" aria-hidden="true"></span>
+          <Role job={job} lang={lang} current={current} />
+        </li>
+      );
+    })}
+    {earlier.length > 0 && (
+      <li class="role">
+        <span class="marker marker-more" aria-hidden="true"></span>
+        <details class="earlier">
+          <summary>
+            {t("experience.older", {
+              n: earlier.length,
+              from: year(earlier[earlier.length - 1].startDate),
+              to: year(earlier[0].endDate),
+            })} <span aria-hidden="true">→</span>
+          </summary>
+          <ol class="timeline-earlier">
+            {earlier.map((job) => (
+              <li><Role job={job} lang={lang} /></li>
+            ))}
+          </ol>
+        </details>
       </li>
-    ))}
-  </ul>
+    )}
+  </ol>
 </Section>
 
 <style>
   .timeline {
-    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding-left: 28px;
+    border-left: 2px solid var(--color-border-subtle);
+  }
+
+  .role {
     position: relative;
   }
-  .timeline:before {
-    background-color: var(--color-muted);
-    content: '';
-    margin-left: -1px;
+
+  .marker {
     position: absolute;
-    top: 0;
-    left: 1em;
-    width: 2px;
-    height: 100%;
+    left: -37px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-border);
+    border: 3px solid var(--color-bg);
+  }
+  .current .marker {
+    background: var(--color-accent);
+  }
+  .marker-more {
+    left: -35px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: var(--color-border-subtle);
   }
 
-  .timeline-event {
-    position: relative;
-  }
-  .timeline-event:hover .timeline-event-icon {
-    transform: rotate(-45deg);
-  }
-  .timeline-event:hover .timeline-event-thumbnail {
-    color: var(--color-accent-3);
-  }
-
-  .timeline-event-copy {
-    padding: 2em 0;
-    position: relative;
-    top: -1.875em;
-    left: 3em;
-    width: 95%;
-
-    .separator {
-      color: var(--color-muted);
-    }
-  }
-
-  .timeline-event-icon {
-    transition: transform 0.2s ease-in;
-    transform: rotate(45deg);
-    background-color: var(--color-accent-3);
-    display: block;
-    margin: 0.5em 0.5em 0.5em -0.5em;
-    position: absolute;
-    top: 0;
-    left: 1em;
-    width: 1em;
-    height: 1em;
-    outline: 2px solid var(--color-bg);
-  }
-
-  .timeline-event-thumbnail {
+  .earlier > summary {
+    cursor: pointer;
+    width: fit-content;
+    list-style: none;
+    font-weight: 600;
+    color: var(--color-accent);
     transition: color 0.2s ease;
-    color: var(--color-muted);
-    font-weight: 700;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 0.5em;
-    align-items: center;
-    margin-bottom: 0.5em;
 
-    svg {
-      height: 1.4em;
+    &::-webkit-details-marker {
+      display: none;
     }
+
+    &:hover {
+      color: var(--color-heading);
+    }
+
     span {
-      flex: 1;
+      display: inline-block;
+      transition: transform 0.2s ease;
     }
   }
 
-  .task-list {
-    list-style-type: square;
-    padding-left: 1em;
-
-    li {
-      margin-bottom: 0.5em;
-    }
-  }
-  .skills {
-    color: var(--color-muted);
-    font-style: italic;
-    font-size: .9em;
+  .earlier[open] > summary span {
+    transform: rotate(90deg);
   }
 
-  @media (width <= 768px) {
-    .timeline-event-copy {
-      width: 88%;
-    }
+  .timeline-earlier {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-10);
   }
-
 </style>

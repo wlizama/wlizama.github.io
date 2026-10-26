@@ -325,22 +325,23 @@ const personLd = {
 		color: var(--color-heading);
 	}
 
-  ul {
+  ul, ol {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-	h1 {
-		font-size: 2rem;
+	h1, h2, h3 {
+		line-height: 1.25;
 		color: var(--color-heading);
+	}
+	h1 {
+		font-size: var(--text-hero);
 	}
 	h2 {
-		font-size: 1.5rem;
-		color: var(--color-accent-2);
+		font-size: var(--text-2xl);
 	}
 	h3 {
-		font-size: 1.25rem;
-		color: var(--color-heading);
+		font-size: var(--text-lg);
 	}
 	h4 {
 		font-size: 1rem;
@@ -353,6 +354,39 @@ const personLd = {
 	}
 	.mono {
 		font-family: var(--font-mono);
+	}
+
+	/* Buttons from direction B: filled accent and outlined ghost */
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: 13px 21px;
+		border: 1px solid transparent;
+		border-radius: var(--radius-sm);
+		font-family: var(--font-sans);
+		font-weight: 600;
+		transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+	}
+	.btn-primary {
+		background: var(--color-accent);
+		color: var(--color-bg);
+		font-weight: 700;
+	}
+	.btn-primary:hover,
+	.btn-primary:focus-visible {
+		background: var(--color-accent-hover);
+		color: var(--color-bg);
+		transform: translateY(-1px);
+	}
+	.btn-ghost {
+		border-color: var(--color-border);
+		color: var(--color-heading);
+	}
+	.btn-ghost:hover,
+	.btn-ghost:focus-visible {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
 	}
 
 	.skip-link {

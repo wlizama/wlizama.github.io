@@ -1,17 +1,32 @@
 ---
 import Container from './Container.astro';
 
-const { id } = Astro.props
+interface Props {
+  id: string;
+  /** Rendered as the section's `# title` h2. Omit it when the section brings its own heading. */
+  title?: string;
+  labelledby?: string;
+}
+
+const { id, title, labelledby } = Astro.props;
+const titleId = `${id}-title`;
 ---
-<Container as="section" id={id} class="section">
-    <slot />
+<Container as="section" id={id} class="section" aria-labelledby={title ? titleId : labelledby}>
+  {title && <h2 id={titleId} class="section-title mono"><span aria-hidden="true">#</span> {title}</h2>}
+  <slot />
 </Container>
 <style>
   .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-block: 1em;
-    margin-top: 2em;
+    padding-block: 80px 40px;
+  }
+
+  .section-title {
+    margin-bottom: var(--space-10);
+    font-size: var(--text-2xl);
+    color: var(--color-heading);
+
+    span {
+      color: var(--color-accent);
+    }
   }
 </style>

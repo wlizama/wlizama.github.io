@@ -1,9 +1,21 @@
 {
   "basics": {
     "name": "Wilder H. Lizama Garcia",
+    "displayName": "Wilder Lizama",
     "occupation": "Frontend Engineer | React • React Native • Expo • TypeScript",
     "headline": "Frontend Engineer que construye apps web y móviles escalables con React, React Native y TypeScript.",
     "tagline": "Arquitectura frontend, sistemas de UI reutilizables y migraciones de sistemas legacy, trabajando con equipos remotos internacionales en fintech, ERP, salud y plataformas sin fines de lucro.",
+    "profile": {
+      "role": "Frontend Engineer",
+      "experience": "8+ años",
+      "remote": "5+ años",
+      "stack": [
+        "React",
+        "React Native",
+        "Expo",
+        "TypeScript"
+      ]
+    },
     "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
     "email": "wilderlizama@gmail.com",
     "url": "wlizama.github.io",
