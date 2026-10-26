@@ -31,13 +31,34 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
 <header>
   <Container as="nav" class="header-inner mono" aria-label={t("nav.label")}>
     <a href={home} class="logo"><span aria-hidden="true">~/</span>{basics.profiles.find((p) => p.network === "GitHub")?.username}</a>
-    <ul class="menu">
-      {menuItems.map((item) => (
-        <li>
-          <a href={item.link}>{item.name}</a>
-        </li>
-      ))}
-    </ul>
+    <!-- Below 860px the menu collapses behind this button; it stays hidden without JS. -->
+    <button
+      type="button"
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label={t("nav.open")}
+      data-label-open={t("nav.open")}
+      data-label-close={t("nav.close")}
+      hidden
+    >
+      <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <div class="panel" id="nav-menu">
+      <ul class="menu">
+        {menuItems.map((item) => (
+          <li>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
+      <a class="btn-cv panel-cv" href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
+    </div>
     <div class="actions">
       <ul class="lang-switch" aria-label={t("lang.label")}>
         {languageLinks.map(({ code, name, href }) => (
@@ -54,7 +75,7 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
           </li>
         ))}
       </ul>
-      <a class="btn-cv" href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
+      <a class="btn-cv actions-cv" href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
     </div>
   </Container>
 </header>
@@ -72,6 +93,23 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
 
     setHeaderHeight();
     new ResizeObserver(setHeaderHeight).observe(header);
+
+    const toggle = header.querySelector<HTMLButtonElement>(".menu-toggle");
+    const panel = header.querySelector<HTMLElement>("#nav-menu");
+
+    if (toggle && panel) {
+      const setOpen = (open: boolean) => {
+        header.toggleAttribute("data-open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", (open ? toggle.dataset.labelClose : toggle.dataset.labelOpen) ?? "");
+      };
+
+      // Collapsing only kicks in once the toggle can work.
+      header.classList.add("has-menu");
+      toggle.hidden = false;
+      toggle.addEventListener("click", () => setOpen(!header.hasAttribute("data-open")));
+      panel.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setOpen(false)));
+    }
   }
 </script>
 
@@ -174,6 +212,122 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
       background: var(--color-accent-hover);
       color: var(--color-bg);
       transform: translateY(-1px);
+    }
+  }
+
+  .panel-cv,
+  .menu-toggle {
+    display: none;
+  }
+
+  .icon-open,
+  .icon-close {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  /* Mobile and portrait tablets: one row (logo, languages, toggle) with the
+     links and the CV button in a dropdown panel. */
+  @media (width < 860px) {
+    .header-inner {
+      flex-wrap: nowrap;
+      gap: var(--space-3);
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    .actions {
+      order: 1;
+    }
+
+    .actions-cv {
+      display: none;
+    }
+
+    .panel {
+      order: 3;
+    }
+
+    .panel-cv {
+      display: inline-flex;
+      justify-content: center;
+      margin-top: var(--space-3);
+      padding-block: 12px;
+    }
+
+    .menu {
+      flex-direction: column;
+      gap: 0;
+      font-size: var(--text-base);
+
+      a {
+        display: block;
+        padding-block: 12px;
+      }
+    }
+
+    .has-menu {
+      .menu-toggle {
+        order: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: transparent;
+        color: var(--color-heading);
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+          border-color: var(--color-accent);
+          color: var(--color-accent);
+        }
+      }
+
+      .icon-close,
+      &[data-open] .icon-open {
+        display: none;
+      }
+
+      &[data-open] .icon-close {
+        display: block;
+      }
+
+      .panel {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: var(--space-2) var(--container-gutter) var(--space-6);
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border-subtle);
+      }
+
+      &[data-open] .panel {
+        display: flex;
+      }
+    }
+
+    /* Without JS the panel stays in the flow, below the first row. */
+    header:not(.has-menu) {
+      .header-inner {
+        flex-wrap: wrap;
+      }
+
+      .panel {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
     }
   }
 </style>

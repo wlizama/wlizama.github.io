@@ -1,4 +1,5 @@
 ---
+import TechList from "./TechList.astro";
 import { formatMonthYear, type CV, type Lang } from "@/i18n/ui";
 
 interface Props {
@@ -12,9 +13,9 @@ const { job, lang, current = false } = Astro.props;
 ---
 
 <p class:list={["dates mono", { current }]}>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</p>
-<h3>{job.position} · {job.name}</h3>
+<h3><span>{job.position}</span><span class="sep"> · </span><span class="company">{job.name}</span></h3>
 <p class="summary">{job.summary}</p>
-<p class="skills mono">{job.skills.join(" · ")}</p>
+<TechList items={job.skills} class="skills" />
 
 <style>
   .dates {
@@ -37,7 +38,22 @@ const { job, lang, current = false } = Astro.props;
 
   .skills {
     margin-top: 10px;
-    font-size: var(--text-xs);
-    color: var(--color-muted);
+  }
+
+  /* Phones: position on one line, company below it. The separator stays
+     in the accessibility tree so screen readers still hear both apart. */
+  @media (width < 640px) {
+    .sep {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .company {
+      display: block;
+    }
   }
 </style>

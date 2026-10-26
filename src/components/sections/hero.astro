@@ -40,11 +40,14 @@ const profileEntries: [string, string | string[]][] = [
       <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
       {t("profile.file")}
     </figcaption>
-    <pre><span class="line">&#123;</span>{profileEntries.map(([key, value], i) => (
-      <span class="line indent"><span class="key">"{key}"</span>: {Array.isArray(value)
-        ? <>[{value.map((item, j) => <><span class="str">"{item}"</span>{j < value.length - 1 && ", "}</>)}]</>
-        : <span class="str">"{value}"</span>}{i < profileEntries.length - 1 && ","}</span>
-    ))}<span class="line">&#125;</span></pre>
+    <pre><span class="line">&#123;</span>{profileEntries.map(([key, value], i) => {
+      const comma = i < profileEntries.length - 1 && ",";
+      return (
+        <span class="line indent"><span class="key">"{key}"</span>: {Array.isArray(value)
+          ? <>[{value.map((item, j) => <span class="item"><span class="str">"{item}"</span>{j < value.length - 1 && ","}</span>)}<span class="close">]{comma}</span></>
+          : <><span class="str">"{value}"</span>{comma}</>}</span>
+      );
+    })}<span class="line">&#125;</span></pre>
   </figure>
 </Container>
 
@@ -157,5 +160,30 @@ const profileEntries: [string, string | string[]][] = [
 
   .str {
     color: var(--color-accent-2);
+  }
+
+  .item + .item::before {
+    content: " ";
+  }
+
+  @media (width < 640px) {
+    .hero {
+      padding-block: var(--space-12) var(--space-14);
+    }
+
+    /* Arrays go one item per line, like formatted JSON, so no value is
+       split across lines. */
+    .item {
+      display: block;
+      padding-left: 2ch;
+    }
+
+    .item + .item::before {
+      content: none;
+    }
+
+    .close {
+      display: block;
+    }
   }
 </style>

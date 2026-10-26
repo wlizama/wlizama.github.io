@@ -88,3 +88,13 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 - [x] Quitar el desplegable de highlights de Experiencia (no está en B)
 - [x] Marcadores del timeline a 20px con anillo del fondo, como en B (`box-sizing: content-box`)
+
+## Fase 6 — Móvil
+
+- [x] Header en una fila por debajo de 860px: logo, EN/ES y botón ☰/✕ (`aria-expanded`, `aria-label` por idioma); el menú desplegable trae los enlaces y "Descargar CV", y se cierra al elegir un enlace. Sin JS, los enlaces quedan visibles bajo el logo
+- [x] Menos espacio vertical por debajo de 640px: hero 48px arriba / 56px abajo, secciones y contacto 56px
+- [x] Tecnologías como lista (`TechList`): ningún renglón empieza con "·" (Experiencia y Proyectos)
+- [x] Cargo y empresa en líneas separadas por debajo de 640px (el separador sigue para lectores de pantalla)
+- [x] `perfil.json`: arrays con un elemento por línea por debajo de 640px
+- [x] Proyectos: "código ↗" pegado a las tecnologías en móvil
+- [x] Revisión visual a 375, 768 y 1280px; `pnpm build` pasa
