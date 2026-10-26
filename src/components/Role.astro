@@ -1,0 +1,82 @@
+---
+import { formatMonthYear, useTranslations, type CV, type Lang } from "@/i18n/ui";
+
+interface Props {
+  job: CV["work"][number];
+  lang: Lang;
+  /** Highlights the dates in the accent color (the ongoing role). */
+  current?: boolean;
+}
+
+const { job, lang, current = false } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<p class:list={["dates mono", { current }]}>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</p>
+<h3>{job.position} · {job.name}</h3>
+<p class="summary">{job.summary}</p>
+<details class="highlights">
+  <summary>{t("experience.highlights")}</summary>
+  <ul>
+    {job.highlights.map((highlight) => <li>{highlight}</li>)}
+  </ul>
+</details>
+<p class="skills mono">{job.skills.join(" · ")}</p>
+
+<style>
+  .dates {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+
+    &.current {
+      color: var(--color-accent);
+    }
+  }
+
+  h3 {
+    margin-top: 6px;
+  }
+
+  .summary {
+    margin-top: 10px;
+    max-width: 760px;
+  }
+
+  .highlights {
+    margin-top: 10px;
+    max-width: 760px;
+
+    summary {
+      cursor: pointer;
+      width: fit-content;
+      padding-block: var(--space-1);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--color-accent);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-heading);
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      margin-top: var(--space-2);
+      padding-left: 1.1em;
+      list-style: square;
+    }
+
+    li::marker {
+      color: var(--color-muted);
+    }
+  }
+
+  .skills {
+    margin-top: 10px;
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+  }
+</style>

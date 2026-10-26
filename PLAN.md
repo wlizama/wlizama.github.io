@@ -64,15 +64,16 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 ## Fase 4 — Secciones
 
-- [ ] Hero: `$ whoami`, `h1` con cursor `_`, headline, tagline, CTAs (Descargar CV como `<a>`, Contactar)
-- [ ] Tarjeta `perfil.json` generada desde los datos (rol, experiencia, remoto, stack, ubicación, idiomas)
-- [ ] `# Experiencia`: timeline sin el hack `top: -1.875em`, marcador `aria-hidden`, fecha mono, `summary`, highlights en `<details>`, skills en línea mono
-- [ ] "Ver {n} roles anteriores" despliega los roles 4–6
-- [ ] `# Proyectos`: filas de B con hover, solo `isActive`, imágenes con `astro:assets` (movidas a `src/assets`), enlace `código ↗`
-- [ ] `# Stack`: categorías con chips, todas las skills
-- [ ] `# Contacto`: tarjeta `$ ./contactar --ahora`, email, LinkedIn, GitHub
-- [ ] Orden: Hero → Experiencia → Proyectos → Stack → Contacto
-- [ ] `pnpm build` pasa
+- [x] Hero: `$ whoami`, `h1` con cursor `_` (nuevo `basics.displayName`), headline, tagline, CTAs (Descargar CV como `<a>`, Contactar)
+- [x] Tarjeta `perfil.json` generada desde los datos (nuevo `basics.profile` + ubicación e idiomas de `cv.json`)
+- [x] `# Experiencia`: timeline sin el hack `top: -1.875em`, marcador `aria-hidden`, fecha mono, `summary`, highlights en `<details>`, skills en línea mono (componente `Role`)
+- [x] "Ver {n} roles anteriores" despliega los roles 4–6
+- [x] `# Proyectos`: filas de B con hover, solo `isActive`, imágenes con `astro:assets` (movidas a `src/assets/projects`), enlace `código ↗`
+- [x] `# Stack`: categorías con chips, todas las skills
+- [x] `# Contacto`: tarjeta `$ ./contactar --ahora`, email, LinkedIn, GitHub
+- [x] Orden: Hero → Experiencia → Proyectos → Stack → Contacto
+- [x] Eliminar `about.astro`, `SectionHead.astro`, `src/icons/` y las claves temporales del diccionario
+- [x] `pnpm build` pasa
 
 ## Fase 5 — Calidad y verificación
 
