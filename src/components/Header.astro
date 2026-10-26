@@ -1,7 +1,6 @@
 ---
-import Logo from "@/icons/Logo.astro";
 import Container from "@/components/Container.astro";
-import { sectionIds, useTranslations, type Lang } from "@/i18n/ui";
+import { getCV, languages, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
 
 interface Props {
   lang: Lang;
@@ -10,37 +9,50 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const ids = sectionIds[lang];
+const { basics } = getCV(lang);
 
 const menuItems = [
-  {
-    name: t("section.about"),
-    link: `#${ids.about}`,
-  },
-  {
-    name: t("section.experience"),
-    link: `#${ids.experience}`,
-  },
-  {
-    name: t("section.projects"),
-    link: `#${ids.projects}`,
-  },
+  { name: t("nav.experience"), link: `#${ids.experience}` },
+  { name: t("nav.projects"), link: `#${ids.projects}` },
+  { name: t("nav.stack"), link: `#${ids.stack}` },
+  { name: t("nav.contact"), link: `#${ids.contact}` },
 ];
+
+const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
+  code,
+  name: languages[code],
+  href: `/${code}/`,
+}));
 ---
 
 <header>
-  <Container class="header-inner">
-    <figure>
-      <Logo />
-    </figure>
-    <nav aria-label={t("nav.label")}>
-      <ul>
-        {menuItems.map((item) => (
+  <Container as="nav" class="header-inner mono" aria-label={t("nav.label")}>
+    <a href={`/${lang}/`} class="logo"><span aria-hidden="true">~/</span>{basics.profiles.find((p) => p.network === "GitHub")?.username}</a>
+    <ul class="menu">
+      {menuItems.map((item) => (
+        <li>
+          <a href={item.link}>{item.name}</a>
+        </li>
+      ))}
+    </ul>
+    <div class="actions">
+      <ul class="lang-switch" aria-label={t("lang.label")}>
+        {languageLinks.map(({ code, name, href }) => (
           <li>
-            <a href={item.link}>{item.name}</a>
+            <a
+              href={href}
+              hreflang={code}
+              lang={code}
+              aria-current={code === lang ? "page" : undefined}
+              title={name}
+            >
+              {code.toUpperCase()}
+            </a>
           </li>
         ))}
       </ul>
-    </nav>
+      <a class="btn-cv" href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
+    </div>
   </Container>
 </header>
 
@@ -62,62 +74,103 @@ const menuItems = [
 
 <style>
   header {
-    width: 100%;
-    background: rgba(var(--color-bg-rgb), 0.72);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1000;
-  }
-
-  figure {
-    color: var(--color-accent);
-    width: 50px;
-    height: 50px;
+    background: rgba(var(--color-bg-rgb), 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border-subtle);
   }
 
   .header-inner {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 1em;
+    justify-content: space-between;
+    gap: var(--space-3) var(--space-6);
+    padding-block: 14px;
   }
 
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1em;
+  .logo {
     font-weight: 700;
+    color: var(--color-heading);
+
+    span {
+      color: var(--color-accent);
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-heading);
+    }
   }
 
-  nav ul li a {
-    color: var(--color-text);
-    padding: 1.2em 1em;
-    text-decoration: none;
-    display: block;
-    transition: color 0.2s ease;
-  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-6);
+    font-size: var(--text-sm);
 
-  nav ul li a:hover,
-  nav ul li a:focus-visible {
-    color: var(--color-accent);
-    text-decoration: underline;
-  }
+    a {
+      display: inline-block;
+      padding-block: 10px;
+      color: var(--color-text);
 
-  @media (max-width: 768px) {
-    .header-inner {
-      flex-direction: column;
-
-      nav ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-        text-align: center;
+      &:hover,
+      &:focus-visible {
+        color: var(--color-accent);
       }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .lang-switch {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    font-size: var(--text-xs);
+
+    a {
+      display: block;
+      padding: 10px 12px;
+      color: var(--color-text);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--color-accent);
+      }
+
+      &[aria-current="page"] {
+        background: var(--color-border-subtle);
+        color: var(--color-heading);
+      }
+    }
+  }
+
+  .btn-cv {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--color-accent-hover);
+      color: var(--color-bg);
+      transform: translateY(-1px);
     }
   }
 </style>

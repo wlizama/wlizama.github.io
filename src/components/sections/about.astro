@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Section from "../Section.astro";
 import { getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
 import LinkedIn from "@/icons/LinkedIn.astro"
@@ -17,7 +16,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const { basics } = getCV(lang);
-const { name, occupation, image, summary, profiles, email } = basics;
+const { name, occupation, summary, profiles, email } = basics;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
@@ -29,12 +28,9 @@ const SOCIAL_ICONS: SocialIcon = {
   <div class="card">
     <div>
       <h1>{name}</h1>
-      <h2>{occupation}</h2>
+      <p class="occupation">{occupation}</p>
       <p>{summary}</p>
     </div>
-    <figure>
-      <Image src={image} alt={name} width={160} height={160} loading="eager" fetchpriority="high" />
-    </figure>
   </div>
   <div class="footer">
     <div class="info">
@@ -47,7 +43,7 @@ const SOCIAL_ICONS: SocialIcon = {
         <span class="mr-1">{basics.location.city}, {basics.location.region}</span>
       </span>
       <span>
-        <h4>{t("about.follow")}</h4>
+        <span class="follow">{t("about.follow")}</span>
         <ul>
           {profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network]
@@ -94,9 +90,16 @@ const SOCIAL_ICONS: SocialIcon = {
     margin-top: 4em;
   }
 
-  figure img {
-    border-radius: 1em;
-    border: 2px solid var(--color-border);
+  .occupation {
+    margin-top: 0.5em;
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-heading);
+  }
+
+  .follow {
+    font-weight: 700;
+    color: var(--color-muted);
   }
 
   ul li {
@@ -179,10 +182,6 @@ const SOCIAL_ICONS: SocialIcon = {
     .card {
       flex-direction: column-reverse;
     }
-    figure img {
-      width: 100px;
-      height: 100px;
-    }
     .footer {
       flex-direction: column;
       .info {
@@ -190,7 +189,7 @@ const SOCIAL_ICONS: SocialIcon = {
         grid-auto-rows: 3em;
         align-items: center;
       }
-      h4 {
+      .follow {
         display: none;
       }
 
