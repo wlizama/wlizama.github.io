@@ -17,7 +17,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 | Proyectos | Solo los 4 de B visibles; SUNAT SOAP-Client y Web Coast Pacific Group → `isActive: false` |
 | Stack | Todas las skills de `cv.json` |
 | Educación / Certificaciones | No se muestran (igual que B); los idiomas solo en la tarjeta `perfil.json` |
-| Foto / logo | Igual que B: sin avatar, logo de texto `~/wlizama`. El favicon se queda |
+| Foto / logo | Igual que B: sin avatar, logo de texto `~/wlizama`. Favicon nuevo `w_` (ver Fase 7) |
 | Nav EN | Estilo terminal: `./experience`, `./projects`, `./stack`, `./contact` |
 | Fuentes | Self-host con `@fontsource` (reemplaza Roboto Mono) |
 | CV PDF | Un `cv_url` por idioma |
@@ -98,3 +98,8 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 - [x] `perfil.json`: arrays con un elemento por línea por debajo de 640px
 - [x] Proyectos: "código ↗" pegado a las tecnologías en móvil
 - [x] Revisión visual a 375, 768 y 1280px; `pnpm build` pasa
+
+## Fase 7 — Favicon
+
+- [x] Favicon `w_`: "w" blanca y cursor `_` rosa sobre `#0D1117`, dibujado con trazos propios (sin fuentes ni sets de íconos)
+- [x] `favicon.svg`, `favicon.ico` (16 y 32px, evita el 404) y `apple-touch-icon.png` (180px, sin esquinas transparentes) enlazados en el layout y en la página de redirección

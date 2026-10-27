@@ -14,7 +14,9 @@ const alternates = codes.map((code) => ({ code, href: new URL(`/${code}/`, Astro
 		<meta name="viewport" content="width=device-width" />
 		<meta name="robots" content="noindex" />
 		<title>Wilder Lizama</title>
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="canonical" href={new URL(`/${defaultLang}/`, Astro.site)} />
 		{alternates.map(({ code, href }) => <link rel="alternate" hreflang={code} href={href} />)}
 		<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
