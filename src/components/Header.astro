@@ -94,6 +94,15 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
     setHeaderHeight();
     new ResizeObserver(setHeaderHeight).observe(header);
 
+    // The header's CV button only shows once the hero's own one is off screen,
+    // so it never appears twice at once. Pages without a hero (404) keep it.
+    const heroCV = document.querySelector("[data-hero-cv]");
+    if (heroCV) {
+      new IntersectionObserver(([entry]) => {
+        header.toggleAttribute("data-hero-cv-visible", entry.isIntersecting);
+      }, { rootMargin: `-${header.offsetHeight}px 0px 0px 0px` }).observe(heroCV);
+    }
+
     const toggle = header.querySelector<HTMLButtonElement>(".menu-toggle");
     const panel = header.querySelector<HTMLElement>("#nav-menu");
 
@@ -124,13 +133,18 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
     border-bottom: 1px solid var(--color-border-subtle);
   }
 
+  /* Desktop: the links sit in a truly centered column, so they don't move
+     when the CV button appears or hides on the right. */
   .header-inner {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: var(--space-3) var(--space-6);
     padding-block: 14px;
+  }
+
+  .logo {
+    justify-self: start;
   }
 
   .logo {
@@ -166,9 +180,9 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
   }
 
   .actions {
+    justify-self: end;
     display: flex;
     align-items: center;
-    gap: var(--space-3);
   }
 
   .lang-switch {
@@ -215,6 +229,24 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
     }
   }
 
+  /* While the hero's CV button is on screen this one takes no space, so the
+     language switch lines up with the page edge; it then slides in. */
+  .actions-cv {
+    max-width: 12rem;
+    margin-left: var(--space-3);
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.25s ease, margin 0.25s ease, padding 0.25s ease, opacity 0.2s ease, visibility 0.25s ease, background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  [data-hero-cv-visible] .actions-cv {
+    max-width: 0;
+    margin-left: 0;
+    padding-inline: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .panel-cv,
   .menu-toggle {
     display: none;
@@ -232,6 +264,7 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
      links and the CV button in a dropdown panel. */
   @media (width < 860px) {
     .header-inner {
+      display: flex;
       flex-wrap: nowrap;
       gap: var(--space-3);
     }
@@ -242,6 +275,7 @@ const languageLinks = (Object.keys(languages) as Lang[]).map((code) => ({
 
     .actions {
       order: 1;
+      gap: var(--space-3);
     }
 
     .actions-cv {

@@ -30,7 +30,7 @@ const profileEntries: [string, string | string[]][] = [
     <p class="headline">{basics.headline}</p>
     <p class="tagline">{basics.tagline}</p>
     <div class="ctas">
-      <a class="btn btn-primary" href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
+      <a class="btn btn-primary" data-hero-cv href={basics.cv_url} target="_blank" rel="noopener noreferrer">{t("cta.cv")}</a>
       <a class="btn btn-ghost" href={`#${ids.contact}`}>{t("cta.contact")}</a>
     </div>
   </div>
@@ -162,28 +162,20 @@ const profileEntries: [string, string | string[]][] = [
     color: var(--color-accent-2);
   }
 
-  .item + .item::before {
-    content: " ";
+  /* Arrays go one item per line, like formatted JSON, so no value is
+     split across lines. */
+  .item {
+    display: block;
+    padding-left: 2ch;
+  }
+
+  .close {
+    display: block;
   }
 
   @media (width < 640px) {
     .hero {
       padding-block: var(--space-12) var(--space-14);
-    }
-
-    /* Arrays go one item per line, like formatted JSON, so no value is
-       split across lines. */
-    .item {
-      display: block;
-      padding-left: 2ch;
-    }
-
-    .item + .item::before {
-      content: none;
-    }
-
-    .close {
-      display: block;
     }
   }
 </style>

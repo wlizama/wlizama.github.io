@@ -95,7 +95,7 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 - [x] Menos espacio vertical por debajo de 640px: hero 48px arriba / 56px abajo, secciones y contacto 56px
 - [x] Tecnologías como lista (`TechList`): ningún renglón empieza con "·" (Experiencia y Proyectos)
 - [x] Cargo y empresa en líneas separadas por debajo de 640px (el separador sigue para lectores de pantalla)
-- [x] `perfil.json`: arrays con un elemento por línea por debajo de 640px
+- [x] `perfil.json`: arrays con un elemento por línea por debajo de 640px (en todos los tamaños desde la Fase 8)
 - [x] Proyectos: "código ↗" pegado a las tecnologías en móvil
 - [x] Revisión visual a 375, 768 y 1280px; `pnpm build` pasa
 
@@ -103,3 +103,8 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 - [x] Favicon `w_`: "w" blanca y cursor `_` rosa sobre `#0D1117`, dibujado con trazos propios (sin fuentes ni sets de íconos)
 - [x] `favicon.svg`, `favicon.ico` (16 y 32px, evita el 404) y `apple-touch-icon.png` (180px, sin esquinas transparentes) enlazados en el layout y en la página de redirección
+
+## Fase 8 — Ajustes del hero
+
+- [x] Tarjeta `perfil.json` / `profile.json`: arrays con un elemento por línea en todos los tamaños
+- [x] "Descargar CV" del header oculto (sin ocupar espacio) mientras el del hero está en pantalla; al hacer scroll aparece y EN/ES se desliza a la izquierda. Los enlaces del header pasan a estar centrados de verdad (grid), así no se mueven. Sin JS y en la 404 se ve siempre; el del menú móvil no cambia
