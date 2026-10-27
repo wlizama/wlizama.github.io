@@ -108,3 +108,4 @@ Leyenda: `[x]` implementado · `[ ]` pendiente
 
 - [x] Tarjeta `perfil.json` / `profile.json`: arrays con un elemento por línea en todos los tamaños
 - [x] "Descargar CV" del header oculto (sin ocupar espacio) mientras el del hero está en pantalla; al hacer scroll aparece y EN/ES se desliza a la izquierda. Los enlaces del header pasan a estar centrados de verdad (grid), así no se mueven. Sin JS y en la 404 se ve siempre; el del menú móvil no cambia
+- [x] Capturas del README (`docs/screenshots/`) e imágenes OG regeneradas con el diseño final; las OG se capturan a 1440×756 y se reducen a 1200×630 para que entre la tarjeta completa
