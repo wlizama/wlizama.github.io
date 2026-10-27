@@ -1,0 +1,78 @@
+---
+import Container from "../Container.astro";
+import { getCV, sectionIds, useTranslations, type Lang } from "@/i18n/ui";
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { basics } = getCV(lang);
+---
+<Container as="section" id={sectionIds[lang].contact} class="contact" aria-labelledby="contact-title">
+  <div class="card mono">
+    <p class="prompt"><span aria-hidden="true">$</span> {t("contact.command")}</p>
+    <h2 id="contact-title">{t("contact.title")}</h2>
+    <div class="links">
+      <a class="btn btn-primary" href={`mailto:${basics.email}`}>{basics.email}</a>
+      {basics.profiles.map(({ network, url }) => (
+        <a class="btn btn-ghost" href={url} target="_blank" rel="noopener noreferrer">{network}</a>
+      ))}
+    </div>
+  </div>
+</Container>
+
+<style>
+  .contact {
+    padding-block: 80px 0;
+  }
+
+  .card {
+    padding: var(--space-12) var(--space-10);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .prompt {
+    font-size: 15px;
+    color: var(--color-muted);
+
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  h2 {
+    margin-top: var(--space-3);
+    font-size: 2rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-4);
+    margin-top: 28px;
+  }
+
+  .btn-primary {
+    overflow-wrap: anywhere;
+  }
+
+  @media (width < 640px) {
+    .contact {
+      padding-block: 56px 0;
+    }
+  }
+
+  @media (width <= 480px) {
+    .card {
+      padding: var(--space-8) var(--space-6);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+    }
+  }
+</style>

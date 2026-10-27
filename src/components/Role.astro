@@ -1,0 +1,59 @@
+---
+import TechList from "./TechList.astro";
+import { formatMonthYear, type CV, type Lang } from "@/i18n/ui";
+
+interface Props {
+  job: CV["work"][number];
+  lang: Lang;
+  /** Highlights the dates in the accent color (the ongoing role). */
+  current?: boolean;
+}
+
+const { job, lang, current = false } = Astro.props;
+---
+
+<p class:list={["dates mono", { current }]}>{formatMonthYear(job.startDate, lang)} — {formatMonthYear(job.endDate, lang)}</p>
+<h3><span>{job.position}</span><span class="sep"> · </span><span class="company">{job.name}</span></h3>
+<p class="summary">{job.summary}</p>
+<TechList items={job.skills} class="skills" />
+
+<style>
+  .dates {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+
+    &.current {
+      color: var(--color-accent);
+    }
+  }
+
+  h3 {
+    margin-top: 6px;
+  }
+
+  .summary {
+    margin-top: 10px;
+    max-width: 760px;
+  }
+
+  .skills {
+    margin-top: 10px;
+  }
+
+  /* Phones: position on one line, company below it. The separator stays
+     in the accessibility tree so screen readers still hear both apart. */
+  @media (width < 640px) {
+    .sep {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .company {
+      display: block;
+    }
+  }
+</style>

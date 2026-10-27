@@ -1,11 +1,25 @@
 {
   "basics": {
     "name": "Wilder H. Lizama Garcia",
+    "displayName": "Wilder Lizama",
     "occupation": "Frontend Engineer | React • React Native • Expo • TypeScript",
+    "headline": "Frontend Engineer building scalable web and mobile apps with React, React Native and TypeScript.",
+    "tagline": "Frontend architecture, reusable UI systems and legacy modernization, working with remote international teams across fintech, ERP, healthcare and nonprofit platforms.",
+    "profile": {
+      "role": "Frontend Engineer",
+      "experience": "8+ years",
+      "remote": "5+ years",
+      "stack": [
+        "React",
+        "React Native",
+        "Expo",
+        "TypeScript"
+      ]
+    },
     "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
     "email": "wilderlizama@gmail.com",
     "url": "wlizama.github.io",
-    "cv_url": "https://drive.google.com/file/d/1EddUXqxrIzWKt6qCQ6uOoYhwS-ZzT5Sc/view?usp=drive_link",
+    "cv_url": "https://drive.google.com/file/d/1ndb0CxNTAIO1pgpty55Bn_zEMmYYan8P/view?usp=drive_link",
     "summary": "Frontend Engineer with 8+ years of experience building scalable web and mobile applications using React.js, React Native, TypeScript, JavaScript, and Next.js. Experienced working with remote international teams across fintech, ERP systems, nonprofit platforms, and mobile products. Strong expertise in frontend architecture, reusable UI systems, API integrations, PWAs, and cross-platform mobile development. Proven experience modernizing legacy systems, migrating JavaScript applications to TypeScript, and delivering maintainable, production-ready software. Skilled in collaborating with distributed teams in agile environments and focused on performance, scalability, maintainability, and user experience. Remote experience: 5+ years working with distributed international teams.",
     "location": {
       "city": "Lima",
@@ -33,7 +47,7 @@
       "url": "",
       "startDate": "2024-08-01",
       "endDate": null,
-      "summary": "",
+      "summary": "Expo apps for healthcare and insurance, a Tamagui component library built on Atomic Design, and the move from Expo to React Native CLI.",
       "highlights": [
         "Developed, published, and maintained Expo-based mobile applications for healthcare and insurance products, ensuring high performance, stability, and reliable release cycles.",
         "Designed and developed a reusable mobile component library using Tamagui following the Atomic Design methodology, improving UI consistency, scalability, and code reuse across multiple projects.",
@@ -44,7 +58,14 @@
         "Collaborated with cross-functional teams in an Agile (Scrum) environment, participating in sprint planning, code reviews, technical discussions, and continuous delivery practices."
       ],
       "skills": [
-        "React.js", "React Native", "Expo", "Next.js", "TypeScript", "Google Cloud Platform", "Artificial Intelligence", "Tamagui UI"
+        "React.js",
+        "React Native",
+        "Expo",
+        "Next.js",
+        "TypeScript",
+        "Google Cloud Platform",
+        "Artificial Intelligence",
+        "Tamagui UI"
       ]
     },
     {
@@ -53,7 +74,7 @@
       "url": "",
       "startDate": "2022-04-01",
       "endDate": "2026-06-01",
-      "summary": "",
+      "summary": "JavaScript-to-TypeScript migration of a grantmaking platform, a financial PWA, and Storybook UI libraries.",
       "highlights": [
         "Migrated a nonprofit grantmaking platform from JavaScript to TypeScript, improving maintainability and type safety across the frontend architecture.",
         "Developed and maintained React Native features for a production mobile application used by HVAC field technicians.",
@@ -63,7 +84,16 @@
         "Collaborated with distributed engineering teams in remote agile environments."
       ],
       "skills": [
-        "React.js", "React Native", "TypeScript", "Redux", "Next.js", "AWS", "Storybook", "Tailwind CSS", "PostgreSQL", "MySQL"
+        "React.js",
+        "React Native",
+        "TypeScript",
+        "Redux",
+        "Next.js",
+        "AWS",
+        "Storybook",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "MySQL"
       ]
     },
     {
@@ -72,7 +102,7 @@
       "url": "",
       "startDate": "2019-04-01",
       "endDate": "2022-03-01",
-      "summary": "",
+      "summary": "Desktop software migrated to React and Kendo UI web apps; ERP systems and enterprise intranets.",
       "highlights": [
         "Led migration of desktop software into modern web applications using React.js and Kendo UI.",
         "Developed and maintained ERP systems and enterprise intranet platforms focused on operational efficiency and business workflows.",
@@ -82,7 +112,16 @@
         "Provided server support for IIS and Ubuntu Linux environments."
       ],
       "skills": [
-        "React.js", "Node.js", "GraphQL", "SQL Server", "Java", "MySQL", "Kendo UI", "Material UI", "Bootstrap", "Linux"
+        "React.js",
+        "Node.js",
+        "GraphQL",
+        "SQL Server",
+        "Java",
+        "MySQL",
+        "Kendo UI",
+        "Material UI",
+        "Bootstrap",
+        "Linux"
       ]
     },
     {
@@ -91,14 +130,19 @@
       "url": "",
       "startDate": "2018-03-01",
       "endDate": "2019-03-01",
-      "summary": "",
+      "summary": "A corporate React web platform, from development to deployment, with API integrations.",
       "highlights": [
         "Built a corporate web platform using React.js from development to deployment.",
         "Maintained frontend architecture and collaborated on API integrations.",
         "Participated in testing, deployment, and continuous maintenance efforts."
       ],
       "skills": [
-        "React.js", "JavaScript", "HTML", "CSS", "Python", "MySQL"
+        "React.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python",
+        "MySQL"
       ]
     },
     {
@@ -107,14 +151,18 @@
       "url": "",
       "startDate": "2017-01-01",
       "endDate": "2018-02-01",
-      "summary": "",
+      "summary": "Accounting desktop applications, SQL Server databases and CLI automation scripts.",
       "highlights": [
         "Developed and maintained accounting desktop applications.",
         "Managed SQL Server database structures and T-SQL operations.",
         "Built CLI automation scripts to improve server-side operational workflows."
       ],
       "skills": [
-        "SQL Server", "Java", "Visual Basic", "JavaScript", "Git"
+        "SQL Server",
+        "Java",
+        "Visual Basic",
+        "JavaScript",
+        "Git"
       ]
     },
     {
@@ -123,7 +171,7 @@
       "url": "",
       "startDate": "2015-10-01",
       "endDate": "2017-12-01",
-      "summary": "",
+      "summary": "Landing pages, JavaScript web platforms and logistics ERP systems.",
       "highlights": [
         "Developed and maintained landing pages and JavaScript-based web platforms.",
         "Participated in development and maintenance of logistics ERP systems.",
@@ -131,7 +179,11 @@
         "Conducted testing, deployment, and production support."
       ],
       "skills": [
-        "JavaScript", "React.js", "PHP", "MySQL", "Git"
+        "JavaScript",
+        "React.js",
+        "PHP",
+        "MySQL",
+        "Git"
       ]
     }
   ],
@@ -189,25 +241,55 @@
     {
       "category": "Frontend Development",
       "items": [
-        "React.js", "React Native", "Expo", "Next.js", "JavaScript (ES6+)", "TypeScript", "Redux", "HTML5", "CSS3", "Tamagui", "Tailwind CSS", "Material UI", "Bootstrap", "Kendo UI", "Storybook", "Atomic Design"
+        "React.js",
+        "React Native",
+        "Expo",
+        "Next.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Redux",
+        "HTML5",
+        "CSS3",
+        "Tamagui",
+        "Tailwind CSS",
+        "Material UI",
+        "Bootstrap",
+        "Kendo UI",
+        "Storybook",
+        "Atomic Design"
       ]
     },
     {
       "category": "Backend & APIs",
       "items": [
-        "Node.js", "REST APIs", "GraphQL", "Java", "PHP", "Python"
+        "Node.js",
+        "REST APIs",
+        "GraphQL",
+        "Java",
+        "PHP",
+        "Python"
       ]
     },
     {
       "category": "Cloud, DevOps & Tools",
       "items": [
-        "AWS", "Google Cloud Platform", "Docker", "Git", "Linux", "CI/CD", "Agile", "Scrum"
+        "AWS",
+        "Google Cloud Platform",
+        "Docker",
+        "Git",
+        "Linux",
+        "CI/CD",
+        "Agile",
+        "Scrum"
       ]
     },
     {
       "category": "Databases",
       "items": [
-        "PostgreSQL", "MySQL", "SQL Server", "T-SQL"
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "T-SQL"
       ]
     }
   ],
@@ -226,7 +308,14 @@
       "name": "Tournament Organizer",
       "isActive": true,
       "description": "Web application to organize eSports tournaments with brackets and results.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "APIs", "Docker"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "APIs",
+        "Docker"
+      ],
       "image": "esports.webp",
       "url": "https://github.com/wlizama/tournament-organizer",
       "github": "https://github.com/wlizama/tournament-organizer"
@@ -235,7 +324,14 @@
       "name": "Home Business Portal",
       "isActive": true,
       "description": "Web portal for a real estate company with magazine view and search filters.",
-      "tags": ["React.js", "Node.js", "Bootstrap", "MySQL", "APIs", "Sequelize"],
+      "tags": [
+        "React.js",
+        "Node.js",
+        "Bootstrap",
+        "MySQL",
+        "APIs",
+        "Sequelize"
+      ],
       "image": "home-business.webp",
       "url": "http://162.212.130.247/",
       "github": "https://github.com/wlizama/home-business-portal"
@@ -244,7 +340,12 @@
       "name": "Pizza Delight",
       "isActive": true,
       "description": "E-commerce for a pizza restaurant with online ordering and delivery.",
-      "tags": ["JavaScript", "Bootstrap", "Java", "MySQL"],
+      "tags": [
+        "JavaScript",
+        "Bootstrap",
+        "Java",
+        "MySQL"
+      ],
       "image": "pizzeria.webp",
       "url": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master",
       "github": "https://github.com/wlizama/pedidos-pizzeria-web/tree/master"
@@ -253,25 +354,45 @@
       "name": "Ecomerce PYME",
       "isActive": true,
       "description": "E-commerce for a mid-sized business with shopping cart and stock control.",
-      "tags": ["Python", "Django", "JavaScript", "Ajax", "PostgreSQL", "Heroku"],
+      "tags": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "Ajax",
+        "PostgreSQL",
+        "Heroku"
+      ],
       "image": "ecomerce.webp",
       "url": "https://github.com/wlizama/ecomerce_py",
       "github": "https://github.com/wlizama/ecomerce_py"
     },
     {
       "name": "SUNAT Billing status SOAP-Client",
-      "isActive": true,
+      "isActive": false,
       "description": "SOAP client to check the status of electronic invoices with SUNAT (Peru's tax authority).",
-      "tags": ["Python", "Flask", "SOAP", "XML", "Web Services"],
+      "tags": [
+        "Python",
+        "Flask",
+        "SOAP",
+        "XML",
+        "Web Services"
+      ],
       "image": "sunat-billing-soap.gif",
       "url": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client",
       "github": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client"
     },
     {
       "name": "Web Coast Pacific Group",
-      "isActive": true,
+      "isActive": false,
       "description": "Landing page for a logistics company with a contact form and services.",
-      "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "GIT"],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "GIT"
+      ],
       "image": "coast-pacific-group.webp",
       "url": "https://github.com/wlizama/web-coast-pacific-group",
       "github": "https://github.com/wlizama/web-coast-pacific-group"
