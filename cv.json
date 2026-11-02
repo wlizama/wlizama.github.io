@@ -2,13 +2,13 @@
   "basics": {
     "name": "Wilder H. Lizama Garcia",
     "displayName": "Wilder Lizama",
-    "occupation": "Frontend Engineer | React • React Native • Expo • TypeScript",
-    "headline": "Frontend Engineer building scalable web and mobile apps with React, React Native and TypeScript.",
+    "occupation": "Senior Frontend Engineer | React • React Native • TypeScript • Next.js",
+    "headline": "Senior Frontend Engineer building scalable web and mobile apps with React, React Native and TypeScript.",
     "tagline": "Frontend architecture, reusable UI systems and legacy modernization, working with remote international teams across fintech, ERP, healthcare and nonprofit platforms.",
     "profile": {
-      "role": "Frontend Engineer",
-      "experience": "8+ years",
-      "remote": "5+ years",
+      "role": "Senior Frontend Engineer",
+      "experience": "11+ years",
+      "remote": "6+ years",
       "stack": [
         "React",
         "React Native",
@@ -18,9 +18,10 @@
     },
     "image": "https://avatars0.githubusercontent.com/u/10176577?s=460&v=4",
     "email": "wilderlizama@gmail.com",
+    "phone": "+51 968 195 037",
     "url": "wlizama.github.io",
-    "cv_url": "https://drive.google.com/file/d/1ndb0CxNTAIO1pgpty55Bn_zEMmYYan8P/view?usp=drive_link",
-    "summary": "Frontend Engineer with 8+ years of experience building scalable web and mobile applications using React.js, React Native, TypeScript, JavaScript, and Next.js. Experienced working with remote international teams across fintech, ERP systems, nonprofit platforms, and mobile products. Strong expertise in frontend architecture, reusable UI systems, API integrations, PWAs, and cross-platform mobile development. Proven experience modernizing legacy systems, migrating JavaScript applications to TypeScript, and delivering maintainable, production-ready software. Skilled in collaborating with distributed teams in agile environments and focused on performance, scalability, maintainability, and user experience. Remote experience: 5+ years working with distributed international teams.",
+    "cv_url": "/cv/Wilder_Lizama_Senior_Frontend_Engineer_CV.pdf",
+    "summary": "Senior Frontend Engineer with 11+ years of experience building scalable web and mobile applications with React.js, React Native, TypeScript, JavaScript and Next.js, including 6+ years working remotely with distributed international teams. Experienced across fintech, insurance and healthcare, ERP systems and nonprofit platforms. Strong expertise in frontend architecture, reusable UI systems (Storybook, Tamagui, Atomic Design), API integrations (REST, GraphQL), PWAs and cross-platform mobile development with React Native and Expo. Proven experience modernizing legacy systems, migrating desktop software to the web and JavaScript applications to TypeScript, backed by full-stack experience with Node.js, SQL Server and PostgreSQL. Comfortable in agile environments, focused on performance, scalability, maintainability and user experience.",
     "location": {
       "city": "Lima",
       "countryCode": "PE",
@@ -50,6 +51,9 @@
       "summary": "Expo apps for healthcare and insurance, a Tamagui component library built on Atomic Design, and the move from Expo to React Native CLI.",
       "highlights": [
         "Developed, published, and maintained Expo-based mobile applications for healthcare and insurance products, ensuring high performance, stability, and reliable release cycles.",
+        "Managed App Store and Google Play releases with EAS Build and EAS Submit, and shipped over-the-air updates with EAS Update.",
+        "Integrated Firebase for push notifications (FCM), crash reporting (Crashlytics), authentication and Firestore.",
+        "Wrote unit, component and end-to-end tests with Jest, React Testing Library and Playwright, and worked with CI/CD pipelines on GitHub Actions, Azure DevOps and Jenkins.",
         "Designed and developed a reusable mobile component library using Tamagui following the Atomic Design methodology, improving UI consistency, scalability, and code reuse across multiple projects.",
         "Led the migration of mobile applications from Expo to React Native CLI, adapting native configurations, dependencies, and build processes to support advanced native capabilities and long-term maintainability.",
         "Developed a healthcare mini app and integrated it into the Rimac Seguros Super App, delivering a seamless user experience within the company's mobile ecosystem.",
@@ -58,19 +62,32 @@
         "Collaborated with cross-functional teams in an Agile (Scrum) environment, participating in sprint planning, code reviews, technical discussions, and continuous delivery practices."
       ],
       "skills": [
-        "React.js",
         "React Native",
         "Expo",
-        "Next.js",
         "TypeScript",
+        "React.js",
+        "Tamagui UI",
+        "Jest",
+        "React Testing Library",
+        "Playwright",
+        "Zustand",
+        "TanStack Query",
+        "Context API",
+        "EAS",
+        "Firebase",
+        "Next.js",
         "Google Cloud Platform",
+        "GitHub Actions",
+        "Azure DevOps",
+        "Jenkins",
         "Artificial Intelligence",
-        "Tamagui UI"
+        "Figma",
+        "Jira"
       ]
     },
     {
-      "name": "FTA DevBase LLC",
-      "position": "Frontend Engineer (Remote)",
+      "name": "DevBase (acquired by Fintech Automation)",
+      "position": "Senior Frontend Engineer (Remote)",
       "url": "",
       "startDate": "2022-04-01",
       "endDate": "2026-06-01",
@@ -78,6 +95,8 @@
       "highlights": [
         "Migrated a nonprofit grantmaking platform from JavaScript to TypeScript, improving maintainability and type safety across the frontend architecture.",
         "Developed and maintained React Native features for a production mobile application used by HVAC field technicians.",
+        "Published React Native app releases to the App Store and Google Play.",
+        "Wrote unit and component tests with Jest and React Testing Library, and worked with CI/CD pipelines on GitHub Actions and Jenkins.",
         "Maintained and enhanced a Progressive Web Application (PWA) for a financial platform handling cash and bank account operations through API integrations.",
         "Built reusable UI component libraries using Storybook and Atomic Design, reducing UI inconsistencies and accelerating frontend development.",
         "Integrated REST APIs for transaction processing and backend communication.",
@@ -85,31 +104,41 @@
       ],
       "skills": [
         "React.js",
-        "React Native",
         "TypeScript",
-        "Redux",
+        "React Native",
         "Next.js",
-        "AWS",
+        "Redux",
         "Storybook",
+        "Jest",
+        "React Testing Library",
+        "Zustand",
+        "TanStack Query",
+        "Context API",
         "Tailwind CSS",
+        "AWS",
         "PostgreSQL",
-        "MySQL"
+        "MySQL",
+        "GitHub Actions",
+        "Jenkins",
+        "Figma",
+        "Jira"
       ]
     },
     {
       "name": "GNT Servicios Generales S.A",
-      "position": "Full Stack Developer",
+      "position": "Full Stack Developer (Hybrid)",
       "url": "",
-      "startDate": "2019-04-01",
-      "endDate": "2022-03-01",
+      "startDate": "2015-04-01",
+      "endDate": "2022-04-07",
       "summary": "Desktop software migrated to React and Kendo UI web apps; ERP systems and enterprise intranets.",
       "highlights": [
-        "Led migration of desktop software into modern web applications using React.js and Kendo UI.",
-        "Developed and maintained ERP systems and enterprise intranet platforms focused on operational efficiency and business workflows.",
+        "Led the migration of desktop software into modern web applications using React.js and Kendo UI.",
+        "Developed and maintained ERP systems and enterprise intranet platforms with Material UI, Bootstrap and GraphQL, focused on operational efficiency and business workflows.",
         "Designed and maintained T-SQL database structures and optimized SQL Server operations.",
-        "Developed integrations with Gmail APIs to automate electronic document registration processes.",
+        "Built Gmail API integrations to automate electronic document registration.",
         "Built background Java services for asynchronous server-side execution.",
-        "Provided server support for IIS and Ubuntu Linux environments."
+        "Provided server support for IIS and Ubuntu Linux environments.",
+        "Worked remotely with the team from 2020 onwards."
       ],
       "skills": [
         "React.js",
@@ -117,73 +146,16 @@
         "GraphQL",
         "SQL Server",
         "Java",
-        "MySQL",
         "Kendo UI",
         "Material UI",
         "Bootstrap",
-        "Linux"
-      ]
-    },
-    {
-      "name": "Home Business Real Estate Magazine",
-      "position": "Frontend Developer (Remote)",
-      "url": "",
-      "startDate": "2018-03-01",
-      "endDate": "2019-03-01",
-      "summary": "A corporate React web platform, from development to deployment, with API integrations.",
-      "highlights": [
-        "Built a corporate web platform using React.js from development to deployment.",
-        "Maintained frontend architecture and collaborated on API integrations.",
-        "Participated in testing, deployment, and continuous maintenance efforts."
-      ],
-      "skills": [
-        "React.js",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Python",
-        "MySQL"
-      ]
-    },
-    {
-      "name": "828 Transporte",
-      "position": "Backend Developer (Remote)",
-      "url": "",
-      "startDate": "2017-01-01",
-      "endDate": "2018-02-01",
-      "summary": "Accounting desktop applications, SQL Server databases and CLI automation scripts.",
-      "highlights": [
-        "Developed and maintained accounting desktop applications.",
-        "Managed SQL Server database structures and T-SQL operations.",
-        "Built CLI automation scripts to improve server-side operational workflows."
-      ],
-      "skills": [
-        "SQL Server",
-        "Java",
-        "Visual Basic",
-        "JavaScript",
-        "Git"
-      ]
-    },
-    {
-      "name": "Coast Pacific Group",
-      "position": "Full Stack Developer (Remote)",
-      "url": "",
-      "startDate": "2015-10-01",
-      "endDate": "2017-12-01",
-      "summary": "Landing pages, JavaScript web platforms and logistics ERP systems.",
-      "highlights": [
-        "Developed and maintained landing pages and JavaScript-based web platforms.",
-        "Participated in development and maintenance of logistics ERP systems.",
-        "Maintained internal operational systems and travel log applications.",
-        "Conducted testing, deployment, and production support."
-      ],
-      "skills": [
-        "JavaScript",
-        "React.js",
-        "PHP",
         "MySQL",
-        "Git"
+        "Linux",
+        "Context API",
+        "Jest",
+        "GitHub Actions",
+        "Azure DevOps",
+        "Figma"
       ]
     }
   ],
@@ -207,15 +179,21 @@
   ],
   "certificates": [
     {
+      "name": "ReactJS, Redux + ES6",
+      "date": "2019",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
       "name": "Microservices Architecture with Patterns & Principles",
       "date": "2022",
       "issuer": "Udemy",
       "url": ""
     },
     {
-      "name": "ReactJS, Redux + ES6",
-      "date": "2019",
-      "issuer": "Udemy",
+      "name": "Java SE Fundamentals",
+      "date": "2018",
+      "issuer": "Platzi",
       "url": ""
     },
     {
@@ -242,21 +220,41 @@
       "category": "Frontend Development",
       "items": [
         "React.js",
-        "React Native",
-        "Expo",
         "Next.js",
         "JavaScript (ES6+)",
         "TypeScript",
         "Redux",
+        "Zustand",
+        "TanStack Query",
+        "Context API",
         "HTML5",
         "CSS3",
-        "Tamagui",
         "Tailwind CSS",
         "Material UI",
         "Bootstrap",
         "Kendo UI",
         "Storybook",
         "Atomic Design"
+      ]
+    },
+    {
+      "category": "Mobile Development",
+      "items": [
+        "React Native",
+        "Expo",
+        "Tamagui",
+        "EAS Build / Submit",
+        "EAS Update (OTA)",
+        "App Store & Google Play releases",
+        "Firebase (FCM, Crashlytics, Auth, Firestore)"
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        "Jest",
+        "React Testing Library",
+        "Playwright"
       ]
     },
     {
@@ -277,8 +275,13 @@
         "Google Cloud Platform",
         "Docker",
         "Git",
+        "GitHub Actions",
+        "Azure DevOps",
+        "Jenkins",
         "Linux",
         "CI/CD",
+        "Figma",
+        "Jira",
         "Agile",
         "Scrum"
       ]
@@ -296,7 +299,7 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "Intermediate"
+      "fluency": "Professional working proficiency (B2)"
     },
     {
       "language": "Spanish",
@@ -319,22 +322,6 @@
       "image": "esports.webp",
       "url": "https://github.com/wlizama/tournament-organizer",
       "github": "https://github.com/wlizama/tournament-organizer"
-    },
-    {
-      "name": "Home Business Portal",
-      "isActive": true,
-      "description": "Web portal for a real estate company with magazine view and search filters.",
-      "tags": [
-        "React.js",
-        "Node.js",
-        "Bootstrap",
-        "MySQL",
-        "APIs",
-        "Sequelize"
-      ],
-      "image": "home-business.webp",
-      "url": "http://162.212.130.247/",
-      "github": "https://github.com/wlizama/home-business-portal"
     },
     {
       "name": "Pizza Delight",
@@ -380,22 +367,6 @@
       "image": "sunat-billing-soap.gif",
       "url": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client",
       "github": "https://github.com/wlizama/SUNAT-Billing-Status-SOAP-Client"
-    },
-    {
-      "name": "Web Coast Pacific Group",
-      "isActive": false,
-      "description": "Landing page for a logistics company with a contact form and services.",
-      "tags": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "PHP",
-        "MySQL",
-        "GIT"
-      ],
-      "image": "coast-pacific-group.webp",
-      "url": "https://github.com/wlizama/web-coast-pacific-group",
-      "github": "https://github.com/wlizama/web-coast-pacific-group"
     }
   ]
 }
