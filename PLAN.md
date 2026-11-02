@@ -18,7 +18,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
 | 4 · LinkedIn | 🟢 Cerrada | — |
-| 5 · Verificación | 🟡 En curso | 5.3: correcciones en LinkedIn (🧑) |
+| 5 · Verificación | 🟡 En curso | 5.3: puntos 3–6 (🧑) + PDF final (🧑→🤖) |
 | 6 · Señales | ⬜ No iniciada | — |
 
 **Siguiente paso:** 5.3 → corregir en LinkedIn los 6 puntos de la verificación (ver bitácora 2026-11-02, Fase 5); luego Fase 6.
@@ -56,8 +56,8 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · PR #19 mergeado y desplegado; PDFs publicados verificados (idénticos a `master`, 2 páginas, resumen neutro, 7 certificados con freeCodeCamp enlazado). 4.9 hecho.
 - **2026-11-02** · Fase 4 cerrada: inglés como idioma principal (descubrimos que el perfil original estaba registrado en español; se creó el perfil en inglés con "Make primary language") y perfil en español con el Anexo C.
 - **2026-11-02** · Fase 5 (5.1–5.2): PDF de LinkedIn comparado con `cv.json` y el CV. OK: titular, summary, 3 puestos (cargos, empresas, fechas y bullets), sin freelance. Pendientes para 5.3:
-  1. Ubicación solo "Peru" → poner *Lima, Lima, Peru* (alta).
-  2. El PDF muestra solo 2 certificaciones → confirmar que estén las 7 (alta).
+  1. ✅ Ubicación: se corrige con **Postal code** (el formulario ya no tiene campo City) e Industry → Software Development (alta).
+  2. ✅ Las 7 certificaciones están en el perfil (el PDF solo mostraba 2) (alta).
   3. About: "insurance &amp; healthcare" → usar "insurance and healthcare" (media).
   4. Idiomas como "Inglés/Español" → *English/Spanish* en el perfil en inglés (media).
   5. Top Skills del PDF = React Query, Jenkins, Firebase → confirmar que el About muestre las 5 elegidas (baja).
