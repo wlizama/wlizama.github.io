@@ -17,7 +17,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
-| 4 · LinkedIn | 🟡 En curso (guiada) | 4.9, 4.10 y 4.12 (🧑) · merge PR #19 (🧑) |
+| 4 · LinkedIn | 🟡 En curso (guiada) | 4.10 y 4.12 (🧑) |
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
 
@@ -53,6 +53,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · Corrección: resumen de `cv.es.json` con redacción neutra ("Con experiencia en entornos ágiles…" en vez de "Cómodo…") → **PR #19** (pendiente de tu merge; luego Claude verifica el sitio). Fase 4 en modo guiado: tú editas LinkedIn y Claude acompaña paso a paso.
 - **2026-11-02** · Certificado de microservicios: fecha real **feb 2024** (no 2022) y nombre oficial con "Design". Corregido en web/PDF dentro del **PR #19**. En LinkedIn: Issue date = February 2024. Fase 4: 4.1–4.8 hechos por ti.
 - **2026-11-02** · Nuevo certificado: **Legacy Responsive Web Design V8** (freeCodeCamp, 12-feb-2024) agregado a web/PDF en el **PR #19**; el PDF ahora enlaza los certificados que tienen URL.
+- **2026-11-02** · PR #19 mergeado y desplegado; PDFs publicados verificados (idénticos a `master`, 2 páginas, resumen neutro, 7 certificados con freeCodeCamp enlazado). 4.9 hecho.
 
 ---
 
@@ -173,7 +174,7 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 | ✅ 4.6 | 🧑 Tú | **Intro**: titular, ubicación **Lima, Lima, Perú**, email `wilderlizama@gmail.com`, sitio web con etiqueta "Portfolio" |
 | ✅ 4.7 | 🧑 Tú | **Acerca de**: texto del Anexo A + 5 aptitudes principales |
 | ✅ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
-| ⬜ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
+| ✅ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
 | ⬜ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
 | ✅ 4.11 | 🤖 Claude | Perfil en español redactado → **Anexo C** |
 | ⬜ 4.12 | 🧑 Tú | **Agregar perfil en otro idioma → Español** y pegar los textos de 4.11 |
