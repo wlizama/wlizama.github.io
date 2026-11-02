@@ -17,11 +17,11 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
-| 4 · LinkedIn | 🟡 En curso (guiada) | 4.10 y 4.12 (🧑) |
-| 5 · Verificación | ⬜ No iniciada | — |
+| 4 · LinkedIn | 🟢 Cerrada | — |
+| 5 · Verificación | 🟡 En curso | 5.3: correcciones en LinkedIn (🧑) |
 | 6 · Señales | ⬜ No iniciada | — |
 
-**Siguiente paso:** Fase 4 (LinkedIn) → tú haces 4.1 → 4.10 y 4.12 en una sola sesión, copiando del Anexo A (inglés) y el Anexo C (español).
+**Siguiente paso:** 5.3 → corregir en LinkedIn los 6 puntos de la verificación (ver bitácora 2026-11-02, Fase 5); luego Fase 6.
 
 Leyenda: ✅ hecho · ⏳ pendiente · ⬜ no iniciado · 🟡 fase con pendientes · 🟢 fase cerrada.
 Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su fase.
@@ -54,6 +54,15 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · Certificado de microservicios: fecha real **feb 2024** (no 2022) y nombre oficial con "Design". Corregido en web/PDF dentro del **PR #19**. En LinkedIn: Issue date = February 2024. Fase 4: 4.1–4.8 hechos por ti.
 - **2026-11-02** · Nuevo certificado: **Legacy Responsive Web Design V8** (freeCodeCamp, 12-feb-2024) agregado a web/PDF en el **PR #19**; el PDF ahora enlaza los certificados que tienen URL.
 - **2026-11-02** · PR #19 mergeado y desplegado; PDFs publicados verificados (idénticos a `master`, 2 páginas, resumen neutro, 7 certificados con freeCodeCamp enlazado). 4.9 hecho.
+- **2026-11-02** · Fase 4 cerrada: inglés como idioma principal (descubrimos que el perfil original estaba registrado en español; se creó el perfil en inglés con "Make primary language") y perfil en español con el Anexo C.
+- **2026-11-02** · Fase 5 (5.1–5.2): PDF de LinkedIn comparado con `cv.json` y el CV. OK: titular, summary, 3 puestos (cargos, empresas, fechas y bullets), sin freelance. Pendientes para 5.3:
+  1. Ubicación solo "Peru" → poner *Lima, Lima, Peru* (alta).
+  2. El PDF muestra solo 2 certificaciones → confirmar que estén las 7 (alta).
+  3. About: "insurance &amp; healthcare" → usar "insurance and healthcare" (media).
+  4. Idiomas como "Inglés/Español" → *English/Spanish* en el perfil en inglés (media).
+  5. Top Skills del PDF = React Query, Jenkins, Firebase → confirmar que el About muestre las 5 elegidas (baja).
+  6. Email del perfil *wilder.lizama@* vs *wilderlizama@* en web/CV (opcional).
+  La copia del PDF de LinkedIn se borró del repo (datos personales).
 
 ---
 
@@ -175,9 +184,9 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 | ✅ 4.7 | 🧑 Tú | **Acerca de**: texto del Anexo A + 5 aptitudes principales |
 | ✅ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
 | ✅ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
-| ⬜ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
+| ✅ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
 | ✅ 4.11 | 🤖 Claude | Perfil en español redactado → **Anexo C** |
-| ⬜ 4.12 | 🧑 Tú | **Agregar perfil en otro idioma → Español** y pegar los textos de 4.11 |
+| ✅ 4.12 | 🧑 Tú | **Agregar perfil en otro idioma → Español** y pegar los textos de 4.11 |
 
 **Salida:** LinkedIn alineado con la web.
 
@@ -187,9 +196,9 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 
 | # | Quién | Tarea |
 |---|---|---|
-| ⬜ 5.1 | 🧑 Tú | Exportar el nuevo PDF de LinkedIn (**Más → Guardar como PDF**) y pasar la ruta |
-| ⬜ 5.2 | 🤖 Claude | Comparar LinkedIn vs `cv.json` vs CV PDF: empresas, cargos, fechas, cifras, certificados, email. Reportar diferencias |
-| ⬜ 5.3 | 🧑 Tú | Corregir en LinkedIn lo que salga en 5.2 |
+| ✅ 5.1 | 🧑 Tú | Exportar el nuevo PDF de LinkedIn (**Más → Guardar como PDF**) y pasar la ruta |
+| ✅ 5.2 | 🤖 Claude | Comparar LinkedIn vs `cv.json` vs CV PDF: empresas, cargos, fechas, cifras, certificados, email. Reportar diferencias |
+| ⏳ 5.3 | 🧑 Tú | Corregir en LinkedIn lo que salga en 5.2 |
 | ⬜ 5.4 | 🧑 Tú | Opcional: pedir a un contacto que busque "Senior Frontend Engineer React Native Peru" en LinkedIn y confirme que apareces |
 
 **Salida:** los tres canales consistentes.
