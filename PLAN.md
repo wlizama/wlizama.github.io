@@ -17,7 +17,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
-| 4 · LinkedIn | 🟡 En curso (guiada) | 4.1 → 4.10 y 4.12 (🧑) · merge PR #19 (🧑) |
+| 4 · LinkedIn | 🟡 En curso (guiada) | 4.9, 4.10 y 4.12 (🧑) · merge PR #19 (🧑) |
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
 
@@ -51,6 +51,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · PR #18 mergeado y desplegado; sitio publicado verificado (3.3) → Fase 3 cerrada. 0.2 hecho.
 - **2026-11-02** · 0.3 hecho → Fase 0 cerrada. 4.11: perfil en español en el Anexo C; "Acerca de" en inglés (Anexo A) actualizado con testing, publicación mobile y CI/CD para que coincida con el español.
 - **2026-11-02** · Corrección: resumen de `cv.es.json` con redacción neutra ("Con experiencia en entornos ágiles…" en vez de "Cómodo…") → **PR #19** (pendiente de tu merge; luego Claude verifica el sitio). Fase 4 en modo guiado: tú editas LinkedIn y Claude acompaña paso a paso.
+- **2026-11-02** · Certificado de microservicios: fecha real **feb 2024** (no 2022) y nombre oficial con "Design". Corregido en web/PDF dentro del **PR #19**. En LinkedIn: Issue date = February 2024. Fase 4: 4.1–4.8 hechos por ti.
 
 ---
 
@@ -89,7 +90,7 @@ portafolio o al CV nunca ve datos distintos.
 | Certificado | Emisor | Fecha |
 |---|---|---|
 | ReactJS, Redux + ES6 | Udemy | 2019 |
-| Microservices Architecture with Patterns & Principles | Udemy | 2022 |
+| Design Microservices Architecture with Patterns & Principles | Udemy | 2024 (feb) |
 | Curso Básico de Java SE | Platzi | 2018 |
 | Backend Development with Python & Django | Platzi | — |
 | Linux Server Administration | Platzi | — |
@@ -162,14 +163,14 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 
 | # | Quién | Tarea |
 |---|---|---|
-| ⬜ 4.1 | 🧑 Tú | **Experiencia**: eliminar Home Business, 828 Transporte y Coast Pacific |
-| ⬜ 4.2 | 🧑 Tú | **Experiencia → New Transport S.A**: cambiar empresa a **GNT Servicios Generales S.A**, fechas **abr 2015 – abr 2022**, ubicación Lima, modalidad **Híbrido**, descripción del Anexo A |
-| ⬜ 4.3 | 🧑 Tú | **Experiencia → DevBase**: cargo **Senior Frontend Engineer**, modalidad **Remoto**, descripción del Anexo A |
-| ⬜ 4.4 | 🧑 Tú | **Experiencia → Rimac**: modalidad **Híbrido**; descripción sin cambios |
-| ⬜ 4.5 | 🧑 Tú | Vincular aptitudes a cada puesto (listas en el Anexo A) |
-| ⬜ 4.6 | 🧑 Tú | **Intro**: titular, ubicación **Lima, Lima, Perú**, email `wilderlizama@gmail.com`, sitio web con etiqueta "Portfolio" |
-| ⬜ 4.7 | 🧑 Tú | **Acerca de**: texto del Anexo A + 5 aptitudes principales |
-| ⬜ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
+| ✅ 4.1 | 🧑 Tú | **Experiencia**: eliminar Home Business, 828 Transporte y Coast Pacific |
+| ✅ 4.2 | 🧑 Tú | **Experiencia → New Transport S.A**: cambiar empresa a **GNT Servicios Generales S.A**, fechas **abr 2015 – abr 2022**, ubicación Lima, modalidad **Híbrido**, descripción del Anexo A |
+| ✅ 4.3 | 🧑 Tú | **Experiencia → DevBase**: cargo **Senior Frontend Engineer**, modalidad **Remoto**, descripción del Anexo A |
+| ✅ 4.4 | 🧑 Tú | **Experiencia → Rimac**: modalidad **Híbrido**; descripción sin cambios |
+| ✅ 4.5 | 🧑 Tú | Vincular aptitudes a cada puesto (listas en el Anexo A) |
+| ✅ 4.6 | 🧑 Tú | **Intro**: titular, ubicación **Lima, Lima, Perú**, email `wilderlizama@gmail.com`, sitio web con etiqueta "Portfolio" |
+| ✅ 4.7 | 🧑 Tú | **Acerca de**: texto del Anexo A + 5 aptitudes principales |
+| ✅ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
 | ⬜ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
 | ⬜ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
 | ✅ 4.11 | 🤖 Claude | Perfil en español redactado → **Anexo C** |
