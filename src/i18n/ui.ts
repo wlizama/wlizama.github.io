@@ -23,9 +23,9 @@ export const getCV = (lang: Lang): CV => cvs[lang];
 
 export const ui = {
 	en: {
-		'meta.title': 'Wilder Lizama | Frontend Engineer',
+		'meta.title': 'Wilder Lizama | Senior Frontend Engineer',
 		'meta.description':
-			'Wilder Lizama — Frontend Engineer with 8+ years building scalable web and mobile apps with React, React Native and TypeScript.',
+			'Wilder Lizama — Senior Frontend Engineer with 11+ years building scalable web and mobile apps with React, React Native and TypeScript.',
 		'skip': 'Skip to content',
 		'nav.label': 'Primary',
 		'nav.open': 'Open menu',
@@ -53,15 +53,15 @@ export const ui = {
 		'projects.source': 'code ↗',
 		'projects.sourceLabel': 'Source code of {name} (opens in a new tab)',
 		'contact.command': './contact --now',
-		'contact.title': 'Looking for a Frontend Engineer for your team?',
+		'contact.title': 'Looking for a Senior Frontend Engineer for your team?',
 		'notFound.title': 'Page not found',
 		'notFound.body': "The page you're looking for doesn't exist or was moved.",
 		'notFound.back': 'Back to home',
 	},
 	es: {
-		'meta.title': 'Wilder Lizama | Frontend Engineer',
+		'meta.title': 'Wilder Lizama | Senior Frontend Engineer',
 		'meta.description':
-			'Wilder Lizama — Frontend Engineer con más de 8 años construyendo apps web y móviles escalables con React, React Native y TypeScript.',
+			'Wilder Lizama — Senior Frontend Engineer con más de 11 años construyendo apps web y móviles escalables con React, React Native y TypeScript.',
 		'skip': 'Saltar al contenido',
 		'nav.label': 'Principal',
 		'nav.open': 'Abrir menú',
@@ -89,7 +89,7 @@ export const ui = {
 		'projects.source': 'código ↗',
 		'projects.sourceLabel': 'Código fuente de {name} (se abre en una pestaña nueva)',
 		'contact.command': './contactar --ahora',
-		'contact.title': '¿Buscas un Frontend Engineer para tu equipo?',
+		'contact.title': '¿Buscas un Senior Frontend Engineer para tu equipo?',
 		'notFound.title': 'Página no encontrada',
 		'notFound.body': 'La página que buscas no existe o fue movida.',
 		'notFound.back': 'Volver al inicio',

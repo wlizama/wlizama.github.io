@@ -1,111 +1,288 @@
-# Plan de rediseño — wlizama.github.io
+# Plan: pulir perfil LinkedIn + portafolio web
 
-Dirección elegida: **B · Dev Terminal** ([canvas de diseño](https://claude.ai/artifact/Xc9PA9bLm4XvikqmDpenNc), artboard `TerminalES.dc.html`).
+> Objetivo: que el perfil aparezca y convenza en las búsquedas de reclutadores TI para
+> **Senior Frontend Engineer (web + React Native), remoto internacional**, con "Full Stack"
+> como palabra clave secundaria. LinkedIn, la web y el CV en PDF deben decir exactamente lo mismo.
 
-Leyenda: `[x]` implementado · `[ ]` pendiente
+## 📍 Estado actual (leer primero al retomar)
+
+Rama de trabajo: **`feat/perfil-senior`** (creada desde `chore/quitar-plan`, que borra el plan anterior; mergear esa primero o junto con esta).
+
+⛔ **Regla de merge:** el merge a `master` se hace **al cerrar las fases 1, 2 y 3** (no antes).
+🎯 **Alcance:** solo se modifican este repo y LinkedIn. No se tocan otros repos ni proyectos de GitHub.
+
+| Fase | Estado | Pendientes para cerrarla |
+|---|---|---|
+| 0 · Preparación | 🟡 Claude listo · faltan tareas tuyas | 0.2 y 0.3 (🧑) |
+| 1 · Portafolio web | 🟢 Cerrada | — |
+| 2 · Imágenes y CV | 🟢 Cerrada | — |
+| 3 · Publicar web | 🟡 En curso · PR #18 abierto | 3.2 merge (🧑), 3.3 (🤖) |
+| 4 · LinkedIn | ⬜ No iniciada | — |
+| 5 · Verificación | ⬜ No iniciada | — |
+| 6 · Señales | ⬜ No iniciada | — |
+
+**Siguiente paso:** Fase 3 → revisar el PR y hacer merge (3.2); luego Claude verifica el sitio publicado (3.3). Pendientes sueltos: 0.2 y 0.3.
+
+Leyenda: ✅ hecho · ⏳ pendiente · ⬜ no iniciado · 🟡 fase con pendientes · 🟢 fase cerrada.
+Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su fase.
+
+### Bitácora
+- **2026-11-02** · Fase 0: textos del Anexo A aprobados ("empieza"); rama creada. Fase 1: `cv.json`/`cv.es.json`, `ui.ts` e imágenes de proyectos actualizados; `pnpm build` en verde (0 errores, `validate-cv` OK). Sin commit todavía (se hace en Fase 3).
+- **2026-11-02** · Fase 2: opción **A** elegida. `scripts/generate-pdf.mjs` implementado (HTML → PDF con Chrome headless, `pnpm generate:pdf`); PDFs EN/ES de 2 páginas en `public/cv/`; `cv_url` apunta a ellos; teléfono agregado como `basics.phone` (solo se muestra en el PDF). OG y capturas del README regeneradas. Build en verde. Regla nueva: sin merge a `master` hasta terminar la web.
+- **2026-11-02** · Regla de merge precisada: merge al cerrar fases 1–3. Alcance limitado a este repo y LinkedIn → 6.4, 6.5 y 6.6 descartadas.
+- **2026-11-02** · Revisión ATS de los PDFs (2.6). Nuevas tecnologías agregadas a `cv.json`/`cv.es.json` (categorías nuevas *Mobile Development* y *Testing*), PDFs regenerados (siguen en 2 páginas), build en verde. Uso confirmado por trabajo:
+
+  | Tecnología | Rimac | DevBase | GNT |
+  |---|:-:|:-:|:-:|
+  | Jest | ✅ | ✅ | ✅ |
+  | React Testing Library | ✅ | ✅ | |
+  | Playwright | ✅ | | |
+  | App Store / Google Play | ✅ | ✅ | |
+  | EAS Build / Submit · EAS Update | ✅ | | |
+  | GitHub Actions | ✅ | ✅ | ✅ |
+  | Azure DevOps | ✅ | | ✅ |
+  | Jenkins | ✅ | ✅ | |
+  | TanStack Query · Zustand | ✅ | ✅ | |
+  | Context API · Figma | ✅ | ✅ | ✅ |
+  | Firebase (FCM, Crashlytics, Auth, Firestore) | ✅ | | |
+  | Jira | ✅ | ✅ | |
+- **2026-11-02** · Experiencia (web): solo top 6 tecnologías por puesto (2.7). Top 6 → Rimac: React Native, Expo, TypeScript, React.js, Tamagui UI, Jest · DevBase: React.js, TypeScript, React Native, Next.js, Redux, Storybook · GNT: React.js, Node.js, GraphQL, SQL Server, Java, Kendo UI.
+- **2026-11-02** · 1.9 y 2.5 revisadas por ti → fases 1 y 2 cerradas. Fase 3 iniciada: commits + push + PR (sin merge hasta tu revisión).
+
+---
+
+**Responsables**
+- 🧑 **Tú**: lo que requiere tu cuenta, tu criterio o acceso que Claude no tiene (LinkedIn, Google Drive, contactos, exámenes).
+- 🤖 **Claude**: cambios en el repo, redacción de textos, generación de archivos y verificación.
+
+**Por qué este orden:** la web (`cv.json`) es la fuente de verdad. Primero se fijan y validan los
+textos ahí; después se copian a LinkedIn y al CV. Así un reclutador que salte de LinkedIn al
+portafolio o al CV nunca ve datos distintos.
+
+---
 
 ## Decisiones tomadas
 
 | Tema | Decisión |
-| --- | --- |
-| Estética | B · Dev Terminal: fondo `#0D1117`, acento `#FF6188`, IBM Plex Sans (texto) + JetBrains Mono (acentos) |
-| Temas | Solo oscuro. La paleta de B es el nuevo tema por defecto; los 7 temas actuales se conservan, sin selector |
-| Idiomas | EN + ES. `/` redirige según `navigator.language` → `/en/` o `/es/`; si no es ES/EN (o sin JS) → inglés |
-| Contenido ES | `cv.es.json` aparte con la misma estructura (traducción redactada por Claude, revisada por Wilder) |
-| Hero | Copy de B: nuevos campos `headline` y `tagline`; el `summary` largo deja de mostrarse |
-| Experiencia | 3 roles recientes con `summary` corto (campo nuevo), sin highlights (igual que B); los 3 roles anteriores tras "Ver {n} roles anteriores" |
-| Proyectos | Solo los 4 de B visibles; SUNAT SOAP-Client y Web Coast Pacific Group → `isActive: false` |
-| Stack | Todas las skills de `cv.json` |
-| Educación / Certificaciones | No se muestran (igual que B); los idiomas solo en la tarjeta `perfil.json` |
-| Foto / logo | Igual que B: sin avatar, logo de texto `~/wlizama`. Favicon nuevo `w_` (ver Fase 7) |
-| Nav EN | Estilo terminal: `./experience`, `./projects`, `./stack`, `./contact` |
-| Fuentes | Self-host con `@fontsource` (reemplaza Roboto Mono) |
-| CV PDF | Un `cv_url` por idioma |
-| Plan / PRs | `PLAN.md` en la raíz; rama de integración `redesign-main` (desde `master`). Cada fase sale de `redesign-main` y abre su PR contra ella; al terminar el diseño completo, un PR de `redesign-main` a `master` |
+|---|---|
+| Rol | Senior Frontend Engineer (web + mobile). "Full Stack" solo como keyword secundaria |
+| Mercado | Remoto internacional |
+| Experiencia total | **11+ años** (desde 01-abr-2015) |
+| Experiencia remota | **6+ años** (GNT mar-2020 → abr-2022 + DevBase abr-2022 → jun-2026) |
+| GNT Servicios Generales S.A | Full Stack Developer · **01-abr-2015 → 07-abr-2022** · híbrido (remoto desde 2020) |
+| Freelance | **Se elimina por completo**: Home Business, 828 Transporte, Coast Pacific (puestos y proyectos) |
+| DevBase | Nombre **DevBase (acquired by Fintech Automation)** · cargo **Senior Frontend Engineer** · remoto |
+| Rimac | **Frontend Mobile Expert** (sin cambio) · híbrido |
+| Inglés | B2 → "Professional working proficiency" |
+| Idioma LinkedIn | Principal **inglés**, secundario **español** |
+| Open to Work | **No** activar |
+| Métricas | No hay → impacto cualitativo, sin inventar cifras |
+| Email | **wilderlizama@gmail.com** |
+| Nombre | **Wilder Humberto Lizama Garcia** (se mantiene) |
+| Flutter | Fuera del titular y aptitudes; queda solo como certificado |
 
-## Pendientes de Wilder
+**Certificados**
 
-- [x] Enlace del PDF del CV en español (`cv.es.json` tiene su propio `cv_url`; el inglés también se actualizó)
-- [x] Revisar la traducción de `cv.es.json`
+| Certificado | Emisor | Fecha |
+|---|---|---|
+| ReactJS, Redux + ES6 | Udemy | 2019 |
+| Microservices Architecture with Patterns & Principles | Udemy | 2022 |
+| Curso Básico de Java SE | Platzi | 2018 |
+| Backend Development with Python & Django | Platzi | — |
+| Linux Server Administration | Platzi | — |
+| Native App Development with Flutter | Udemy | — |
 
-## Fase 1 — Fundamentos
+---
 
-- [x] Instalar `@fontsource/ibm-plex-sans` (400–700) y `@fontsource-variable/jetbrains-mono`; quitar Roboto Mono
-- [x] Nuevo tema `terminal` con la paleta de B como `DEFAULT_THEME` y su `THEME_ACCENT`
-- [x] Tokens base: escala tipográfica, espaciado, radios (8 / 12 / 16 / 999px), bordes (`#21262D`, `#30363D`)
-- [x] Componente `Container` (max-width 1120px, padding 24px) que reemplaza los 800px duplicados
-- [x] Estilos globales: body sans, utilidades `.mono`, `a`/`:focus-visible` según B, `prefers-reduced-motion`
-- [x] `pnpm build` pasa
+## Fase 0 · Preparación
 
-## Fase 2 — Datos e i18n
+| # | Quién | Tarea |
+|---|---|---|
+| ✅ 0.1 | 🧑 Tú | Revisar y aprobar los textos del **Anexo A** (titular, Acerca de, experiencia). Cualquier ajuste se hace aquí, antes de tocar nada |
+| ⏳ 0.2 | 🧑 Tú | LinkedIn → **Configuración → Visibilidad → Compartir actualizaciones del perfil con tu red → Desactivar** |
+| ⏳ 0.3 | 🧑 Tú | Guardar respaldo del perfil actual (`~/Downloads/Profile.pdf` existe; moverlo a un lugar seguro, Descargas se limpia) |
+| ✅ 0.4 | 🤖 Claude | Rama `feat/perfil-senior` creada (desde `chore/quitar-plan`, ver Estado actual) |
 
-- [x] `cv.json`: añadir `basics.headline`, `basics.tagline`, `work[].summary`; `isActive: false` en los 2 proyectos ocultos
-- [x] `cv.es.json` con la misma estructura, traducido
-- [x] `validate-cv.mjs` valida ambos archivos y que tengan las mismas claves
-- [x] Alias `@cv-es` en `tsconfig.json` + loader `getCV(lang)` en `src/i18n/ui.ts`
-- [x] Diccionario de textos de UI (`src/i18n/ui.ts`): nav, CTAs, títulos de sección, "Ver {n} roles anteriores", etc.
-- [x] Rutas `/en/` y `/es/` con `src/pages/[lang]/index.astro` (config `i18n` de Astro, `prefixDefaultLocale`)
-- [x] `src/pages/index.astro`: redirect por el idioma principal (`navigator.language`) con fallback a `/en/`; `<noscript>` con enlaces a ambos idiomas; fuera del sitemap y `noindex`
-- [x] `<html lang>`, `hreflang` alternates, canonical y meta description por idioma
-- [x] Formato de fechas por idioma (`ago 2024 — actualidad` / `Aug 2024 — Present`)
-- [x] Anclas de sección por idioma (`#experiencia`, `#proyectos`, `#contacto` en ES)
-- [x] Página 404 con textos del diccionario (en inglés: GitHub Pages sirve un único `404.html`)
-- [x] `pnpm build` pasa
+**Salida:** textos aprobados y LinkedIn sin notificaciones a la red.
 
-## Fase 3 — Estructura
+---
 
-- [x] Header de B (sticky): logo `~/wlizama`, nav con `./`, selector EN/ES (`aria-current`), botón "Descargar CV" con el `cv_url` de cada idioma
-- [x] Landmark `<main id="main">`; el skip link apunta a él
-- [x] Navegación que se acomoda en móvil (los ítems pasan a la siguiente línea, como en B)
-- [x] Footer: © año · nombre, ciudad · zona horaria
-- [x] Jerarquía de encabezados: un `h1`, `h2` por sección, `h3` por ítem
-- [x] Quitar `Logo.astro` (archivo eliminado) y el avatar
-- [x] `pnpm build` pasa
+## Fase 1 · Portafolio web (fuente de verdad)
 
-## Fase 4 — Secciones
+| # | Quién | Tarea |
+|---|---|---|
+| ✅ 1.1 | 🤖 Claude | `cv.json` y `cv.es.json` → **basics**: `occupation`, `headline`, `profile.role` = Senior Frontend Engineer; `profile.experience` = `11+ years` / `11+ años`; `profile.remote` = `6+ years` / `6+ años`; `summary` reescrito (11+/6+, sin la frase suelta de "Remote experience"); email ya era el correcto |
+| ✅ 1.2 | 🤖 Claude | **work**: GNT `2015-04-01 → 2022-04-07`, cargo `Full Stack Developer (Hybrid)` + highlights del Anexo A; DevBase → nuevo nombre y `Senior Frontend Engineer (Remote)`; eliminados Home Business, 828 Transporte y Coast Pacific |
+| ✅ 1.3 | 🤖 Claude | **languages**: English → `Professional working proficiency (B2)` / `Competencia profesional (B2)` |
+| ✅ 1.4 | 🤖 Claude | **certificates**: agregado Java SE (Platzi, 2018) — EN "Java SE Fundamentals", ES "Curso Básico de Java SE"; orden: React/Redux, Microservices, Java SE, Django, Linux, Flutter |
+| ✅ 1.5 | 🤖 Claude | **projects**: eliminados `Home Business Portal` y `Web Coast Pacific Group` + sus imágenes |
+| ✅ 1.6 | 🤖 Claude | `src/i18n/ui.ts`: `meta.title`, `meta.description` (11+) y `contact.title` ahora dicen "Senior Frontend Engineer" (EN/ES) |
+| ✅ 1.7 | 🤖 Claude | Búsqueda de datos antiguos en todo el repo: no queda ninguno (solo el certificado de Flutter, intencional) |
+| ✅ 1.8 | 🤖 Claude | `pnpm build` en verde; HTML generado EN/ES verificado (11+, 6+, GNT 2015, DevBase, sin freelance). La revisión visual queda en 1.9 |
+| ✅ 1.9 | 🧑 Tú | Revisar la web en local (`pnpm dev` → http://localhost:4321/en y /es) y dar el visto bueno |
 
-- [x] Hero: `$ whoami`, `h1` con cursor `_` (nuevo `basics.displayName`), headline, tagline, CTAs (Descargar CV como `<a>`, Contactar)
-- [x] Tarjeta `perfil.json` generada desde los datos (nuevo `basics.profile` + ubicación e idiomas de `cv.json`)
-- [x] `# Experiencia`: timeline sin el hack `top: -1.875em`, marcador `aria-hidden`, fecha mono, `summary`, skills en línea mono (componente `Role`)
-- [x] "Ver {n} roles anteriores" despliega los roles 4–6
-- [x] `# Proyectos`: filas de B con hover, solo `isActive`, imágenes con `astro:assets` (movidas a `src/assets/projects`), enlace `código ↗`
-- [x] `# Stack`: categorías con chips, todas las skills
-- [x] `# Contacto`: tarjeta `$ ./contactar --ahora`, email, LinkedIn, GitHub
-- [x] Orden: Hero → Experiencia → Proyectos → Stack → Contacto
-- [x] Eliminar `about.astro`, `SectionHead.astro`, `src/icons/` y las claves temporales del diccionario
-- [x] `pnpm build` pasa
+**Salida:** web local con los datos nuevos, build en verde.
 
-## Fase 5 — Calidad y verificación
+---
 
-- [x] Imagen OG por idioma (`public/images/og-{en,es}.png`, 1200×630, captura del hero) con `og:image:width/height/alt`; se elimina `banner.webp`
-- [x] Contraste AA de todos los textos (mínimo 5.62:1: `muted` sobre `surface`)
-- [x] Página 404 con el estilo nuevo; los enlaces del header pasan a `/{lang}/#sección` para funcionar desde la 404
-- [x] Lighthouse móvil y escritorio sobre el build (`pnpm preview`), `/en/` y `/es/`: móvil 99 / 100 / 100 / 100 (FCP 1.7 s, LCP 1.9 s); escritorio 100 / 100 / 100 / 100 (rendimiento / accesibilidad / buenas prácticas / SEO)
-- [x] Revisión visual a 375, 768 y 1280px en ambos idiomas, y 404
-- [x] Actualizar las capturas del README (`docs/screenshots/`)
+## Fase 2 · Imágenes y CV descargable
 
-## Ajustes tras revisar contra B
+| # | Quién | Tarea |
+|---|---|---|
+| ✅ 2.1 | 🤖 Claude | `public/images/og-en.png` y `og-es.png` regeneradas (1440×756 @2x → 1200×630, Chrome headless sobre `pnpm preview`) |
+| ✅ 2.2 | 🤖 Claude | `docs/screenshots/desktop.webp` (1280×800) y `mobile.webp` (375×812, capturada en un iframe de 375px porque Chrome headless no baja de ~500px de ventana) regeneradas |
+| ✅ 2.3 | 🧑 Tú → 🤖 Claude | Elegida la **opción A**: `scripts/generate-pdf.mjs` genera `public/cv/Wilder_Lizama_Senior_Frontend_Engineer_CV.pdf` y `..._CV_ES.pdf` desde `cv.json`/`cv.es.json`; `basics.cv_url` → `/cv/...`. Incluye teléfono (`basics.phone`, solo en el PDF). **Cada vez que cambie `cv.json`: correr `pnpm generate:pdf` y commitear los PDFs** |
+| ✅ 2.4 | — | No aplica (era solo para la opción B). Opcional: borrar o dejar de compartir los PDFs viejos de Drive y de `~/Downloads`, que aún tienen los datos anteriores |
+| ✅ 2.6 | 🤖 Claude | Revisión ATS de los PDFs (texto extraído con pdfminer/pypdf): texto limpio, orden correcto, fuentes incrustadas, enlaces OK. Mejoras aplicadas: nombre completo **Wilder H. Lizama Garcia** en el encabezado; nuevas tecnologías confirmadas por trabajo (testing, publicación mobile, CI/CD, estado, Firebase, Figma, Jira) en Skills, `Technologies` y bullets. El cargo se mantiene con la modalidad entre paréntesis (decisión tuya) |
+| ✅ 2.7 | 🤖 Claude | Experiencia en la web menos cargada: `job.skills` ordenado por relevancia en `cv.json`/`cv.es.json` y `Role.astro` muestra solo las **6 primeras** por puesto (la lista completa sigue en Stack, el PDF y LinkedIn). PDFs regenerados con el nuevo orden |
+| ✅ 2.5 | 🧑 Tú | Revisar los dos PDFs en `public/cv/` (regenerados) y las imágenes nuevas (`public/images/og-*.png`, `docs/screenshots/`) |
 
-- [x] Quitar el desplegable de highlights de Experiencia (no está en B)
-- [x] Marcadores del timeline a 20px con anillo del fondo, como en B (`box-sizing: content-box`)
+**Salida:** imágenes de vista previa y CV con los datos nuevos.
 
-## Fase 6 — Móvil
+---
 
-- [x] Header en una fila por debajo de 860px: logo, EN/ES y botón ☰/✕ (`aria-expanded`, `aria-label` por idioma); el menú desplegable trae los enlaces y "Descargar CV", y se cierra al elegir un enlace. Sin JS, los enlaces quedan visibles bajo el logo
-- [x] Menos espacio vertical por debajo de 640px: hero 48px arriba / 56px abajo, secciones y contacto 56px
-- [x] Tecnologías como lista (`TechList`): ningún renglón empieza con "·" (Experiencia y Proyectos)
-- [x] Cargo y empresa en líneas separadas por debajo de 640px (el separador sigue para lectores de pantalla)
-- [x] `perfil.json`: arrays con un elemento por línea por debajo de 640px (en todos los tamaños desde la Fase 8)
-- [x] Proyectos: "código ↗" pegado a las tecnologías en móvil
-- [x] Revisión visual a 375, 768 y 1280px; `pnpm build` pasa
+## Fase 3 · Publicar la web
 
-## Fase 7 — Favicon
+| # | Quién | Tarea |
+|---|---|---|
+| ✅ 3.1 | 🤖 Claude | 4 commits + push de `feat/perfil-senior` → **PR #18** (https://github.com/wlizama/wlizama.github.io/pull/18). Incluye el commit del PR #17 |
+| ⬜ 3.2 | 🧑 Tú | Revisar el PR y hacer merge **cuando 1.9 y 2.5 estén cerrados** (fases 1–3 completas) |
+| ⬜ 3.3 | 🤖 Claude | Verificar el sitio publicado (wlizama.github.io EN/ES) y el CV descargable |
 
-- [x] Favicon `w_`: "w" blanca y cursor `_` rosa sobre `#0D1117`, dibujado con trazos propios (sin fuentes ni sets de íconos)
-- [x] `favicon.svg`, `favicon.ico` (16 y 32px, evita el 404) y `apple-touch-icon.png` (180px, sin esquinas transparentes) enlazados en el layout y en la página de redirección
+**Salida:** web pública actualizada. Desde aquí LinkedIn puede enlazar al portafolio sin contradicciones.
 
-## Fase 8 — Ajustes del hero
+---
 
-- [x] Tarjeta `perfil.json` / `profile.json`: arrays con un elemento por línea en todos los tamaños
-- [x] "Descargar CV" del header oculto (sin ocupar espacio) mientras el del hero está en pantalla; al hacer scroll aparece y EN/ES se desliza a la izquierda. Los enlaces del header pasan a estar centrados de verdad (grid), así no se mueven. Sin JS y en la 404 se ve siempre; el del menú móvil no cambia
-- [x] Capturas del README (`docs/screenshots/`) e imágenes OG regeneradas con el diseño final; las OG se capturan a 1440×756 y se reducen a 1200×630 para que entre la tarjeta completa
+## Fase 4 · LinkedIn (todo lo haces tú; Claude da los textos)
+
+Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros de Recruiter, después lo visual.
+
+| # | Quién | Tarea |
+|---|---|---|
+| ⬜ 4.1 | 🧑 Tú | **Experiencia**: eliminar Home Business, 828 Transporte y Coast Pacific |
+| ⬜ 4.2 | 🧑 Tú | **Experiencia → New Transport S.A**: cambiar empresa a **GNT Servicios Generales S.A**, fechas **abr 2015 – abr 2022**, ubicación Lima, modalidad **Híbrido**, descripción del Anexo A |
+| ⬜ 4.3 | 🧑 Tú | **Experiencia → DevBase**: cargo **Senior Frontend Engineer**, modalidad **Remoto**, descripción del Anexo A |
+| ⬜ 4.4 | 🧑 Tú | **Experiencia → Rimac**: modalidad **Híbrido**; descripción sin cambios |
+| ⬜ 4.5 | 🧑 Tú | Vincular aptitudes a cada puesto (listas en el Anexo A) |
+| ⬜ 4.6 | 🧑 Tú | **Intro**: titular, ubicación **Lima, Lima, Perú**, email `wilderlizama@gmail.com`, sitio web con etiqueta "Portfolio" |
+| ⬜ 4.7 | 🧑 Tú | **Acerca de**: texto del Anexo A + 5 aptitudes principales |
+| ⬜ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
+| ⬜ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
+| ⬜ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
+| ⬜ 4.11 | 🤖 Claude | Redactar el **perfil en español** (titular + Acerca de) a partir del Anexo A y `cv.es.json` |
+| ⬜ 4.12 | 🧑 Tú | **Agregar perfil en otro idioma → Español** y pegar los textos de 4.11 |
+
+**Salida:** LinkedIn alineado con la web.
+
+---
+
+## Fase 5 · Verificación cruzada
+
+| # | Quién | Tarea |
+|---|---|---|
+| ⬜ 5.1 | 🧑 Tú | Exportar el nuevo PDF de LinkedIn (**Más → Guardar como PDF**) y pasar la ruta |
+| ⬜ 5.2 | 🤖 Claude | Comparar LinkedIn vs `cv.json` vs CV PDF: empresas, cargos, fechas, cifras, certificados, email. Reportar diferencias |
+| ⬜ 5.3 | 🧑 Tú | Corregir en LinkedIn lo que salga en 5.2 |
+| ⬜ 5.4 | 🧑 Tú | Opcional: pedir a un contacto que busque "Senior Frontend Engineer React Native Peru" en LinkedIn y confirme que apareces |
+
+**Salida:** los tres canales consistentes.
+
+---
+
+## Fase 6 · Señales que suben el perfil (semanas siguientes)
+
+| # | Quién | Tarea | Prioridad |
+|---|---|---|---|
+| ⬜ 6.1 | 🤖 Claude | Redactar mensajes para pedir recomendaciones (qué destacar: RN, librería de componentes, migración a TS) | Alta |
+| ⬜ 6.2 | 🧑 Tú | Pedir 2–3 recomendaciones: líder/compañero de Rimac y de DevBase | Alta |
+| ⬜ 6.3 | 🧑 Tú | Hacer el **EF SET** (gratis, ~50 min); si da B2+ agregarlo como certificación | Alta |
+| ~~6.4~~ | — | ~~Mejorar READMEs de GitHub~~ · **Descartada** (fuera de alcance: no se tocan otros repos) | — |
+| ~~6.5~~ | — | ~~Fijar repos en GitHub~~ · **Descartada** (fuera de alcance) | — |
+| ~~6.6~~ | — | ~~Publicar `tournament-organizer` / proyecto RN~~ · **Descartada** (fuera de alcance) | — |
+| ⬜ 6.7 | 🧑 Tú | Opcional: certificación reciente (React Native, TypeScript o AWS Cloud Practitioner) | Baja |
+
+---
+
+## Anexo A · Textos para LinkedIn (EN, perfil principal)
+
+### Titular
+```
+Senior Frontend Engineer | React • React Native • TypeScript • Next.js | Web & Mobile Apps | 11+ years | Remote
+```
+Se quitan `Software developer`, `Systems engineer`, `Desarrollador frontend`, `Flutter` y `Node`, que diluyen el posicionamiento.
+
+### Acerca de
+```
+Senior Frontend Engineer with 11+ years of experience building web and mobile applications with React, React Native, TypeScript and Next.js, including 6+ years working remotely with distributed international teams.
+
+At Rimac Seguros I build and ship Expo / React Native apps for healthcare and insurance, maintain a Tamagui component library based on Atomic Design, and led the migration from Expo to React Native CLI. Before that, at DevBase (acquired by Fintech Automation), I migrated a nonprofit grantmaking platform from JavaScript to TypeScript, built React Native features for field technicians and maintained a financial PWA.
+
+What I bring:
+• Frontend architecture and reusable UI systems (Storybook, Tamagui, Atomic Design)
+• Cross-platform mobile development (React Native, Expo, React Native CLI)
+• Legacy modernization: desktop to web, JavaScript to TypeScript
+• API integrations (REST, GraphQL) and PWAs, backed by full-stack experience with Node.js, SQL Server and PostgreSQL
+• Cloud exposure on GCP and AWS, and AI-assisted development workflows
+
+Industries: fintech, insurance & healthcare, ERP, nonprofit.
+English: professional working proficiency. Based in Lima, Peru (GMT-5).
+
+Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · Redux · Node.js · GraphQL · Storybook · Tailwind CSS · GCP · AWS
+```
+**Aptitudes principales (5):** React.js · React Native · TypeScript · Next.js · Front-End Development
+
+### Rimac Seguros y Reaseguros — Frontend Mobile Expert
+ago 2024 – actualidad · Lima, Perú · Híbrido. Descripción: los 7 bullets actuales **más estos 3**, después del primero:
+```
+• Managed App Store and Google Play releases with EAS Build and EAS Submit, and shipped over-the-air updates with EAS Update.
+• Integrated Firebase for push notifications (FCM), crash reporting (Crashlytics), authentication and Firestore.
+• Wrote unit, component and end-to-end tests with Jest, React Testing Library and Playwright, and worked with CI/CD pipelines on GitHub Actions, Azure DevOps and Jenkins.
+```
+Aptitudes: React Native · Expo · TypeScript · React.js · Tamagui · Google Cloud Platform · Atomic Design · Scrum · Jest · React Testing Library · Playwright · Firebase · Zustand · TanStack Query · GitHub Actions · Azure DevOps · Jenkins · Figma · Jira
+
+### DevBase (acquired by Fintech Automation) — Senior Frontend Engineer
+abr 2022 – jun 2026 · Remoto
+```
+• Migrated a nonprofit grantmaking platform from JavaScript to TypeScript, improving maintainability and type safety across the frontend architecture.
+• Developed and maintained React Native features for a production mobile app used by HVAC field technicians.
+• Maintained and enhanced a Progressive Web App (PWA) for a financial platform handling cash and bank account operations through REST API integrations.
+• Published React Native app releases to the App Store and Google Play.
+• Wrote unit and component tests with Jest and React Testing Library, and worked with CI/CD pipelines on GitHub Actions and Jenkins.
+• Built reusable UI component libraries with Storybook and Atomic Design, reducing UI inconsistencies and speeding up frontend development.
+• Collaborated with distributed engineering teams in remote agile environments.
+```
+Aptitudes: React.js · React Native · TypeScript · Next.js · Redux · Storybook · Tailwind CSS · AWS · PostgreSQL · Jest · React Testing Library · Zustand · TanStack Query · GitHub Actions · Jenkins · Figma · Jira
+
+### GNT Servicios Generales S.A — Full Stack Developer
+abr 2015 – abr 2022 · Lima, Perú · Híbrido
+```
+• Led the migration of desktop software into modern web applications using React.js and Kendo UI.
+• Developed and maintained ERP systems and enterprise intranet platforms with Material UI, Bootstrap and GraphQL, focused on operational efficiency and business workflows.
+• Designed and maintained T-SQL database structures and optimized SQL Server operations.
+• Built Gmail API integrations to automate electronic document registration.
+• Built background Java services for asynchronous server-side execution.
+• Provided server support for IIS and Ubuntu Linux environments.
+• Worked remotely with the team from 2020 onwards.
+```
+Aptitudes: React.js · Node.js · GraphQL · SQL Server · T-SQL · Java · Kendo UI · Material UI · Linux · Jest · GitHub Actions · Azure DevOps · Figma
+
+Resultado en Recruiter: experiencia calculada desde abr 2015, sin huecos (≈ 11 años 7 meses).
+
+---
+
+## Anexo B · Aptitudes de LinkedIn
+
+Usar los nombres estándar del catálogo (Recruiter filtra por coincidencia exacta). Orden sugerido:
+
+React.js · React Native · TypeScript · JavaScript · Next.js · Front-End Development · Expo · Redux ·
+HTML5 · CSS · Tailwind CSS · Storybook · Atomic Design · Design Systems · Progressive Web Apps (PWA) ·
+REST APIs · GraphQL · Node.js · Mobile Application Development · Cross-Platform Development ·
+Web Development · Full-Stack Development · Software Architecture · Git · CI/CD ·
+Agile Methodologies · Scrum · Google Cloud Platform (GCP) · Amazon Web Services (AWS) ·
+PostgreSQL · MySQL · Microsoft SQL Server · Material UI · Kendo UI · Artificial Intelligence (AI) ·
+Jest · React Testing Library · Playwright · Zustand · React Query · Firebase · Expo Application Services (EAS) ·
+GitHub Actions · Azure DevOps · Jenkins · Figma · Jira
+
+(Las nuevas de la última línea se confirmaron por trabajo el 2026-11-02; ver tabla en la bitácora.)
+
+Quitar: **Flutter** y cualquier aptitud que no puedas defender en una entrevista.
