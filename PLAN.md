@@ -52,6 +52,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · 0.3 hecho → Fase 0 cerrada. 4.11: perfil en español en el Anexo C; "Acerca de" en inglés (Anexo A) actualizado con testing, publicación mobile y CI/CD para que coincida con el español.
 - **2026-11-02** · Corrección: resumen de `cv.es.json` con redacción neutra ("Con experiencia en entornos ágiles…" en vez de "Cómodo…") → **PR #19** (pendiente de tu merge; luego Claude verifica el sitio). Fase 4 en modo guiado: tú editas LinkedIn y Claude acompaña paso a paso.
 - **2026-11-02** · Certificado de microservicios: fecha real **feb 2024** (no 2022) y nombre oficial con "Design". Corregido en web/PDF dentro del **PR #19**. En LinkedIn: Issue date = February 2024. Fase 4: 4.1–4.8 hechos por ti.
+- **2026-11-02** · Nuevo certificado: **Legacy Responsive Web Design V8** (freeCodeCamp, 12-feb-2024) agregado a web/PDF en el **PR #19**; el PDF ahora enlaza los certificados que tienen URL.
 
 ---
 
@@ -90,6 +91,7 @@ portafolio o al CV nunca ve datos distintos.
 | Certificado | Emisor | Fecha |
 |---|---|---|
 | ReactJS, Redux + ES6 | Udemy | 2019 |
+| Legacy Responsive Web Design V8 ([verificar](https://www.freecodecamp.org/certification/wilderlizama/responsive-web-design)) | freeCodeCamp | 2024 (12 feb) |
 | Design Microservices Architecture with Patterns & Principles | Udemy | 2024 (feb) |
 | Curso Básico de Java SE | Platzi | 2018 |
 | Backend Development with Python & Django | Platzi | — |
