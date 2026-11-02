@@ -179,6 +179,12 @@
   ],
   "certificates": [
     {
+      "name": "Legacy Responsive Web Design V8",
+      "date": "2024",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/wilderlizama/responsive-web-design"
+    },
+    {
       "name": "Design Microservices Architecture with Patterns & Principles",
       "date": "2024",
       "issuer": "Udemy",
