@@ -241,7 +241,7 @@ What I bring:
 • API integrations (REST, GraphQL) and PWAs, backed by full-stack experience with Node.js, SQL Server and PostgreSQL
 • Cloud exposure on GCP and AWS, and AI-assisted development workflows
 
-Industries: fintech, insurance & healthcare, ERP, nonprofit.
+Industries: fintech, insurance and healthcare, ERP, nonprofit.
 English: professional working proficiency. Based in Lima, Peru (GMT-5).
 
 Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · Redux · Zustand · TanStack Query · Node.js · GraphQL · Storybook · Tailwind CSS · Jest · Playwright · GCP · AWS
