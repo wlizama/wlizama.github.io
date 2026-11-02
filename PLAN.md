@@ -13,7 +13,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 
 | Fase | Estado | Pendientes para cerrarla |
 |---|---|---|
-| 0 · Preparación | 🟡 Casi cerrada | 0.3 (🧑) |
+| 0 · Preparación | 🟢 Cerrada | — |
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
@@ -21,7 +21,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
 
-**Siguiente paso:** Fase 4 (LinkedIn) → Claude redacta el perfil en español (4.11); tú haces 4.1 → 4.12 en una sola sesión. Pendiente suelto: 0.3.
+**Siguiente paso:** Fase 4 (LinkedIn) → tú haces 4.1 → 4.10 y 4.12 en una sola sesión, copiando del Anexo A (inglés) y el Anexo C (español).
 
 Leyenda: ✅ hecho · ⏳ pendiente · ⬜ no iniciado · 🟡 fase con pendientes · 🟢 fase cerrada.
 Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su fase.
@@ -49,6 +49,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · Experiencia (web): solo top 6 tecnologías por puesto (2.7). Top 6 → Rimac: React Native, Expo, TypeScript, React.js, Tamagui UI, Jest · DevBase: React.js, TypeScript, React Native, Next.js, Redux, Storybook · GNT: React.js, Node.js, GraphQL, SQL Server, Java, Kendo UI.
 - **2026-11-02** · 1.9 y 2.5 revisadas por ti → fases 1 y 2 cerradas. Fase 3 iniciada: commits + push + PR (sin merge hasta tu revisión).
 - **2026-11-02** · PR #18 mergeado y desplegado; sitio publicado verificado (3.3) → Fase 3 cerrada. 0.2 hecho.
+- **2026-11-02** · 0.3 hecho → Fase 0 cerrada. 4.11: perfil en español en el Anexo C; "Acerca de" en inglés (Anexo A) actualizado con testing, publicación mobile y CI/CD para que coincida con el español.
 
 ---
 
@@ -101,7 +102,7 @@ portafolio o al CV nunca ve datos distintos.
 |---|---|---|
 | ✅ 0.1 | 🧑 Tú | Revisar y aprobar los textos del **Anexo A** (titular, Acerca de, experiencia). Cualquier ajuste se hace aquí, antes de tocar nada |
 | ✅ 0.2 | 🧑 Tú | LinkedIn → **Configuración → Visibilidad → Compartir actualizaciones del perfil con tu red → Desactivar** |
-| ⏳ 0.3 | 🧑 Tú | Guardar respaldo del perfil actual (`~/Downloads/Profile.pdf` existe; moverlo a un lugar seguro, Descargas se limpia) |
+| ✅ 0.3 | 🧑 Tú | Respaldo del perfil actual movido fuera de Descargas |
 | ✅ 0.4 | 🤖 Claude | Rama `feat/perfil-senior` creada (desde `chore/quitar-plan`, ver Estado actual) |
 
 **Salida:** textos aprobados y LinkedIn sin notificaciones a la red.
@@ -170,7 +171,7 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 | ⬜ 4.8 | 🧑 Tú | **Aptitudes**: quitar Flutter; agregar las que falten del Anexo B |
 | ⬜ 4.9 | 🧑 Tú | **Certificaciones**: completar Java SE (Platzi, 2018) y agregar las 4 que faltan |
 | ⬜ 4.10 | 🧑 Tú | **Destacados**: agregar wlizama.github.io y github.com/wlizama |
-| ⬜ 4.11 | 🤖 Claude | Redactar el **perfil en español** (titular + Acerca de) a partir del Anexo A y `cv.es.json` |
+| ✅ 4.11 | 🤖 Claude | Perfil en español redactado → **Anexo C** |
 | ⬜ 4.12 | 🧑 Tú | **Agregar perfil en otro idioma → Español** y pegar los textos de 4.11 |
 
 **Salida:** LinkedIn alineado con la web.
@@ -220,15 +221,16 @@ At Rimac Seguros I build and ship Expo / React Native apps for healthcare and in
 
 What I bring:
 • Frontend architecture and reusable UI systems (Storybook, Tamagui, Atomic Design)
-• Cross-platform mobile development (React Native, Expo, React Native CLI)
+• Cross-platform mobile development (React Native, Expo, React Native CLI) and App Store / Google Play releases with EAS
 • Legacy modernization: desktop to web, JavaScript to TypeScript
+• Testing and delivery: Jest, React Testing Library and Playwright; CI/CD with GitHub Actions, Azure DevOps and Jenkins
 • API integrations (REST, GraphQL) and PWAs, backed by full-stack experience with Node.js, SQL Server and PostgreSQL
 • Cloud exposure on GCP and AWS, and AI-assisted development workflows
 
 Industries: fintech, insurance & healthcare, ERP, nonprofit.
 English: professional working proficiency. Based in Lima, Peru (GMT-5).
 
-Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · Redux · Node.js · GraphQL · Storybook · Tailwind CSS · GCP · AWS
+Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · Redux · Zustand · TanStack Query · Node.js · GraphQL · Storybook · Tailwind CSS · Jest · Playwright · GCP · AWS
 ```
 **Aptitudes principales (5):** React.js · React Native · TypeScript · Next.js · Front-End Development
 
@@ -268,6 +270,80 @@ abr 2015 – abr 2022 · Lima, Perú · Híbrido
 Aptitudes: React.js · Node.js · GraphQL · SQL Server · T-SQL · Java · Kendo UI · Material UI · Linux · Jest · GitHub Actions · Azure DevOps · Figma
 
 Resultado en Recruiter: experiencia calculada desde abr 2015, sin huecos (≈ 11 años 7 meses).
+
+---
+
+## Anexo C · Perfil en español (LinkedIn, perfil secundario)
+
+**Dónde:** Perfil → **Agregar perfil en otro idioma** → Español. LinkedIn pide nombre, titular y "Acerca de". Si también te deja traducir la experiencia, usa los textos de abajo.
+Los cargos y la empresa se dejan en inglés, igual que en el perfil principal, porque así los buscan los reclutadores.
+
+### Nombre
+Wilder Humberto Lizama Garcia
+
+### Titular
+```
+Senior Frontend Engineer | React • React Native • TypeScript • Next.js | Apps web y móviles | +11 años | Remoto
+```
+
+### Acerca de
+```
+Senior Frontend Engineer con más de 11 años de experiencia construyendo aplicaciones web y móviles con React, React Native, TypeScript y Next.js, incluidos más de 6 años trabajando en remoto con equipos internacionales distribuidos.
+
+En Rimac Seguros desarrollo y publico apps con Expo / React Native para salud y seguros, mantengo una librería de componentes en Tamagui basada en Atomic Design y lideré la migración de Expo a React Native CLI. Antes, en DevBase (acquired by Fintech Automation), migré una plataforma de subvenciones para organizaciones sin fines de lucro de JavaScript a TypeScript, desarrollé funcionalidades en React Native para técnicos de campo y mantuve una PWA financiera.
+
+Lo que aporto:
+• Arquitectura frontend y sistemas de UI reutilizables (Storybook, Tamagui, Atomic Design)
+• Desarrollo móvil multiplataforma (React Native, Expo, React Native CLI) y publicación en App Store y Google Play con EAS
+• Modernización de sistemas legacy: de escritorio a web y de JavaScript a TypeScript
+• Testing y entrega continua: Jest, React Testing Library y Playwright; CI/CD con GitHub Actions, Azure DevOps y Jenkins
+• Integraciones de APIs (REST, GraphQL) y PWAs, con experiencia full stack en Node.js, SQL Server y PostgreSQL
+• Experiencia en la nube con GCP y AWS, y flujos de desarrollo asistidos por IA
+
+Industrias: fintech, seguros y salud, ERP y organizaciones sin fines de lucro.
+Inglés: competencia profesional (B2). Ubicación: Lima, Perú (GMT-5).
+
+Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · Redux · Zustand · TanStack Query · Node.js · GraphQL · Storybook · Tailwind CSS · Jest · Playwright · GCP · AWS
+```
+
+### Experiencia (solo si el editor del perfil en español lo permite)
+
+**Rimac Seguros y Reaseguros — Frontend Mobile Expert**
+```
+• Desarrollé, publiqué y mantuve aplicaciones móviles con Expo para productos de salud y seguros, asegurando alto rendimiento, estabilidad y ciclos de release confiables.
+• Gestioné los releases en App Store y Google Play con EAS Build y EAS Submit, y publiqué actualizaciones over-the-air con EAS Update.
+• Integré Firebase para notificaciones push (FCM), reporte de errores (Crashlytics), autenticación y Firestore.
+• Escribí pruebas unitarias, de componentes y end-to-end con Jest, React Testing Library y Playwright, y trabajé con pipelines de CI/CD en GitHub Actions, Azure DevOps y Jenkins.
+• Diseñé y desarrollé una librería de componentes móviles reutilizables con Tamagui siguiendo la metodología Atomic Design, mejorando la consistencia de la UI, la escalabilidad y la reutilización de código en varios proyectos.
+• Lideré la migración de aplicaciones móviles de Expo a React Native CLI, adaptando configuraciones nativas, dependencias y procesos de build para soportar capacidades nativas avanzadas y la mantenibilidad a largo plazo.
+• Desarrollé una mini app de salud y la integré en la Super App de Rimac Seguros, ofreciendo una experiencia de usuario fluida dentro del ecosistema móvil de la empresa.
+• Gestioné y mantuve infraestructura y servicios en Google Cloud Platform (GCP), dando soporte al despliegue, monitoreo y confiabilidad operativa de las aplicaciones.
+• Utilicé herramientas de desarrollo con IA para automatizar tareas repetitivas, acelerar la entrega de funcionalidades, mejorar la calidad del código y la productividad del equipo.
+• Colaboré con equipos multidisciplinarios en un entorno ágil (Scrum), participando en sprint plannings, code reviews, discusiones técnicas y prácticas de entrega continua.
+```
+
+**DevBase (acquired by Fintech Automation) — Senior Frontend Engineer**
+```
+• Migré una plataforma de subvenciones para organizaciones sin fines de lucro de JavaScript a TypeScript, mejorando la mantenibilidad y la seguridad de tipos en toda la arquitectura frontend.
+• Desarrollé y mantuve funcionalidades en React Native para una aplicación móvil en producción usada por técnicos de campo de HVAC.
+• Publiqué releases de la app en React Native en App Store y Google Play.
+• Escribí pruebas unitarias y de componentes con Jest y React Testing Library, y trabajé con pipelines de CI/CD en GitHub Actions y Jenkins.
+• Mantuve y mejoré una Progressive Web Application (PWA) para una plataforma financiera que gestiona operaciones de caja y cuentas bancarias mediante integraciones con APIs.
+• Construí librerías de componentes de UI reutilizables con Storybook y Atomic Design, reduciendo inconsistencias de UI y acelerando el desarrollo frontend.
+• Integré APIs REST para el procesamiento de transacciones y la comunicación con el backend.
+• Colaboré con equipos de ingeniería distribuidos en entornos ágiles remotos.
+```
+
+**GNT Servicios Generales S.A — Full Stack Developer**
+```
+• Lideré la migración de software de escritorio a aplicaciones web modernas con React.js y Kendo UI.
+• Desarrollé y mantuve sistemas ERP e intranets corporativas con Material UI, Bootstrap y GraphQL, enfocadas en la eficiencia operativa y los flujos de negocio.
+• Diseñé y mantuve estructuras de base de datos en T-SQL y optimicé operaciones en SQL Server.
+• Desarrollé integraciones con las APIs de Gmail para automatizar el registro de documentos electrónicos.
+• Construí servicios en segundo plano con Java para la ejecución asíncrona en el servidor.
+• Brindé soporte de servidores en entornos IIS y Ubuntu Linux.
+• Trabajé en remoto con el equipo desde 2020.
+```
 
 ---
 
