@@ -104,7 +104,7 @@ function render(cv, lang) {
 		.join('');
 
 	const certificates = cv.certificates
-		.map((c) => `<li><strong>${esc(c.name)}</strong> – ${esc(c.issuer)}${c.date ? ` (${esc(c.date)})` : ''}</li>`)
+		.map((c) => `<li><strong>${c.url ? link(c.url, c.name) : esc(c.name)}</strong> – ${esc(c.issuer)}${c.date ? ` (${esc(c.date)})` : ''}</li>`)
 		.join('');
 
 	const languages = cv.languages.map((x) => `${esc(x.language)}: ${esc(x.fluency)}`).join(' · ');

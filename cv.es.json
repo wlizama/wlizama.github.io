@@ -21,7 +21,7 @@
     "phone": "+51 968 195 037",
     "url": "wlizama.github.io",
     "cv_url": "/cv/Wilder_Lizama_Senior_Frontend_Engineer_CV_ES.pdf",
-    "summary": "Senior Frontend Engineer con más de 11 años de experiencia construyendo aplicaciones web y móviles escalables con React.js, React Native, TypeScript, JavaScript y Next.js, incluidos más de 6 años trabajando en remoto con equipos internacionales distribuidos. Experiencia en fintech, seguros y salud, sistemas ERP y plataformas sin fines de lucro. Sólida experiencia en arquitectura frontend, sistemas de UI reutilizables (Storybook, Tamagui, Atomic Design), integraciones de APIs (REST, GraphQL), PWAs y desarrollo móvil multiplataforma con React Native y Expo. Experiencia comprobada modernizando sistemas legacy, migrando software de escritorio a la web y aplicaciones de JavaScript a TypeScript, respaldada por experiencia full stack con Node.js, SQL Server y PostgreSQL. Cómodo en entornos ágiles, con foco en rendimiento, escalabilidad, mantenibilidad y experiencia de usuario.",
+    "summary": "Senior Frontend Engineer con más de 11 años de experiencia construyendo aplicaciones web y móviles escalables con React.js, React Native, TypeScript, JavaScript y Next.js, incluidos más de 6 años trabajando en remoto con equipos internacionales distribuidos. Experiencia en fintech, seguros y salud, sistemas ERP y plataformas sin fines de lucro. Sólida experiencia en arquitectura frontend, sistemas de UI reutilizables (Storybook, Tamagui, Atomic Design), integraciones de APIs (REST, GraphQL), PWAs y desarrollo móvil multiplataforma con React Native y Expo. Experiencia comprobada modernizando sistemas legacy, migrando software de escritorio a la web y aplicaciones de JavaScript a TypeScript, respaldada por experiencia full stack con Node.js, SQL Server y PostgreSQL. Con experiencia en entornos ágiles y foco en rendimiento, escalabilidad, mantenibilidad y experiencia de usuario.",
     "location": {
       "city": "Lima",
       "countryCode": "PE",
@@ -179,14 +179,20 @@
   ],
   "certificates": [
     {
-      "name": "ReactJS, Redux + ES6",
-      "date": "2019",
+      "name": "Legacy Responsive Web Design V8",
+      "date": "2024",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/wilderlizama/responsive-web-design"
+    },
+    {
+      "name": "Diseño de Arquitectura de Microservicios con Patrones y Principios",
+      "date": "2024",
       "issuer": "Udemy",
       "url": ""
     },
     {
-      "name": "Arquitectura de Microservicios con Patrones y Principios",
-      "date": "2022",
+      "name": "ReactJS, Redux + ES6",
+      "date": "2019",
       "issuer": "Udemy",
       "url": ""
     },
