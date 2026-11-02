@@ -58,11 +58,12 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · Fase 5 (5.1–5.2): PDF de LinkedIn comparado con `cv.json` y el CV. OK: titular, summary, 3 puestos (cargos, empresas, fechas y bullets), sin freelance. Pendientes para 5.3:
   1. ✅ Ubicación: se corrige con **Postal code** (el formulario ya no tiene campo City) e Industry → Software Development (alta).
   2. ✅ Las 7 certificaciones están en el perfil (el PDF solo mostraba 2) (alta).
-  3. About: "insurance &amp; healthcare" → usar "insurance and healthcare" (media).
+  3. ✅ About: "insurance and healthcare" (verificado en el 2.º PDF).
   4. Idiomas como "Inglés/Español" → *English/Spanish* en el perfil en inglés (media).
   5. Top Skills del PDF = React Query, Jenkins, Firebase → confirmar que el About muestre las 5 elegidas (baja).
   6. Email del perfil *wilder.lizama@* vs *wilderlizama@* en web/CV (opcional).
   La copia del PDF de LinkedIn se borró del repo (datos personales).
+  - 2.º PDF (2026-11-02): ubicación sigue "Peru" e idiomas siguen "Inglés/Español" → confirmar en el perfil si se guardaron (el PDF sí refleja otros cambios, así que no es caché). Barra lateral de certificaciones del PDF sigue mostrando 2 aunque el perfil tiene 7 (limitación de la exportación). Copia del PDF borrada.
 
 ---
 
