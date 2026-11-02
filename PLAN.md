@@ -18,10 +18,10 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
 | 4 · LinkedIn | 🟢 Cerrada | — |
-| 5 · Verificación | 🟡 En curso | 5.3: puntos 3–6 (🧑) + PDF final (🧑→🤖) |
-| 6 · Señales | ⬜ No iniciada | — |
+| 5 · Verificación | 🟢 Cerrada | — (email opcional pendiente a tu criterio) |
+| 6 · Señales | 🟡 En curso | 6.2 pedir recomendaciones (🧑) · 6.3 EF SET (🧑) · 6.7 opcional |
 
-**Siguiente paso:** 5.3 → corregir en LinkedIn los 6 puntos de la verificación (ver bitácora 2026-11-02, Fase 5); luego Fase 6.
+**Siguiente paso:** Fase 6 → pedir 2–3 recomendaciones con los mensajes del **Anexo D** (6.2) y hacer el EF SET (6.3).
 
 Leyenda: ✅ hecho · ⏳ pendiente · ⬜ no iniciado · 🟡 fase con pendientes · 🟢 fase cerrada.
 Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su fase.
@@ -64,6 +64,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
   6. Email del perfil *wilder.lizama@* vs *wilderlizama@* en web/CV (opcional).
   La copia del PDF de LinkedIn se borró del repo (datos personales).
   - 2.º PDF (2026-11-02): ubicación sigue "Peru" e idiomas siguen "Inglés/Español" → confirmar en el perfil si se guardaron (el PDF sí refleja otros cambios, así que no es caché). Barra lateral de certificaciones del PDF sigue mostrando 2 aunque el perfil tiene 7 (limitación de la exportación). Copia del PDF borrada.
+- **2026-11-02** · Ubicación e idiomas confirmados en el perfil → Fase 5 cerrada. Fase 6 iniciada: mensajes de recomendación en el Anexo D (6.1).
 
 ---
 
@@ -199,7 +200,7 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 |---|---|---|
 | ✅ 5.1 | 🧑 Tú | Exportar el nuevo PDF de LinkedIn (**Más → Guardar como PDF**) y pasar la ruta |
 | ✅ 5.2 | 🤖 Claude | Comparar LinkedIn vs `cv.json` vs CV PDF: empresas, cargos, fechas, cifras, certificados, email. Reportar diferencias |
-| ⏳ 5.3 | 🧑 Tú | Corregir en LinkedIn lo que salga en 5.2 |
+| ✅ 5.3 | 🧑 Tú | Corregir en LinkedIn lo que salga en 5.2 |
 | ⬜ 5.4 | 🧑 Tú | Opcional: pedir a un contacto que busque "Senior Frontend Engineer React Native Peru" en LinkedIn y confirme que apareces |
 
 **Salida:** los tres canales consistentes.
@@ -210,7 +211,7 @@ Hazlo en una sola sesión y en este orden: primero lo que afecta a los filtros d
 
 | # | Quién | Tarea | Prioridad |
 |---|---|---|---|
-| ⬜ 6.1 | 🤖 Claude | Redactar mensajes para pedir recomendaciones (qué destacar: RN, librería de componentes, migración a TS) | Alta |
+| ✅ 6.1 | 🤖 Claude | Redactar mensajes para pedir recomendaciones (qué destacar: RN, librería de componentes, migración a TS) | Alta |
 | ⬜ 6.2 | 🧑 Tú | Pedir 2–3 recomendaciones: líder/compañero de Rimac y de DevBase | Alta |
 | ⬜ 6.3 | 🧑 Tú | Hacer el **EF SET** (gratis, ~50 min); si da B2+ agregarlo como certificación | Alta |
 | ~~6.4~~ | — | ~~Mejorar READMEs de GitHub~~ · **Descartada** (fuera de alcance: no se tocan otros repos) | — |
@@ -359,6 +360,43 @@ Stack: React · React Native · Expo · TypeScript · JavaScript · Next.js · R
 • Brindé soporte de servidores en entornos IIS y Ubuntu Linux.
 • Trabajé en remoto con el equipo desde 2020.
 ```
+
+---
+
+## Anexo D · Mensajes para pedir recomendaciones (6.1)
+
+**Cómo:** en el perfil de la persona → **More → Request a recommendation** (o desde tu perfil: **Recommendations → Ask for a recommendation**). Elige la relación (p. ej. *Managed you directly* / *Worked on the same team*) y el puesto (Rimac o DevBase). Pega el mensaje y reemplaza lo que está entre [corchetes].
+
+**A quién:** 2–3 personas. Ideal: un/a líder técnico o jefe/a directo/a de Rimac y alguien de DevBase con quien hayas trabajado de cerca. Mejor alguien que conozca tu trabajo en detalle que alguien con un cargo alto.
+
+### Rimac (español)
+```
+Hola [Nombre], ¿cómo estás? Estoy actualizando mi perfil de LinkedIn y me ayudaría mucho una recomendación tuya sobre el trabajo que hicimos juntos en Rimac.
+
+Si te resulta cómodo, podrías mencionar algo de esto (lo que hayas visto de cerca):
+• Las apps con Expo / React Native y sus releases en App Store y Google Play
+• La librería de componentes con Tamagui y Atomic Design
+• La migración de Expo a React Native CLI o la mini app de salud en la Super App
+
+Con 3–4 líneas es más que suficiente. Si prefieres, también te puedo escribir una recomendación. ¡Gracias!
+```
+
+### DevBase (inglés)
+```
+Hi [Name], hope you're doing well! I'm updating my LinkedIn profile and would really appreciate a short recommendation about our work together at DevBase.
+
+If it helps, you could mention anything you saw firsthand, for example:
+• The JavaScript-to-TypeScript migration of the grantmaking platform
+• React Native features and App Store / Google Play releases for the HVAC app
+• The Storybook / Atomic Design component library, or how we worked as a remote team
+
+3–4 sentences is plenty. Happy to write one for you as well. Thanks a lot!
+```
+
+**Tips:**
+- Envía el mensaje personalizado: menciona un proyecto concreto que compartieron.
+- Ofrecer escribir una recomendación de vuelta aumenta mucho la tasa de respuesta.
+- Si en una semana no responde, un recordatorio corto y amable está bien; si no, pasa a otra persona.
 
 ---
 
