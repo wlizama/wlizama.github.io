@@ -16,7 +16,7 @@ Rama de trabajo: **`feat/perfil-senior`** (creada desde `chore/quitar-plan`, que
 | 0 · Preparación | 🟡 Claude listo · faltan tareas tuyas | 0.2 y 0.3 (🧑) |
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
-| 3 · Publicar web | 🟡 En curso | 3.1 (🤖), 3.2 merge (🧑), 3.3 (🤖) |
+| 3 · Publicar web | 🟡 En curso · PR #18 abierto | 3.2 merge (🧑), 3.3 (🤖) |
 | 4 · LinkedIn | ⬜ No iniciada | — |
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
@@ -145,7 +145,7 @@ portafolio o al CV nunca ve datos distintos.
 
 | # | Quién | Tarea |
 |---|---|---|
-| ⬜ 3.1 | 🤖 Claude | Commit, push de `feat/perfil-senior` y PR contra `master` con resumen de cambios (**sin merge**, ver regla) |
+| ✅ 3.1 | 🤖 Claude | 4 commits + push de `feat/perfil-senior` → **PR #18** (https://github.com/wlizama/wlizama.github.io/pull/18). Incluye el commit del PR #17 |
 | ⬜ 3.2 | 🧑 Tú | Revisar el PR y hacer merge **cuando 1.9 y 2.5 estén cerrados** (fases 1–3 completas) |
 | ⬜ 3.3 | 🤖 Claude | Verificar el sitio publicado (wlizama.github.io EN/ES) y el CV descargable |
 
