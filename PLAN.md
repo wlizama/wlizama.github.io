@@ -6,22 +6,22 @@
 
 ## 📍 Estado actual (leer primero al retomar)
 
-Rama de trabajo: **`feat/perfil-senior`** (creada desde `chore/quitar-plan`, que borra el plan anterior; mergear esa primero o junto con esta).
+Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan; la web ya está en `master` vía PR #18).
 
 ⛔ **Regla de merge:** el merge a `master` se hace **al cerrar las fases 1, 2 y 3** (no antes).
 🎯 **Alcance:** solo se modifican este repo y LinkedIn. No se tocan otros repos ni proyectos de GitHub.
 
 | Fase | Estado | Pendientes para cerrarla |
 |---|---|---|
-| 0 · Preparación | 🟡 Claude listo · faltan tareas tuyas | 0.2 y 0.3 (🧑) |
+| 0 · Preparación | 🟡 Casi cerrada | 0.3 (🧑) |
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
-| 3 · Publicar web | 🟡 En curso · PR #18 abierto | 3.2 merge (🧑), 3.3 (🤖) |
+| 3 · Publicar web | 🟢 Cerrada | — |
 | 4 · LinkedIn | ⬜ No iniciada | — |
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
 
-**Siguiente paso:** Fase 3 → revisar el PR y hacer merge (3.2); luego Claude verifica el sitio publicado (3.3). Pendientes sueltos: 0.2 y 0.3.
+**Siguiente paso:** Fase 4 (LinkedIn) → Claude redacta el perfil en español (4.11); tú haces 4.1 → 4.12 en una sola sesión. Pendiente suelto: 0.3.
 
 Leyenda: ✅ hecho · ⏳ pendiente · ⬜ no iniciado · 🟡 fase con pendientes · 🟢 fase cerrada.
 Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su fase.
@@ -48,6 +48,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
   | Jira | ✅ | ✅ | |
 - **2026-11-02** · Experiencia (web): solo top 6 tecnologías por puesto (2.7). Top 6 → Rimac: React Native, Expo, TypeScript, React.js, Tamagui UI, Jest · DevBase: React.js, TypeScript, React Native, Next.js, Redux, Storybook · GNT: React.js, Node.js, GraphQL, SQL Server, Java, Kendo UI.
 - **2026-11-02** · 1.9 y 2.5 revisadas por ti → fases 1 y 2 cerradas. Fase 3 iniciada: commits + push + PR (sin merge hasta tu revisión).
+- **2026-11-02** · PR #18 mergeado y desplegado; sitio publicado verificado (3.3) → Fase 3 cerrada. 0.2 hecho.
 
 ---
 
@@ -99,7 +100,7 @@ portafolio o al CV nunca ve datos distintos.
 | # | Quién | Tarea |
 |---|---|---|
 | ✅ 0.1 | 🧑 Tú | Revisar y aprobar los textos del **Anexo A** (titular, Acerca de, experiencia). Cualquier ajuste se hace aquí, antes de tocar nada |
-| ⏳ 0.2 | 🧑 Tú | LinkedIn → **Configuración → Visibilidad → Compartir actualizaciones del perfil con tu red → Desactivar** |
+| ✅ 0.2 | 🧑 Tú | LinkedIn → **Configuración → Visibilidad → Compartir actualizaciones del perfil con tu red → Desactivar** |
 | ⏳ 0.3 | 🧑 Tú | Guardar respaldo del perfil actual (`~/Downloads/Profile.pdf` existe; moverlo a un lugar seguro, Descargas se limpia) |
 | ✅ 0.4 | 🤖 Claude | Rama `feat/perfil-senior` creada (desde `chore/quitar-plan`, ver Estado actual) |
 
@@ -146,8 +147,8 @@ portafolio o al CV nunca ve datos distintos.
 | # | Quién | Tarea |
 |---|---|---|
 | ✅ 3.1 | 🤖 Claude | 4 commits + push de `feat/perfil-senior` → **PR #18** (https://github.com/wlizama/wlizama.github.io/pull/18). Incluye el commit del PR #17 |
-| ⬜ 3.2 | 🧑 Tú | Revisar el PR y hacer merge **cuando 1.9 y 2.5 estén cerrados** (fases 1–3 completas) |
-| ⬜ 3.3 | 🤖 Claude | Verificar el sitio publicado (wlizama.github.io EN/ES) y el CV descargable |
+| ✅ 3.2 | 🧑 Tú | PR #18 mergeado el 2026-11-02 (incluye el commit del #17, que también figura como mergeado). Deploy de GitHub Pages OK |
+| ✅ 3.3 | 🤖 Claude | Sitio publicado verificado (EN/ES): title y description con Senior + 11+, `profile.json` con 11+/6+, GNT, DevBase Senior, sin freelance ni enlaces a Drive; PDFs e imágenes OG publicados idénticos a los del repo (mismo hash) |
 
 **Salida:** web pública actualizada. Desde aquí LinkedIn puede enlazar al portafolio sin contradicciones.
 
