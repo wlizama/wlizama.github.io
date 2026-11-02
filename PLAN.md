@@ -17,7 +17,7 @@ Rama de trabajo: **`chore/plan-seguimiento`** (solo actualizaciones de este plan
 | 1 · Portafolio web | 🟢 Cerrada | — |
 | 2 · Imágenes y CV | 🟢 Cerrada | — |
 | 3 · Publicar web | 🟢 Cerrada | — |
-| 4 · LinkedIn | ⬜ No iniciada | — |
+| 4 · LinkedIn | 🟡 En curso (guiada) | 4.1 → 4.10 y 4.12 (🧑) · merge PR #19 (🧑) |
 | 5 · Verificación | ⬜ No iniciada | — |
 | 6 · Señales | ⬜ No iniciada | — |
 
@@ -50,6 +50,7 @@ Regla: al terminar una sesión, actualizar esta tabla y marcar cada tarea en su 
 - **2026-11-02** · 1.9 y 2.5 revisadas por ti → fases 1 y 2 cerradas. Fase 3 iniciada: commits + push + PR (sin merge hasta tu revisión).
 - **2026-11-02** · PR #18 mergeado y desplegado; sitio publicado verificado (3.3) → Fase 3 cerrada. 0.2 hecho.
 - **2026-11-02** · 0.3 hecho → Fase 0 cerrada. 4.11: perfil en español en el Anexo C; "Acerca de" en inglés (Anexo A) actualizado con testing, publicación mobile y CI/CD para que coincida con el español.
+- **2026-11-02** · Corrección: resumen de `cv.es.json` con redacción neutra ("Con experiencia en entornos ágiles…" en vez de "Cómodo…") → **PR #19** (pendiente de tu merge; luego Claude verifica el sitio). Fase 4 en modo guiado: tú editas LinkedIn y Claude acompaña paso a paso.
 
 ---
 
